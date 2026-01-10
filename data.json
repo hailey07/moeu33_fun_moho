@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "2D 操纵杆",
-    "icon": "<img src='assets/Favicon.png'>", 
+    "icon": "<img src='assets/ae_2D_joystick.png'>", 
     "category": "骨骼",
     "version": "1.3",
     "author": "Alexandra",
