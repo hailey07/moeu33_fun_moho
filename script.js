@@ -7,6 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             allData = data;
+
+            // --- 新增功能：检查 URL 是否带有搜索参数 (?q=xxx) ---
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                const searchInput = document.getElementById('search-input');
+                if(searchInput) {
+                    searchInput.value = decodeURIComponent(query);
+                }
+            }
+            // ------------------------------------------------
+
             render(); // 开始渲染
         })
         .catch(err => console.error("读取 data.json 失败，请检查文件是否存在", err));
@@ -28,11 +40,19 @@ function handleSearch() {
 // 主渲染函数
 function render() {
     const container = document.getElementById('app-container');
-    const searchText = document.getElementById('search-input').value.toLowerCase();
+    const searchInput = document.getElementById('search-input');
+    // 防止报错：如果还没加载 HTML 元素
+    if (!container || !searchInput) return;
+
+    const searchText = searchInput.value.toLowerCase().trim();
     
     // 过滤数据（搜索逻辑）
+    // 修改：增加了对分类 (category)、作者 (author)、适配版本 (supportVer) 的搜索支持
     const filteredData = allData.filter(item => 
         item.name.toLowerCase().includes(searchText) || 
+        item.category.toLowerCase().includes(searchText) || 
+        (item.author && item.author.toLowerCase().includes(searchText)) ||
+        (item.supportVer && item.supportVer.toLowerCase().includes(searchText)) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchText))
     );
 
@@ -46,12 +66,10 @@ function render() {
 }
 
 // 渲染看板视图
-// 渲染看板视图
 function renderBoard(container, data) {
     container.className = 'board-view';
     
-    // --- 🔴 新增：定义分类与颜色的对应关系 ---
-    // 这里的 key (左边) 必须和你 data.json 里的 "category" 完全一致
+    // 左侧彩条颜色映射
     const colorMap = {
         "骨骼": "color-red",
         "绘图": "color-blue",
@@ -68,8 +86,6 @@ function renderBoard(container, data) {
         const colDiv = document.createElement('div');
         colDiv.className = 'board-column';
         
-        // --- 🔴 新增：获取当前分类的颜色类名 ---
-        // 如果找不到对应分类，就默认用 color-gray
         const colorClass = colorMap[cat] || "color-gray"; 
 
         const cardsHtml = items.map(item => `
@@ -87,7 +103,7 @@ function renderBoard(container, data) {
 
         colDiv.innerHTML = `
             <div class="column-header">
-                <span class="tag-badge tool">${cat}</span> 
+                <span class="tag-badge tag-blue">${cat}</span> 
                 <span class="column-count">${items.length}</span>
             </div>
             ${cardsHtml}
@@ -95,16 +111,20 @@ function renderBoard(container, data) {
         container.appendChild(colDiv);
     });
 }
+
 // 渲染表格视图
 function renderTable(container, data) {
-    container.className = ''; 
+    container.className = 'table-mode-container'; 
     
     const table = document.createElement('table');
     table.className = 'table-view';
+    
+    // 修改：表头增加了“分类”列
     table.innerHTML = `
         <thead>
             <tr>
-                <th width="35%">名称</th>
+                <th width="30%">名称</th>
+                <th width="10%">分类</th>
                 <th>标签</th>
                 <th>版本</th>
                 <th>作者</th>
@@ -118,16 +138,32 @@ function renderTable(container, data) {
     
     data.forEach(item => {
         const tr = document.createElement('tr');
-        const tagsHtml = item.tags.map(t => `<span class="tag-badge">${t}</span>`).join('');
         
+        // --- 整行点击事件 ---
+        tr.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return; // 防止点击链接时双重跳转
+            window.open(`detail.html?id=${item.id}`, '_blank');
+        });
+
+        // 标签渲染
+        const tagsHtml = item.tags.map(t => 
+            `<span class="tag-badge tag-orange">${t}</span>`
+        ).join('');
+        
+        const authorName = item.author || 'Unknown';
+
+        // 修改：行内容增加了 category 列 (蓝色 Badge)
         tr.innerHTML = `
             <td>
                 <span class="table-icon">${item.icon}</span>
-                <a href="detail.html?id=${item.id}" target="_blank" style="font-weight:500;">${item.name}</a>
+                <a href="detail.html?id=${item.id}" target="_blank" class="row-title">
+                    ${item.name}
+                </a>
             </td>
+            <td><span class="tag-badge tag-blue">${item.category}</span></td>
             <td>${tagsHtml}</td>
-            <td>${item.version}</td>
-            <td>${item.author}</td>
+            <td>v${item.version}</td>
+            <td><span class="tag-badge tag-purple" style="margin:0">${authorName}</span></td>
             <td style="color:#999">${item.date}</td>
         `;
         tbody.appendChild(tr);

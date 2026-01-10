@@ -8,20 +8,26 @@
     "author": "Alexandra",
     "date": "2025-10-28",
     "tags": ["工具", "Moho 14"],
-    "desc": "这是一个非常强大的骨骼控制工具。<br><br><b>功能特点：</b><br>1. 轻松绑定面部表情。<br>2. 支持多轴控制。<br><br>即使是初学者也能快速上手。",
-    "link": "https://example.com/download.zip"
+    "realName": "ae_2D_joystick.lua", 
+    "supportVer": "Moho 12/13.5/14",
+    "publishPage": "https://mohousers.com/thread-123",
+    "link": "https://pan.baidu.com/s/xxxxxx",
+    "descUrl": "docs/ae_2D_joystick.md"
   },
   {
     "id": 2,
     "name": "节点绘图工具",
-    "icon": "🎨",
+    "icon": "<img src='assets/ae_2D_joystick.png'>", 
     "category": "绘图",
     "version": "4.2.5",
     "author": "Stan",
     "date": "2026-01-02",
     "tags": ["工具"],
-    "desc": "基于节点的矢量绘图辅助，让画图更精准。",
-    "link": "#"
+    "realName": "Moho_2D_Joystick.lua", 
+    "supportVer": "Moho 12/13.5/14",
+    "publishPage": "https://mohousers.com/thread-123",
+    "link": "https://pan.baidu.com/s/xxxxxx",
+    "desc": "这里是描述..."
   },
   {
     "id": 3,
@@ -32,8 +38,11 @@
     "author": "Alexandra",
     "date": "2021-01-26",
     "tags": ["工具", "脚本"],
-    "desc": "批量选择并操作图层，极大提高效率。",
-    "link": "#"
+    "realName": "Moho_2D_Joystick.lua", 
+    "supportVer": "Moho 12/13.5/14",
+    "publishPage": "https://mohousers.com/thread-123",
+    "link": "https://pan.baidu.com/s/xxxxxx",
+    "desc": "这里是描述..."
   },
   {
     "id": 4,
@@ -44,8 +53,11 @@
     "author": "Unknown",
     "date": "2025-12-29",
     "tags": ["Moho 14.1"],
-    "desc": "自动化补间生成工具。",
-    "link": "#"
+   "realName": "Moho_2D_Joystick.lua", 
+    "supportVer": "Moho 12/13.5/14",
+    "publishPage": "https://mohousers.com/thread-123",
+    "link": "https://pan.baidu.com/s/xxxxxx",
+    "desc": "这里是描述..."
   },
   {
     "id": 5,
@@ -56,7 +68,10 @@
     "author": "Stan",
     "date": "2024-05-20",
     "tags": ["效率"],
-    "desc": "一键批量重命名骨骼或图层。",
-    "link": "#"
+   "realName": "Moho_2D_Joystick.lua", 
+    "supportVer": "Moho 12/13.5/14",
+    "publishPage": "https://mohousers.com/thread-123",
+    "link": "https://pan.baidu.com/s/xxxxxx",
+    "desc": "这里是描述..."
   }
 ]

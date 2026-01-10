@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moho 脚本库</title>
+    <title>𝐌𝐨𝐡𝐨 脚本整理 - ʙʏ萌酥𝟛𝟛</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="app-mode">
     <header class="navbar">
         <div class="title-area">
-            <link rel="icon" href="<svg id='_图层_4' data-name='图层 4' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 870 870'> <defs><style>.cls-1 {fill: #fe3333;}.cls-2 {fill: #fefefe;}</style></defs><circle class='cls-1' cx='435' cy='435' r='435'/> <path class='cls-2' d='M455.32,324.37c-29.69-22.88-92.07-71.54-78.45-113.25,14.66-44.93,84.33-64.65,126.03-71.26,3.4-4.8.65-37.38-3.44-40-12.73-8.15-100.67,17.11-118.32,24.69-51.38,22.04-91.7,58.97-96.18,116.98-7.49,97,88.9,175.19,161.8,222.9,56.4,43.52-10.66,101.37-49.38,134.28-73.16,62.19-169.98,114.63-254.92,158.23,77.26,70.25,179.91,113.07,292.55,113.07,26.72,0,52.88-2.42,78.27-7.04l3.67-6.21c52.44-99.04,112.58-220.62,96.32-335.77-14.07-99.65-79.09-145.02-157.94-196.62Z'/> <path class='cls-2' d='M612.69,111.99c-1.37,26.14-39.65,35.42-65.87,22.87-8.46-4.05-14-11.7-15.35-19.24-1.66-9.26,1.69-18.87,9.1-25.7,16.66-15.35,43.28-15.64,61.24-1.91,7.94,6.07,11.37,14.67,10.88,23.98Z'/> </svg>" type="image/svg+xml">
+            <link rel="icon"
+                href="<svg id='_图层_4' data-name='图层 4' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 870 870'> <defs><style>.cls-1 {fill: #fe3333;}.cls-2 {fill: #fefefe;}</style></defs><circle class='cls-1' cx='435' cy='435' r='435'/> <path class='cls-2' d='M455.32,324.37c-29.69-22.88-92.07-71.54-78.45-113.25,14.66-44.93,84.33-64.65,126.03-71.26,3.4-4.8.65-37.38-3.44-40-12.73-8.15-100.67,17.11-118.32,24.69-51.38,22.04-91.7,58.97-96.18,116.98-7.49,97,88.9,175.19,161.8,222.9,56.4,43.52-10.66,101.37-49.38,134.28-73.16,62.19-169.98,114.63-254.92,158.23,77.26,70.25,179.91,113.07,292.55,113.07,26.72,0,52.88-2.42,78.27-7.04l3.67-6.21c52.44-99.04,112.58-220.62,96.32-335.77-14.07-99.65-79.09-145.02-157.94-196.62Z'/> <path class='cls-2' d='M612.69,111.99c-1.37,26.14-39.65,35.42-65.87,22.87-8.46-4.05-14-11.7-15.35-19.24-1.66-9.26,1.69-18.87,9.1-25.7,16.66-15.35,43.28-15.64,61.24-1.91,7.94,6.07,11.37,14.67,10.88,23.98Z'/> </svg>"
+                type="image/svg+xml">
             <h1>
                 <img src="assets/Favicon.png" class="header-logo" alt="Logo">
-        
-        <span style="margin-left: 10px;">𝕄𝕠𝕙𝕠 脚本整理</span>
-    </h1>
-            <p>资源整理看板 | 点击卡片查看详情</p>
+
+                <span style="margin-left: 10px;">𝕄𝕠𝕙𝕠 脚本</span>
+            </h1>
+            <!-- 给p标签加行内样式，强制变成行内元素，即可同行 -->
+            <p>
+            <div>———— • 这里是 𝕄𝕠𝕙𝕠 软件的相关资源分享站 • ————<br><br>ʜᴏᴡ ➜
+                <a href="howtoinstall.html" style="text-decoration:none; transition:0.2s;"
+                    onmouseover="this.style.color='#f06595';this.style.fontWeight='bold';this.style.paddingLeft='6px';this.style.paddingRight='6px';this.style.borderBottom='2px solid #f06595';"
+                    onmouseout="this.style.color='#333';this.style.fontWeight='normal';this.style.paddingLeft='0px';this.style.paddingRight='0px';this.style.borderBottom='0px';">如何安装脚本</a> |
+                <a href="howtouninstall.html" style="text-decoration:none; transition:0.2s;"
+                    onmouseover="this.style.color='#f06595';this.style.fontWeight='bold';this.style.paddingLeft='6px';this.style.paddingRight='6px';"
+                    onmouseout="this.style.color='#333';this.style.fontWeight='normal';this.style.paddingLeft='0px';this.style.paddingRight='0px';">如何卸载脚本</a></p>
+            </div>
         </div>
-        
+        </div>
+
         <div class="controls">
             <div class="view-switcher">
-                <button id="btn-board" class="active" onclick="switchView('board')">⊞ 分类视图</button>
+                <button id="btn-board" class="active" onclick="switchView('board')">⊞ 看板视图</button>
                 <button id="btn-table" onclick="switchView('table')">☰ 表格视图</button>
             </div>
             <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">
@@ -30,5 +44,7 @@
     <main id="app-container"></main>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
-</html> 
+
+</html>
