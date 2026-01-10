@@ -1,0 +1,415 @@
+/* --- 全局变量与重置 --- */
+:root {
+  --bg-color: #ffffff;
+  --gray-bg: #f7f7f5;
+  --border-color: #e0e0e0;
+  --text-main: #37352f;
+  --text-light: #787774;
+  --primary-color: #2eaadc;
+  --hover-bg: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- 顶部导航栏 (主页) --- */
+.navbar {
+  padding: 30px 80px;
+  border-bottom: 1px solid var(--border-color);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* 找到原来的 .navbar h1，修改字体大小 */
+.navbar h1 {
+  margin: 0;
+  font-size: 32px; /* 👈 把原来的 22px 改大，比如 32px */
+  display: flex;
+  align-items: center;
+  font-weight: 700; /* 加粗 */
+}
+
+/* --- 新增：控制头部 SVG 图标的大小 --- */
+.header-svg {
+  width: 40px; /* 设置图标宽度，根据需要调整 */
+  height: 40px; /* 设置图标高度，保持和宽度一致 */
+  /* 如果你想给图标加个圆角或边框，可以在这里加 */
+  /* border-radius: 50%; */
+}
+/* --- 顶部大标题的头像样式 --- */
+.header-logo {
+  width: 32px; /* 宽度：根据你的喜好调整，30-40px 比较合适 */
+  height: 32px; /* 高度：保持和宽度一样 */
+  border-radius: 50%; /* 关键：这一行让正方形图片变圆形！ */
+  object-fit: cover; /* 防止图片变形 */
+  border: 1px solid #e0e0e0; /* 可选：加个细细的边框让它更精致 */
+}
+.navbar p {
+  color: var(--text-light);
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.view-switcher button {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+.view-switcher button:hover {
+  background: var(--gray-bg);
+}
+.view-switcher button.active {
+  background: #eef3f5;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#search-input {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: 220px;
+  font-size: 14px;
+  outline: none;
+}
+#search-input:focus {
+  border-color: var(--primary-color);
+}
+
+/* --- 看板视图 (Board View) --- */
+.board-view {
+  display: flex;
+  overflow-x: auto; /* 横向滚动 */
+  padding: 20px 40px;
+  gap: 20px;
+  align-items: flex-start;
+  height: calc(100vh - 120px);
+}
+.board-column {
+  min-width: 260px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+.column-header {
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+.column-count {
+  color: var(--text-light);
+  font-weight: normal;
+}
+
+.board-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: 0.2s;
+  cursor: pointer;
+  display: block;
+}
+.board-card:hover {
+  background: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.card-top {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.card-icon {
+  font-size: 20px;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+}
+.card-meta {
+  font-size: 12px;
+  color: var(--text-light);
+  display: flex;
+  gap: 10px;
+}
+
+/* --- 表格视图 (Table View) --- */
+.table-view {
+    width: 80%;            /* 80% 宽度 */
+    margin: 40px auto;     /* 居中 */
+    border-collapse: collapse; /* 合并边框，这对于显示网格线非常重要 */
+    font-size: 14px;
+    
+    /* 可选：给整个表格外围加个大边框，防止内部线条看起来散 */
+    border: 1px solid var(--border-color); 
+}
+
+/* 1. 表头和单元格的通用样式 */
+.table-view th, 
+.table-view td { 
+    padding: 12px 16px;
+    vertical-align: middle;
+    
+    /* 🔴 关键修改：加上完整的 1px 边框 (上下左右都有) */
+    border: 1px solid var(--border-color); 
+}
+
+/* 2. 表头特有样式 */
+.table-view th {
+    text-align: left; 
+    color: var(--text-light); 
+    font-weight: normal;
+    background: #fafafa; /* 给表头加一点点背景色，和内容区分开 */
+}
+
+/* 3. 单元格特有样式 */
+.table-view td {
+    color: #333;
+}
+
+/* 4. 隔行变色 (Zebra Striping) */
+/* 偶数行变色 */
+.table-view tbody tr:nth-child(even) {
+    background-color: #fcfcfc; /* 极淡的灰色，保留层次感 */
+}
+
+/* 5. 鼠标悬停高亮 */
+.table-view tbody tr:hover {
+    background-color: #f0f0f0; 
+    transition: background-color 0.1s;
+}
+
+.table-icon { margin-right: 8px; font-size: 16px; vertical-align: middle; }
+
+/* --- 通用标签样式 --- */
+.tag-badge {
+  background: #f0e6fa;
+  color: #5a3e78;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 4px;
+}
+.tag-badge.tool {
+  background: #e3f2fd;
+  color: #0d47a1;
+} /* 蓝色 */
+
+/* --- 详情页专属样式 (Detail Page) --- */
+.detail-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.breadcrumb { margin-bottom: 30px; color: var(--text-light); font-size: 14px; }
+.breadcrumb a:hover { text-decoration: underline; color: var(--text-main); }
+
+/* 🔴 修改 1：图标和标题一行显示 */
+.detail-header {
+    display: flex;          /* 开启 Flex 布局 */
+    align-items: center;    /* 垂直居中对齐 */
+    gap: 15px;              /* 图标和标题之间的间距 */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* 图标容器，控制大小 */
+.detail-icon {
+    font-size: 48px;        /* Emoji 字体大小 */
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;         /* 防止图标被压缩 */
+}
+/* 如果是图片/SVG，控制其大小 */
+.detail-icon img, .detail-icon svg {
+    width: 100%; height: 100%; object-fit: contain;
+}
+
+/* 标题样式 */
+.detail-title {
+    font-size: 32px; 
+    font-weight: 700; 
+    margin: 0;              /* 去掉默认边距 */
+    /* border-bottom: none;    去掉之前的下边框，现在由 .detail-header 统一管理 */
+}
+
+/* --- 详情页属性表样式 (斑马纹 + 竖线版) --- */
+.prop-table { 
+    width: 100%; 
+    margin-bottom: 40px; 
+    border-top: 1px solid #e0e0e0; 
+    border-left: 1px solid #e0e0e0;  /* 左侧封口 */
+    border-right: 1px solid #e0e0e0; /* 右侧封口 */
+}
+
+.prop-row { 
+    display: flex; 
+    /* padding: 12px 16px;  <-- 删掉这个，把 padding 分配给 key 和 val */
+    border-bottom: 1px solid #e0e0e0; 
+    align-items: stretch; /* 让左右两边高度自动拉伸一致 */
+}
+
+/* 斑马纹背景 */
+.prop-row:nth-child(odd) { background-color: #fafafa; }
+
+/* 🔴 修改 2：添加竖线 */
+.prop-key { 
+    width: 140px; 
+    color: var(--text-light); 
+    font-size: 14px; 
+    flex-shrink: 0;
+    display: flex; align-items: center; /* 文字垂直居中 */
+    
+    padding: 12px 16px;             /* 加上内边距 */
+    border-right: 1px solid #e0e0e0; /* 核心：添加右侧竖线 */
+    background: #fdfdfd;            /* 可选：给标题列加个极淡的背景色，区分度更高 */
+}
+
+.prop-val { 
+    flex: 1; 
+    color: var(--text-main); 
+    font-size: 14px; 
+    display: flex; align-items: center; /* 文字垂直居中 */
+    padding: 12px 16px;             /* 加上内边距 */
+}
+
+/* --- 底部内容和按钮 --- */
+.content-area { font-size: 16px; line-height: 1.7; color: #333; margin-bottom: 40px; }
+.btn-download {
+    display: inline-block; background: var(--primary-color); color: #fff;
+    padding: 12px 24px; border-radius: 6px; font-weight: 500; transition: 0.2s;
+}
+.btn-download:hover { background: #2589b1; box-shadow: 0 4px 12px rgba(46, 170, 220, 0.3); }
+.btn-disabled { background: #ccc; cursor: not-allowed; }
+
+/* --- 新增：让图标支持图片和SVG --- */
+
+/* 1. 看板视图的小图标 */
+.card-icon img,
+.card-icon svg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: text-bottom;
+}
+
+/* 2. 表格视图的小图标 */
+.table-icon img,
+.table-icon svg {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* 3. 详情页的大图标 */
+.detail-icon img,
+.detail-icon svg {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+/* --- 新增：卡片分类颜色 & 悬停交互 --- */
+
+/* 1. 基础卡片：给边框和背景加过渡，让变色更丝滑 */
+.board-card {
+  border-left: 5px solid transparent;
+  transition: all 0.2s ease; /* 关键：让颜色变化有动画 */
+}
+
+/* 2. 定义颜色：常态 & 悬停态 */
+
+/* 🔴 红色 (骨骼) */
+.color-red {
+  border-left-color: #ff7e79 !important;
+  background: #fffcfc;
+}
+.color-red:hover {
+  background: #ffebeb; /* 悬停时背景变粉 */
+  box-shadow: 0 4px 12px rgba(255, 126, 121, 0.25); /* 红色光晕 */
+}
+
+/* 🔵 蓝色 (绘图) */
+.color-blue {
+  border-left-color: #2eaadc !important;
+  background: #f8fbff;
+}
+.color-blue:hover {
+  background: #e6f4ff; /* 悬停时背景变浅蓝 */
+  box-shadow: 0 4px 12px rgba(46, 170, 220, 0.25); /* 蓝色光晕 */
+}
+
+/* 🟢 绿色 (动画) */
+.color-green {
+  border-left-color: #45b649 !important;
+  background: #fafffa;
+}
+.color-green:hover {
+  background: #eaffea;
+  box-shadow: 0 4px 12px rgba(69, 182, 73, 0.25);
+}
+
+/* 🟣 紫色 (图层) */
+.color-purple {
+  border-left-color: #9d4edd !important;
+  background: #fdfaff;
+}
+.color-purple:hover {
+  background: #f5e6ff;
+  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.25);
+}
+
+/* 🟠 橙色 (其他) */
+.color-orange {
+  border-left-color: #ff9f1c !important;
+  background: #fffdf8;
+}
+.color-orange:hover {
+  background: #fff0d4;
+  box-shadow: 0 4px 12px rgba(255, 159, 28, 0.25);
+}
+
+/* ⚫ 灰色 (默认) */
+.color-gray {
+  border-left-color: #b0b0b0 !important;
+}
+.color-gray:hover {
+  background: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

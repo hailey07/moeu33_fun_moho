@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源详情</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="detail-container">
+        <div class="breadcrumb">
+            <link rel="icon"
+                href="<svg id='_图层_4' data-name='图层 4' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 870 870'> <defs><style>.cls-1 {fill: #fe3333;}.cls-2 {fill: #fefefe;}</style></defs><circle class='cls-1' cx='435' cy='435' r='435'/> <path class='cls-2' d='M455.32,324.37c-29.69-22.88-92.07-71.54-78.45-113.25,14.66-44.93,84.33-64.65,126.03-71.26,3.4-4.8.65-37.38-3.44-40-12.73-8.15-100.67,17.11-118.32,24.69-51.38,22.04-91.7,58.97-96.18,116.98-7.49,97,88.9,175.19,161.8,222.9,56.4,43.52-10.66,101.37-49.38,134.28-73.16,62.19-169.98,114.63-254.92,158.23,77.26,70.25,179.91,113.07,292.55,113.07,26.72,0,52.88-2.42,78.27-7.04l3.67-6.21c52.44-99.04,112.58-220.62,96.32-335.77-14.07-99.65-79.09-145.02-157.94-196.62Z'/> <path class='cls-2' d='M612.69,111.99c-1.37,26.14-39.65,35.42-65.87,22.87-8.46-4.05-14-11.7-15.35-19.24-1.66-9.26,1.69-18.87,9.1-25.7,16.66-15.35,43.28-15.64,61.24-1.91,7.94,6.07,11.37,14.67,10.88,23.98Z'/> </svg>"
+                type="image/svg+xml">
+            <a href="index.html">🏠 返回首页</a> / <span id="bread-name">加载中...</span>
+        </div>
+
+        <div id="loading">正在读取数据...</div>
+
+        <div id="content" style="display: none;">
+            <div class="detail-header">
+                <div class="detail-icon" id="d-icon"></div>
+                <h1 class="detail-title" id="d-title"></h1>
+            </div>
+
+            <div class="prop-table">
+                <div class="prop-row">
+                    <div class="prop-key">📂 分类</div>
+                    <div class="prop-val" id="d-category"></div>
+                </div>
+                <div class="prop-row">
+                    <div class="prop-key">👤 作者</div>
+                    <div class="prop-val" id="d-author"></div>
+                </div>
+                <div class="prop-row">
+                    <div class="prop-key">🏷️ 标签</div>
+                    <div class="prop-val" id="d-tags"></div>
+                </div>
+
+                <div class="prop-row">
+                    <div class="prop-key">🔢 版本</div>
+                    <div class="prop-val" id="d-ver"></div>
+                </div>
+                <div class="prop-row">
+                    <div class="prop-key">📅 更新日期</div>
+                    <div class="prop-val" id="d-date"></div>
+                </div>
+            </div>
+
+            <h3>📝 详细说明</h3>
+            <div class="content-area" id="d-desc"></div>
+
+            <a href="#" id="d-download" class="btn-download" target="_blank">⬇️ 点击下载资源</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 获取 URL 中的 ID (例如 ?id=1)
+            const params = new URLSearchParams(window.location.search);
+            const targetId = params.get('id');
+
+            if (!targetId) {
+                document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px'>错误：没有指定资源 ID</h2>";
+                return;
+            }
+
+            // 2. 读取 data.json
+            fetch('data.json')
+                .then(res => res.json())
+                .then(data => {
+                    // 查找对应 ID 的数据
+                    const item = data.find(i => i.id == targetId);
+
+                    if (item) {
+                        renderDetail(item);
+                    } else {
+                        document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px'>未找到该资源</h2>";
+                    }
+                })
+                .catch(err => console.error(err));
+        });
+
+        function renderDetail(item) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+
+            // 填充文字
+            document.title = item.name + " - 详情";
+            document.getElementById('bread-name').textContent = item.name;
+            document.getElementById('d-icon').innerHTML = item.icon;
+            document.getElementById('d-title').textContent = item.name;
+            document.getElementById('d-category').textContent = item.category;
+            document.getElementById('d-author').textContent = item.author;
+            document.getElementById('d-ver').textContent = "v" + item.version;
+            document.getElementById('d-date').textContent = item.date;
+
+            // 渲染标签
+            document.getElementById('d-tags').innerHTML = item.tags.map(t =>
+                `<span class="tag-badge">${t}</span>`
+            ).join('');
+
+            // 渲染描述 (支持 HTML 标签)
+            document.getElementById('d-desc').innerHTML = item.desc;
+
+            // 按钮逻辑
+            const btn = document.getElementById('d-download');
+            if (item.link && item.link !== "#") {
+                btn.href = item.link;
+            } else {
+                btn.textContent = "暂无下载链接";
+                btn.classList.add('btn-disabled');
+                btn.removeAttribute('href');
+            }
+        }
+    </script>
+</body>
+
+</html>
