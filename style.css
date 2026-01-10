@@ -382,9 +382,9 @@ a {
 }
 
 .breadcrumb {
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   color: var(--text-light);
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: end;
 }
