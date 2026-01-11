@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "ae_2D_joystick", 
     "name": "2D 操纵杆",
     "icon": "<img src='assets/ae_2D_joystick.png'>", 
     "category": "骨骼",

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>资源详情</title>
+    <base href="/">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -39,8 +40,23 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const targetId = params.get('id');
+            // --- ID 获取逻辑 (支持字符串文件名) ---
+            let targetId = null;
+
+            // 1. 尝试从路径获取 (例如 /scripts/ae_2D_joystick)
+            const pathSegments = window.location.pathname.split('/').filter(Boolean);
+            const lastSegment = pathSegments[pathSegments.length - 1];
+
+            // 只要最后一段存在且不是页面本身的名字，就认为是 ID
+            if (lastSegment && lastSegment !== 'index.html' && lastSegment !== 'detail.html') {
+                targetId = decodeURIComponent(lastSegment); // 解码，防止 URL 编码问题
+            }
+
+            // 2. 兼容旧的 ?id= 写法
+            if (!targetId) {
+                const params = new URLSearchParams(window.location.search);
+                targetId = params.get('id');
+            }
 
             if (!targetId) {
                 showError("错误：没有指定资源 ID");
@@ -51,12 +67,13 @@
             fetch('data.json')
                 .then(res => res.json())
                 .then(data => {
+                    // 查找 ID 匹配的项 (字符串匹配)
                     const item = data.find(i => i.id == targetId);
                     if (item) {
-                        renderBaseInfo(item);      // 1. 渲染基础信息
-                        loadMarkdownContent(item); // 2. 加载 Markdown 内容
+                        renderBaseInfo(item);      
+                        loadMarkdownContent(item); 
                     } else {
-                        showError("未找到该资源");
+                        showError("未找到该资源：" + targetId);
                     }
                 })
                 .catch(err => {
@@ -70,23 +87,19 @@
             document.body.innerHTML = `<h2 style='text-align:center;margin-top:50px'>${msg}</h2>`;
         }
 
-        // 1. 渲染基础信息 (修改后的核心函数)
+        // 1. 渲染基础信息
         function renderBaseInfo(item) {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('content').style.display = 'block';
 
-            // 填充头部
             document.title = item.name + " - 详情";
             document.getElementById('bread-name').textContent = item.name;
             document.getElementById('d-icon').innerHTML = item.icon;
             document.getElementById('d-title').textContent = item.name;
 
-            // --- 动态生成属性表 ---
             const propContainer = document.getElementById('prop-table-body');
             propContainer.innerHTML = ''; 
 
-            // 辅助工具：生成搜索跳转链接
-            // href 指向 index.html?q=关键词，配合 script.js 的 URLParams 读取功能
             const createSearchLink = (text, badgeClass) => {
                 return `<a href="index.html?q=${encodeURIComponent(text)}" 
                            class="tag-badge ${badgeClass || ''}" 
@@ -94,8 +107,6 @@
                            title="点击在首页搜索">${text}</a>`;
             };
 
-            // 配置表：定义顺序、样式和交互行为
-            // isSearchable: true 表示点击该字段会跳转到首页进行搜索
             const propsConfig = [
                 { label: '🗂️ 标签', value: item.category, badgeClass: 'tag-blue', isSearchable: true },
                 { label: '🏷️ 分类', value: item.tags, type: 'array', badgeClass: 'tag-orange', isSearchable: true },
@@ -108,31 +119,24 @@
             ];
 
             propsConfig.forEach(prop => {
-                // 只有当值存在且不为空时才渲染
                 if (prop.value && prop.value.length !== 0) {
                     let htmlContent = prop.value;
 
-                    // A. 处理标签数组 (如: tags: ["工具", "Moho"])
                     if (prop.type === 'array' && Array.isArray(prop.value)) {
                         if (prop.isSearchable) {
-                            // 如果可搜索，每个标签都是一个链接
                             htmlContent = prop.value.map(t => createSearchLink(t, prop.badgeClass)).join('');
                         } else {
-                            // 否则只是展示用的 Badge
                             htmlContent = prop.value.map(t => 
                                 `<span class="tag-badge ${prop.badgeClass}">${t}</span>`
                             ).join('');
                         }
                     } 
-                    // B. 处理外部链接 (发布页面)
                     else if (prop.type === 'link') {
                         htmlContent = `<a href="${prop.value}" target="_blank" style="color:#1971c2;text-decoration:underline;word-break:break-all;">点击访问</a>`;
                     }
-                    // C. 处理单文本且可搜索 (如: 作者、分类)
                     else if (prop.isSearchable) {
                         htmlContent = createSearchLink(prop.value, prop.badgeClass);
                     }
-                    // D. 处理普通带颜色文本 (不可点击)
                     else if (prop.badgeClass) {
                         htmlContent = `<span class="tag-badge ${prop.badgeClass}">${prop.value}</span>`;
                     }
@@ -147,7 +151,6 @@
                 }
             });
 
-            // --- 下载按钮逻辑 ---
             const btn = document.getElementById('d-download');
             if (item.link && item.link !== "#") {
                 btn.href = item.link;
@@ -162,7 +165,6 @@
         function loadMarkdownContent(item) {
             const descEl = document.getElementById('d-desc');
 
-            // 优先读取外部文件 (descUrl)
             if (item.descUrl) {
                 descEl.innerHTML = "<p style='color:#666'>⏳ 正在加载详细说明...</p>";
                 fetch(item.descUrl)
@@ -178,7 +180,6 @@
                         descEl.innerHTML = item.desc ? marked.parse(item.desc) : `<p style='color:red'>加载说明文件失败。</p>`;
                     });
             } 
-            // 如果没有外部文件，读取内嵌文本 (desc)
             else if (item.desc) {
                 descEl.innerHTML = marked.parse(item.desc);
             } 

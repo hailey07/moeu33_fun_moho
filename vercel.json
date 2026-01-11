@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/scripts/:match*", "destination": "/detail.html" }
+  ]
+}
