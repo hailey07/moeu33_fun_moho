@@ -3,23 +3,15 @@
 /* ========================================= */
 :root {
   --fz-h1: 40px;
-  /* 网站名 */
   --fz-desc: 16px;
-  /* 描述 */
   --fz-head-sub: 13px;
-  /* How to 按钮*/
   --fz-index-tags: 13px;
   --fz-button: 14px;
-  /*按钮 + 搜索 */
-  --fz-card-title: 16px;
+  --fz-card-title: 15px;
   --fz-card-meta: 12px;
-  --fz-table-title: 16px;
-
-  /*  详情页 ⬇️ */
+  --fz-table-title: 15px;
   --fz-d-h1: 32px;
-  /* 标题 */
   --fz-bread: 18px;
-  /* 返回首页 */
   --fz-btn-down: 18px;
   --fz-article: 16px;
   --fz-d-table: 16px;
@@ -32,21 +24,44 @@
   --primary-color: #4ccadb;
   --hover-bg: #efefef;
   --script-icon-bg: #9aaecb;
-
   --black: #000000;
   --shadow-offset: 4px;
 }
 
 * {
   box-sizing: border-box;
+  input, button, select, textarea {
+  font-family: inherit;
+}
+}
+
+/* style.css - 找到 1. 全局变量与重置 */
+
+/* 保持 html 锁定，防止浏览器原生的双滚动条 */
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--text-main);
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+
+  /* 【关键修改】 */
+  height: 100vh;
+  /* 高度设为视口高度 */
+  width: 100vw;
+  overflow: auto;
+  /* 让 body 负责滚动（横向和竖向） */
+  display: block;
+  /* 取消之前的 flex 布局，回归标准文档流 */
+  position: relative;
 }
 
 a {
@@ -58,18 +73,30 @@ a {
 /* ========================================= */
 /* 2. 顶部导航栏 (Navbar) */
 /* ========================================= */
+/* style.css - 找到 .navbar */
+
 .navbar {
+  /* 移除 flex-shrink 等之前的布局属性 */
   padding: 10px 10px;
   border-bottom: 2px solid var(--border-color);
   background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  z-index: 1000;
+  /* 提高层级，防止被内容遮盖 */
+  text-align: center;
+
+  /* 【关键修改】 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  min-width: 500px;
+  width: 100%;
+
+  /* 让 Navbar 在竖向滚动时随文档流移动（默认行为），
+     但在横向滚动时，始终吸附在左侧，保证不被滚出屏幕 
+  */
+  position: sticky;
+  left: 0;
+  /* 确保背景色遮挡下面的内容 */
+  background: #fff;
 }
 
 .navbar h1 {
@@ -77,7 +104,7 @@ a {
   font-size: var(--fz-h1);
   display: flex;
   align-items: end;
-  font-weight: 700;
+  font-weight: bold;
   gap: 5px;
   justify-content: center;
   width: 100%;
@@ -110,23 +137,24 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  width: 80%;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* 按钮样式 */
 .view-switcher button {
   background: #fff;
   border: 2px solid var(--border-color);
-  padding: 8px 16px;
+  padding: 6px 12px;
   cursor: pointer;
   border-radius: 6px;
   color: var(--text-main);
   font-size: var(--fz-button);
-  font-weight: 600;
-  margin-right: 8px;
+  font-weight: 500;
+  margin: 4px;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   white-space: nowrap;
-  margin: 4px;
 }
 
 .view-switcher button:hover {
@@ -160,26 +188,98 @@ a {
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.8);
 }
 
+/* 筛选与排序工具栏样式 */
+.filter-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 10px;
+  flex-grow: 0;
+}
+
+.notion-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 30px 6px 12px;
+  font-size: var(--fz-button);
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.notion-select:hover {
+  border-color: var(--black);
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0px 0px var(--black);
+}
+
+.notion-select:focus {
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  #search-input {
+    width: 100%;
+    order: 3;
+  }
+
+  .filter-toolbar {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+
+  .notion-select {
+    flex-grow: 1;
+  }
+}
+
+/* ========================================= */
+/* 【新增】主内容区域 (App Container) */
+/* ========================================= */
+/* style.css - 找到 #app-container */
+
+#app-container {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  /* 内容自然撑开 */
+  position: relative;
+}
+
 /* ========================================= */
 /* 3. 看板视图 (Board View) */
 /* ========================================= */
+
 .board-view {
   display: flex;
-
-  /* 【关键】限制高度，减去顶部导航栏的高度(根据你实际header高度调整，大概260-300px) */
-  height: calc(100vh - 280px);
-
-  /* 横向滚动 */
-  overflow-x: auto;
-  /* 纵向不滚动 (交给内部的列去滚动) */
-  overflow-y: hidden;
-
-  padding: 20px 40px;
+  min-width: 100%;
+  width: fit-content;
+  height: auto;
+  padding: 20px 0 30px 20px;
   gap: 20px;
   align-items: flex-start;
+  box-sizing: border-box;
+}
 
-  /* 底部留白，防止滚动条遮挡卡片 */
-  padding-bottom: 20px;
+.board-view::after {
+  content: "";
+  display: block;
+  width: 20px;
+  flex-shrink: 0;
+  height: 1px;
 }
 
 .board-column {
@@ -187,10 +287,11 @@ a {
   width: 280px;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .column-header {
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 12px;
   padding: 0 4px;
   display: flex;
@@ -215,12 +316,13 @@ a {
   padding: 16px;
   margin-bottom: 16px;
   display: block;
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); */
+  transition: all 0.2s ease;
   box-shadow: 0 0 0 0 var(--black);
 }
 
 .board-card:hover {
-  border-color: var(--black) !important;
+  /* border-color: var(--black) !important; */
   transform: translate(-5px, -5px);
   box-shadow: 5px 5px 0px 0px var(--black);
   z-index: 10;
@@ -228,14 +330,14 @@ a {
 
 .board-card:hover .card-title {
   font-size: 1.1em;
-  padding-left: 5px;
+  /* padding-left: 5px; */
+  
 }
 
 .card-top {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  margin-bottom: 10px;
 }
 
 .card-icon img,
@@ -250,7 +352,7 @@ a {
 }
 
 .card-title {
-  font-weight: 600;
+  font-weight: bold;
   font-size: var(--fz-card-title);
   line-height: 1.4;
   color: #333;
@@ -262,7 +364,6 @@ a {
   color: var(--text-light);
   display: flex;
   gap: 10px;
-  margin-top: 8px;
   padding-left: 36px;
 }
 
@@ -357,15 +458,6 @@ a {
   background: #e5ffe6;
 }
 
-.color-orange {
-  border-left: 5px solid #ff922b !important;
-  background: #fffdf8;
-}
-
-.color-orange:hover {
-  background: #fff0d4;
-}
-
 .color-yellow {
   border-left: 5px solid #ffc40d !important;
   background: #fffdf0;
@@ -378,34 +470,52 @@ a {
 /* ========================================= */
 /* 4. 表格视图 (Table View) */
 /* ========================================= */
+.table-mode-container {
+  width: 100%;
+  /* 【修改】去掉 overflow-x，让父容器处理滚动 */
+  padding-bottom: 20px;
+  justify-content: center;
+  display: flex;
+}
+
 .table-view {
-  width: 85%;
-  margin: 40px auto;
+  width: 100%;
+  min-width: 900px;
+  /* 保持最小宽度以触发横向滚动 */
+  margin-left: 50px;
+  margin-right: 50px;
   border-collapse: separate;
   border-spacing: 0 8px;
   white-space: nowrap;
-  min-width: 500px;
+  table-layout: fixed;
 }
 
 .table-view th {
   text-align: left;
   color: var(--text-light);
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px 16px;
   border-bottom: 2px solid var(--border-color);
 }
 
 .table-view tbody tr {
-  background: #fff;
+  background: #f8f9fa;
   transition: all 0.2s ease;
   cursor: pointer;
 }
+.table-view tbody tr:nth-child(odd) {
+background-color: #fff;}
 
 .table-view td {
   padding: 16px;
   border-top: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
   vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 超出显示省略号 */
+  white-space: nowrap;
+  /* 强制不换行 */
 }
 
 .table-view td:first-child {
@@ -418,6 +528,7 @@ a {
   border-right: 2px solid var(--border-color);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  text-align: right;
 }
 
 .table-view tbody tr:hover td {
@@ -446,20 +557,6 @@ a {
   border: 1px solid var(--script-icon-bg);
 }
 
-.table-view tbody tr {
-  background: #fff;
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: pointer;
-}
-
-.table-view tbody tr:hover {
-  transform: translateY(-3px) scale(1.005);
-  box-shadow: 4px 4px 0px 0px var(--black);
-  z-index: 10;
-  position: relative;
-  border-color: var(--black);
-}
-
 .table-view tbody tr:hover .row-title {
   font-size: 1.1em;
   padding-left: 5px;
@@ -475,15 +572,10 @@ a {
 /* ========================================= */
 /* 5. 详情页 (Detail Page) */
 /* ========================================= */
-
 .detail-container {
-  /* 【修改】加宽容器，给文章和目录留出更多空间 */
-  /* max-width: 1200px; */
   margin: 20px auto;
   padding: 0 40px;
-  /* 稍微增加内边距 */
   min-width: 500px;
-
 }
 
 .content {
@@ -500,6 +592,8 @@ a {
   font-size: var(--fz-bread);
   display: flex;
   align-items: end;
+
+  /* 【修改】确保在滚动容器顶部吸附 */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -517,7 +611,12 @@ a {
   border-bottom: 2px solid var(--border-color);
   white-space: nowrap;
 }
-
+.xiangxishuoming {
+  font-size: 22px;
+  font-weight: 500;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom:10px;
+}
 .detail-icon img,
 .detail-icon svg {
   width: 64px;
@@ -529,12 +628,6 @@ a {
   box-shadow: 4px 4px 0px 0px var(--black);
   padding: 8px;
   flex-shrink: 0;
-}
-
-/* 详情页大图标动效 */
-.detail-icon img,
-.detail-icon svg {
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
 }
 
 .detail-icon img:hover,
@@ -567,30 +660,36 @@ a {
 .prop-row {
   display: flex;
   border-bottom: 2px solid var(--border-color);
+  height: 48px;
+  align-items: center;
+  background-color: #f8f9fa;
 }
 
 .prop-row:last-child {
   border-bottom: none;
+  
 }
 
 .prop-row:nth-child(odd) {
-  background-color: #fafafa;
+  background-color: #fff;
+  
 }
 
 .prop-key {
   width: 160px;
   color: var(--text-light);
-  padding: 12px 20px;
+  padding-left:16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-right: 2px solid var(--border-color);
   font-weight: 500;
-  background: #fdfdfd;
   flex-shrink: 0;
 }
 
 .prop-val {
   flex: 1;
   color: var(--text-main);
-  padding: 12px 16px;
+  padding-left: 16px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -610,7 +709,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   margin: 20px 0 40px 0;
-
 }
 
 .btn-download:hover {
@@ -639,7 +737,6 @@ a {
   line-height: 1.7;
   color: #333;
   margin-bottom: 50px;
-
 }
 
 .content-area h1,
@@ -658,9 +755,7 @@ a {
   margin-bottom: 0.5em;
   line-height: 1.4;
   font-weight: 600;
-  /* 稍微细一点 */
   color: #555;
-  /* 颜色稍微浅一点，区分层级 */
 }
 
 .content-area ul,
@@ -717,8 +812,6 @@ a {
   border-radius: 6px;
   font-size: var(--fz-index-tags);
   font-weight: 500;
-  margin-right: 6px;
-  margin-bottom: 4px;
   border: 1px solid transparent;
   line-height: 1.4;
   white-space: nowrap;
@@ -762,34 +855,7 @@ a {
 }
 
 /* ========================================= */
-/* 8. 布局修复：全屏画布模式 (Canvas Mode) */
-/* ========================================= */
-/* ========================================= */
-/* 8. 布局修复：恢复默认滚动 (Default Scroll) */
-/* ========================================= */
-body.app-mode {
-  min-height: 100vh;
-  /* 改用最小高度，内容多了自动撑开 */
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  /* 【关键】允许垂直滚动 */
-  overflow-x: hidden;
-  /* 防止横向出现不必要的滚动条 */
-}
-
-/* 确保导航栏吸顶 */
-body.app-mode .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
-}
-
-/* ========================================= */
-/* 9. 顶部标题与链接优化 (Header Optimization) */
+/* 8. 顶部标题与链接优化 */
 /* ========================================= */
 .top-announcement {
   width: 100%;
@@ -797,8 +863,6 @@ body.app-mode .navbar {
   align-items: center;
   justify-content: flex-start;
   margin: 0px 0px 10px 0;
-  /* 增加底部虚线，增强区分感 */
-  /* border-bottom: 1.5px dashed var(--border-color); */
   padding-bottom: 15px;
 }
 
@@ -821,6 +885,7 @@ body.app-mode .navbar {
 .header-desc-container {
   color: var(--text-light);
   font-size: var(--fz-desc);
+  font-weight: 500 ;
   margin: 10px 0 30px 0;
   text-align: center;
 }
@@ -828,7 +893,6 @@ body.app-mode .navbar {
 .header-sub-link {
   display: inline-block;
   padding: 4px 10px;
-  /* 调整回舒适的大小 */
   margin-right: 10px;
   margin-left: 0;
   background-color: #fff4e6;
@@ -851,7 +915,7 @@ body.app-mode .navbar {
 }
 
 /* ========================================= */
-/* 10. 详情页交互动效优化 */
+/* 9. 交互细节 */
 /* ========================================= */
 .breadcrumb {
   white-space: nowrap;
@@ -883,62 +947,48 @@ body.app-mode .navbar {
   display: flex;
   align-items: end;
   position: sticky;
-
 }
 
 .breadcrumb-link:hover {
   color: #f06595;
   font-weight: bold;
   padding: 0 10px;
-  /* 原地撑开效果 */
   text-decoration: none;
   border-bottom: 2px solid #f06595;
   font-size: 1.1em;
 }
 
 /* ========================================= */
-/* 11. 文章目录布局 (Table of Contents) - 已修复 */
+/* 10. 文章目录布局 (Table of Contents) */
 /* ========================================= */
-
 .article-layout {
   display: flex;
   gap: 50px;
-  /* 【修改】增加间距，让目录离文章更远一点，更清爽 */
-
-  /* 【关键修改】使用 stretch 撑满高度，这是 sticky 滚动的关键 */
   align-items: stretch;
-
   margin-top: 30px;
   position: relative;
 }
 
-/* 左侧文章：占据剩余空间 */
 .content-area {
   flex: 1;
   min-width: 0;
 }
 
-/* 右侧目录容器 */
 .toc-container {
   width: 240px;
   flex-shrink: 0;
   display: none;
 }
 
-/* 目录的粘性盒子 (滚动跟随) */
 .toc-sticky-box {
   position: sticky;
   top: 100px;
-
   background: #fff;
   border: none;
   border-left: 2px solid #eee;
   border-radius: 0;
-
   padding: 10px 0 10px 20px;
   max-height: 80vh;
-
-  /* 【关键修改】只允许竖向滚动，强制隐藏横向滚动条 */
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -951,19 +1001,15 @@ body.app-mode .navbar {
   color: #333;
   padding-bottom: 0;
   border-bottom: none;
-  /* 去掉标题下划线，更干净 */
-  /* 【建议添加】防止长文字被切掉，强制换行 */
   word-wrap: break-word;
   word-break: break-word;
 }
 
-/* 目录链接样式 */
 .toc-link {
   display: block;
   color: var(--text-light);
   text-decoration: none;
   font-size: 13px;
-  /* 字体稍微调小 */
   margin-bottom: 8px;
   line-height: 1.5;
   transition: all 0.2s;
@@ -972,10 +1018,8 @@ body.app-mode .navbar {
 .toc-link:hover {
   color: #f06595;
   transform: translateX(3px);
-  /* 悬停时微微右移 */
 }
 
-/* 不同层级缩进 */
 .toc-h1 {
   margin-left: 0;
   font-weight: bold;
@@ -1009,7 +1053,6 @@ body.app-mode .navbar {
   opacity: 0.6;
 }
 
-/* 📱 手机端适配：把目录放到最上面 */
 @media (max-width: 800px) {
   .article-layout {
     flex-direction: column-reverse;

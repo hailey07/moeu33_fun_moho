@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>脚本整理 - ʙʏ萌酥𝟛𝟛</title>
 
     <base href="/">
@@ -19,14 +19,14 @@
         
         <div class="top-announcement">
             <span style="font-size: 14px; font-weight:bold; color:#868e96; margin:0 10px; ">ʜᴏᴡ ➜</span>
-            <a href="howtoinstall" class="header-sub-link" target="_blank">如何安装脚本</a>
-            <a href="howtouninstall" class="header-sub-link" target="_blank">如何卸载脚本</a>
+            <a href="/howtoinstall" class="header-sub-link" target="_blank">如何安装脚本</a>
+            <a href="/howtouninstall" class="header-sub-link" target="_blank">如何卸载脚本</a>
         </div>
 
         <h1>
-            <img src="assets/Favicon.png" href="index" class="header-logo" alt="Logo">
+            <img src="assets/Favicon.png" href="/index" class="header-logo" alt="Logo">
             <span style="margin-left: 10px;">
-                <a href="index" class="header-main-title"> 𝕄𝕠𝕙𝕠 脚本</a>
+                <a href="/index" class="header-main-title"> 𝕄𝕠𝕙𝕠 脚本</a>
             </span>
         </h1>
 
@@ -37,9 +37,23 @@
 
         <div class="controls">
             <div class="view-switcher">
-                <button id="btn-board" class="active" onclick="switchView('board')">⊞ 看板视图</button>
-                <button id="btn-table" onclick="switchView('table')">☰ 表格视图</button>
-            </div>
+        <button id="btn-board" class="active" onclick="switchView('board')">⊞ 看板视图</button>
+        <button id="btn-table" onclick="switchView('table')">☰ 表格视图</button>
+    </div>
+
+    <div class="filter-toolbar">
+        <select id="filter-select" class="notion-select" onchange="handleFilter()">
+            <option value="all">🔖 类别</option>
+            </select>
+
+        <select id="sort-select" class="notion-select" onchange="handleSort()">
+            <option value="default">⇅ 默认排序</option>
+            <option value="date-desc">📅 日期 ⬇︎</option>
+            <option value="date-asc">📅 日期 ⬆︎</option>
+            <option value="name-asc">🔤 名称 ⬇︎</option>
+            <option value="name-desc">🔤 名称 ⬆︎</option> </select>
+    </div>
+
             <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">
         </div>
     </header>
