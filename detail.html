@@ -15,10 +15,11 @@
     <div class="detail-container">
         <div class="breadcrumb">
             <span class="home-icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
-                <img src="assets/Favicon.png" alt="Home" style="width:34px; height:34px;border:1.5px solid #687078; border-radius:50%; margin-right:10px;">
+                <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
             </span>
-            <a href="index.html" style="padding-left:10px;">返回首页</a> ｜ <span id="bread-name">加载中...</span>
+            <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">加载中...</span>
         </div>
+
         <div id="loading">正在读取数据...</div>
 
         <div id="content" style="display: none;">
@@ -34,25 +35,33 @@
 
             <span style="margin-left: 10px; font-size: 20px; font-weight: bold;"> 📋 详细说明：</span>
             <hr />
-            <div class="content-area" id="d-desc" "></div>
+
+            <div class="article-layout">
+                
+                <div class="content-area" id="d-desc"></div>
+
+                <aside class="toc-container">
+                    <div class="toc-sticky-box">
+                        <h3 class="toc-title">📖 目录</h3>
+                        <div id="toc-list"></div> </div>
+                </aside>
+
+            </div>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- ID 获取逻辑 (支持字符串文件名) ---
+            // --- ID 获取逻辑 ---
             let targetId = null;
 
-            // 1. 尝试从路径获取 (例如 /scripts/ae_2D_joystick)
             const pathSegments = window.location.pathname.split('/').filter(Boolean);
             const lastSegment = pathSegments[pathSegments.length - 1];
 
-            // 只要最后一段存在且不是页面本身的名字，就认为是 ID
             if (lastSegment && lastSegment !== 'index.html' && lastSegment !== 'detail.html') {
-                targetId = decodeURIComponent(lastSegment); // 解码，防止 URL 编码问题
+                targetId = decodeURIComponent(lastSegment);
             }
 
-            // 2. 兼容旧的 ?id= 写法
             if (!targetId) {
                 const params = new URLSearchParams(window.location.search);
                 targetId = params.get('id');
@@ -67,11 +76,10 @@
             fetch('data.json')
                 .then(res => res.json())
                 .then(data => {
-                    // 查找 ID 匹配的项 (字符串匹配)
                     const item = data.find(i => i.id == targetId);
                     if (item) {
-                        renderBaseInfo(item);      
-                        loadMarkdownContent(item); 
+                        renderBaseInfo(item);
+                        loadMarkdownContent(item);
                     } else {
                         showError("未找到该资源：" + targetId);
                     }
@@ -98,7 +106,7 @@
             document.getElementById('d-title').textContent = item.name;
 
             const propContainer = document.getElementById('prop-table-body');
-            propContainer.innerHTML = ''; 
+            propContainer.innerHTML = '';
 
             const createSearchLink = (text, badgeClass) => {
                 return `<a href="index.html?q=${encodeURIComponent(text)}" 
@@ -113,7 +121,7 @@
                 { label: '🔢 版本', value: item.version ? "v" + item.version : null, badgeClass: 'tag-gray' },
                 { label: '👤 作者', value: item.author, badgeClass: 'tag-purple', isSearchable: true },
                 { label: '📅 更新日期', value: item.date },
-                { label: '📝 脚本名称', value: item.realName }, 
+                { label: '📝 脚本名称', value: item.realName },
                 { label: '⚙️ 适配版本', value: item.supportVer, badgeClass: 'tag-green', isSearchable: true },
                 { label: '🔗 发布页面', value: item.publishPage, type: 'link' }
             ];
@@ -126,18 +134,15 @@
                         if (prop.isSearchable) {
                             htmlContent = prop.value.map(t => createSearchLink(t, prop.badgeClass)).join('');
                         } else {
-                            htmlContent = prop.value.map(t => 
+                            htmlContent = prop.value.map(t =>
                                 `<span class="tag-badge ${prop.badgeClass}">${t}</span>`
                             ).join('');
                         }
-                    } 
-                    else if (prop.type === 'link') {
+                    } else if (prop.type === 'link') {
                         htmlContent = `<a href="${prop.value}" target="_blank" style="color:#1971c2;text-decoration:underline;word-break:break-all;">点击访问</a>`;
-                    }
-                    else if (prop.isSearchable) {
+                    } else if (prop.isSearchable) {
                         htmlContent = createSearchLink(prop.value, prop.badgeClass);
-                    }
-                    else if (prop.badgeClass) {
+                    } else if (prop.badgeClass) {
                         htmlContent = `<span class="tag-badge ${prop.badgeClass}">${prop.value}</span>`;
                     }
 
@@ -161,7 +166,7 @@
             }
         }
 
-        // 2. 加载 Markdown 内容
+        // 2. 加载 Markdown 内容 (修改后)
         function loadMarkdownContent(item) {
             const descEl = document.getElementById('d-desc');
 
@@ -173,19 +178,69 @@
                         return res.text();
                     })
                     .then(text => {
+                        // 1. 渲染 HTML
                         descEl.innerHTML = marked.parse(text);
+                        // 2. 【关键】生成目录
+                        generateTOC();
                     })
                     .catch(err => {
                         console.error(err);
                         descEl.innerHTML = item.desc ? marked.parse(item.desc) : `<p style='color:red'>加载说明文件失败。</p>`;
+                        // 如果加载失败但有备用描述，也尝试生成目录
+                        if (item.desc) generateTOC();
                     });
-            } 
-            else if (item.desc) {
+            } else if (item.desc) {
                 descEl.innerHTML = marked.parse(item.desc);
-            } 
-            else {
+                // 【关键】直接渲染字符串描述时，也要生成目录
+                generateTOC();
+            } else {
                 descEl.innerHTML = "<p style='color:#999'>暂无详细说明。</p>";
+                // 没有内容时隐藏目录
+                document.querySelector('.toc-container').style.display = 'none';
             }
+        }
+
+        // --- 【新增】自动生成目录函数 ---
+        function generateTOC() {
+            const content = document.getElementById('d-desc'); // 目标是文章容器
+            const tocContainer = document.querySelector('.toc-container');
+            const tocList = document.getElementById('toc-list');
+
+            // 1. 找到文章里所有的 h1, h2, h3
+            const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+            // 如果没有标题，就隐藏目录栏
+            if (headers.length === 0) {
+                tocContainer.style.display = 'none';
+                return;
+            }
+
+            // 显示目录栏
+            tocContainer.style.display = 'block';
+            tocList.innerHTML = ''; // 清空旧内容
+
+            headers.forEach((header, index) => {
+                // 2. 确保每个标题都有 ID (为了让链接能跳过去)
+                if (!header.id) {
+                    header.id = 'heading-' + index;
+                }
+
+                // 3. 生成目录链接
+                const link = document.createElement('a');
+                link.href = '#' + header.id;
+                link.textContent = header.textContent;
+                link.className = 'toc-link toc-' + header.tagName.toLowerCase(); // 例如 class="toc-link toc-h2"
+
+                // 4. 点击平滑滚动效果
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    header.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                };
+
+                tocList.appendChild(link);
+            });
         }
     </script>
 </body>

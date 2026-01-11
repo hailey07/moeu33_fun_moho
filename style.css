@@ -66,6 +66,14 @@ a {
   border-radius: 50%;
   object-fit: cover;
   border: 1.5px solid var(--border-color);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease;
+  transform-origin: center center;
+}
+
+.header-logo:hover {
+  transform: scale(1.15) rotate(15deg);
+  border-color: #f06595;
+  cursor: pointer;
 }
 
 .navbar p {
@@ -226,59 +234,23 @@ a {
 }
 
 /* 颜色侧边栏 */
-.color-red {
-  border-left: 5px solid #ff7e79 !important;
-  background: #fffcfc;
-}
+.color-red { border-left: 5px solid #ff7e79 !important; background: #fffcfc; }
+.color-red:hover { background: #ffebeb; }
 
-.color-red:hover {
-  background: #ffebeb;
-}
+.color-blue { border-left: 5px solid #2eaadc !important; background: #f8fbff; }
+.color-blue:hover { background: #e6f4ff; }
 
-.color-blue {
-  border-left: 5px solid #2eaadc !important;
-  background: #f8fbff;
-}
+.color-green { border-left: 5px solid #45b649 !important; background: #fafffa; }
+.color-green:hover { background: #eaffea; }
 
-.color-blue:hover {
-  background: #e6f4ff;
-}
+.color-purple { border-left: 5px solid #9d4edd !important; background: #fdfaff; }
+.color-purple:hover { background: #f5e6ff; }
 
-.color-green {
-  border-left: 5px solid #45b649 !important;
-  background: #fafffa;
-}
+.color-orange { border-left: 5px solid #ff9f1c !important; background: #fffdf8; }
+.color-orange:hover { background: #fff0d4; }
 
-.color-green:hover {
-  background: #eaffea;
-}
-
-.color-purple {
-  border-left: 5px solid #9d4edd !important;
-  background: #fdfaff;
-}
-
-.color-purple:hover {
-  background: #f5e6ff;
-}
-
-.color-orange {
-  border-left: 5px solid #ff9f1c !important;
-  background: #fffdf8;
-}
-
-.color-orange:hover {
-  background: #fff0d4;
-}
-
-.color-gray {
-  border-left: 5px solid #b0b0b0 !important;
-  background: #f9f9f9;
-}
-
-.color-gray:hover {
-  background: #eeeeee;
-}
+.color-gray { border-left: 5px solid #b0b0b0 !important; background: #f9f9f9; }
+.color-gray:hover { background: #eeeeee; }
 
 /* ========================================= */
 /* 4. 表格视图 (Table View) */
@@ -346,7 +318,6 @@ a {
   border: 1px solid var(--script-icon-bg);
 }
 
-/* --- [交互核心] 表格行样式 --- */
 .table-view tbody tr {
   background: #fff;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -376,9 +347,10 @@ a {
 /* 5. 详情页 (Detail Page) */
 /* ========================================= */
 .detail-container {
-  max-width: 900px;
+  /* 【修改】加宽容器，给文章和目录留出更多空间 */
+  max-width: 1200px; 
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 40px; /* 稍微增加内边距 */
 }
 
 .breadcrumb {
@@ -387,15 +359,6 @@ a {
   font-size: 18px;
   display: flex;
   align-items: end;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-  color: var(--text-main);
-  padding-left: 4px;
-  font-weight:bold;
-  transition: all 0.2s ease;
-  color: #f06595;
 }
 
 .detail-header {
@@ -419,6 +382,23 @@ a {
   box-shadow: 4px 4px 0px 0px var(--black);
   padding: 8px;
   flex-shrink: 0;
+}
+
+/* 详情页大图标动效 */
+.detail-icon img,
+.detail-icon svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.detail-icon img:hover,
+.detail-icon svg:hover {
+  transform: scale(1.5) rotate(-5deg);
+  box-shadow: 6px 6px 0px 0px var(--black);
+  cursor: grab;
+}
+
+.detail-icon img:active {
+  cursor: grabbing;
 }
 
 .detail-title {
@@ -467,7 +447,6 @@ a {
   flex-wrap: wrap;
 }
 
-/* 下载按钮 */
 .btn-download {
   display: inline-block;
   background: var(--primary-color);
@@ -509,24 +488,28 @@ a {
   margin-bottom: 50px;
 }
 
-.content-area h1,
-.content-area h2,
-.content-area h3 {
+.content-area h1, .content-area h2, .content-area h3 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.3;
   font-weight: 700;
 }
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  font-weight: 600; /* 稍微细一点 */
+  color: #555;      /* 颜色稍微浅一点，区分层级 */
+}
 
-.content-area ul,
-.content-area ol {
+.content-area ul, .content-area ol {
   padding-left: 20px;
   margin: 1em 0;
 }
 
-.content-area li {
-  margin-bottom: 0.5em;
-}
+.content-area li { margin-bottom: 0.5em; }
 
 .content-area code {
   background: #eee;
@@ -544,10 +527,7 @@ a {
   border: 1px solid #ddd;
 }
 
-.content-area pre code {
-  background: none;
-  padding: 0;
-}
+.content-area pre code { background: none; padding: 0; }
 
 .content-area img {
   max-width: 100%;
@@ -584,9 +564,7 @@ a {
 .tag-orange { background-color: #fff4e6; color: #e8590c; border-color: #ffe8cc; }
 .tag-gray { background-color: #f8f9fa; color: #495057; border-color: #dee2e6; }
 
-/* --- [新增] 详情页中可点击标签的交互效果 --- */
 .prop-val a.tag-badge:hover {
-  /* filter: brightness(0.95); */
   transform: translateY(-2px);
   box-shadow: 2px 2px 0px 0px var(--black);
   transition: all 0.2s ease;
@@ -609,4 +587,202 @@ body.app-mode .navbar {
   z-index: 20;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(5px);
+}
+
+/* ========================================= */
+/* 9. 顶部标题与链接优化 (Header Optimization) */
+/* ========================================= */
+.top-announcement {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0px 30px 0;
+    /* 增加底部虚线，增强区分感 */
+    /* border-bottom: 1.5px dashed var(--border-color); */
+    padding-bottom: 15px;
+}
+
+.header-main-title {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid transparent; 
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center bottom;
+}
+
+.header-main-title:hover {
+    color: #f06595;
+    border-bottom-color: #f06595;
+    transform: scale(1.08);
+}
+
+.header-desc-container {
+    color: var(--text-light);
+    font-size: 16px;
+    margin: 10px 0 30px 0;
+    text-align: center;
+}
+
+.header-sub-link {
+    display: inline-block;
+    padding: 6px 14px; /* 调整回舒适的大小 */
+    margin-right: 10px;
+    margin-left: 0;
+    background-color: #fff4e6;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header-sub-link:hover {
+    border-color: var(--black);
+    color: var(--black);
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px var(--black);
+    background-color: #ffe8cc; 
+}
+
+/* ========================================= */
+/* 10. 详情页交互动效优化 */
+/* ========================================= */
+.breadcrumb-home-icon {
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid #687078;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease;
+}
+
+.breadcrumb-home-icon:hover {
+    transform: rotate(20deg) scale(1.1);
+    border-color: #f06595;
+    cursor: pointer;
+}
+
+.breadcrumb-link {
+    margin-left: 10px; 
+    padding: 0 4px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    border-bottom: 2px solid transparent; 
+    transition: all 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #f06595;
+    font-weight: bold;
+    padding: 0 10px; /* 原地撑开效果 */
+    text-decoration: none;
+    border-bottom: 2px solid #f06595;
+}
+
+/* ========================================= */
+/* 11. 文章目录布局 (Table of Contents) - 已修复 */
+/* ========================================= */
+
+.article-layout {
+    display: flex;
+    gap: 50px; /* 【修改】增加间距，让目录离文章更远一点，更清爽 */
+    
+    /* 【关键修改】使用 stretch 撑满高度，这是 sticky 滚动的关键 */
+    align-items: stretch; 
+    
+    margin-top: 30px;
+    position: relative;
+}
+
+/* 左侧文章：占据剩余空间 */
+.content-area {
+    flex: 1; 
+    min-width: 0;
+}
+
+/* 右侧目录容器 */
+.toc-container {
+    width: 240px; 
+    flex-shrink: 0; 
+    display: none; 
+}
+
+/* 目录的粘性盒子 (滚动跟随) */
+.toc-sticky-box {
+    position: sticky;
+    top: 100px;
+    
+    background: #fff;
+    border: none;
+    border-left: 2px solid #eee;
+    border-radius: 0;
+    
+    padding: 10px 0 10px 20px;
+    max-height: 80vh;
+    
+    /* 【关键修改】只允许竖向滚动，强制隐藏横向滚动条 */
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.toc-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #333;
+    padding-bottom: 0;
+    border-bottom: none; /* 去掉标题下划线，更干净 */
+    /* 【建议添加】防止长文字被切掉，强制换行 */
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* 目录链接样式 */
+.toc-link {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 13px; /* 字体稍微调小 */
+    margin-bottom: 8px;
+    line-height: 1.5;
+    transition: all 0.2s;
+}
+
+.toc-link:hover {
+    color: #f06595;
+    transform: translateX(3px); /* 悬停时微微右移 */
+}
+
+/* 不同层级缩进 */
+.toc-h1 { margin-left: 0; font-weight: bold; }
+.toc-h2 { margin-left: 10px; }
+.toc-h3 { margin-left: 20px; font-size: 12px; opacity: 0.8; }
+.toc-h4 { margin-left: 30px; font-size: 12px; opacity: 0.8; }
+.toc-h5 { margin-left: 40px; font-size: 12px; opacity: 0.7; }
+.toc-h6 { margin-left: 50px; font-size: 12px; opacity: 0.6; }
+
+/* 📱 手机端适配：把目录放到最上面 */
+@media (max-width: 800px) {
+    .article-layout {
+        flex-direction: column-reverse; 
+        gap: 20px;
+    }
+    .toc-container {
+        width: 100%;
+        display: block;
+    }
+    .toc-sticky-box {
+        position: static; 
+        border-left: none;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
 }

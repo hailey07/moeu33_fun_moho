@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何安装脚本 - Moho 脚本</title>
+    <base href="/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/Favicon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+    <div class="detail-container">
+        <div class="breadcrumb">
+            <span class="home-icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
+                <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
+            </span>
+            <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">安装教程</span>
+        </div>
+
+        <div id="content" style="display: block;">
+            
+            <div class="detail-header">
+                <div class="detail-icon">
+                    <span style="font-size: 50px; line-height: 64px;">✅</span>
+                    </div>
+                <h1 class="detail-title">如何安装 Moho 脚本</h1>
+            </div>
+
+
+            <div class="article-layout">
+                
+                <div class="content-area" id="article-content">
+                    <p style="text-align:center; color:#999;">正在加载教程...</p>
+                </div>
+
+                <aside class="toc-container">
+                    <div class="toc-sticky-box">
+                        <h3 class="toc-title">📖 目录</h3>
+                        <div id="toc-list"></div> 
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 指定 Markdown 文件路径
+            const mdFile = 'otherdocs/install.md'; 
+
+            fetch(mdFile)
+                .then(res => {
+                    if (!res.ok) throw new Error("无法读取文件");
+                    return res.text();
+                })
+                .then(text => {
+                    const contentDiv = document.getElementById('article-content');
+                    // 1. 渲染 Markdown
+                    contentDiv.innerHTML = marked.parse(text);
+                    
+                    // 2. 生成目录
+                    generateTOC(); 
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById('article-content').innerHTML = 
+                        `<h3 style="color:red; text-align:center;">😢 加载教程失败，请检查 docs/install.md 是否存在。</h3>`;
+                });
+        });
+
+        // --- 自动生成目录函数 (和 detail.html 通用) ---
+        function generateTOC() {
+            const content = document.getElementById('article-content');
+            const tocContainer = document.querySelector('.toc-container');
+            const tocList = document.getElementById('toc-list');
+            
+            // 1. 找到文章里所有的 h1, h2, h3
+            const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            
+            // 如果没有标题，就隐藏目录栏
+            if (headers.length === 0) {
+                tocContainer.style.display = 'none';
+                return;
+            }
+            
+            // 显示目录栏
+            tocContainer.style.display = 'block';
+            tocList.innerHTML = ''; // 清空旧内容
+
+            headers.forEach((header, index) => {
+                // 2. 确保每个标题都有 ID
+                if (!header.id) {
+                    header.id = 'heading-' + index;
+                }
+
+                // 3. 生成目录链接
+                const link = document.createElement('a');
+                link.href = '#' + header.id;
+                link.textContent = header.textContent;
+                link.className = 'toc-link toc-' + header.tagName.toLowerCase(); 
+                
+                // 4. 点击平滑滚动效果
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    header.scrollIntoView({ behavior: 'smooth' });
+                };
+
+                tocList.appendChild(link);
+            });
+        }
+    </script>
+</body>
+</html>
