@@ -71,11 +71,30 @@ function renderBoard(container, data) {
     container.className = 'board-view';
     
     const colorMap = {
-        "骨骼": "color-red", "绘图": "color-blue", "动画": "color-green",
-        "图层": "color-purple", "其他": "color-orange", "脚本": "color-gray"
+        "绘图": "color-orange", "图层": "color-blue", "动画": "color-red", "骨骼": "color-purple", 
+        "其他": "color-yellow", "软件协作":"color-teal", "文档清理": "color-gray"
     };
 
-    const categories = [...new Set(data.map(item => item.category))];
+    // --- 【修改开始】自定义排序逻辑 ---
+    
+    // 1. 在这里定义你想要的显示顺序
+    const categoryOrder = ["绘图", "图层", "动画", "骨骼", "软件协作", "文档清理", "其他"];
+
+    // 2. 获取数据中实际存在的所有分类
+    let categories = [...new Set(data.map(item => item.category))];
+
+    // 3. 根据你定义的顺序进行排序
+    categories.sort((a, b) => {
+        let indexA = categoryOrder.indexOf(a);
+        let indexB = categoryOrder.indexOf(b);
+
+        // 如果某个分类没在 categoryOrder 里定义（比如新加的），就把它放到最后
+        if (indexA === -1) indexA = 999;
+        if (indexB === -1) indexB = 999;
+
+        return indexA - indexB;
+    });
+    // --- 【修改结束】 ---
 
     categories.forEach(cat => {
         const items = data.filter(item => item.category === cat);

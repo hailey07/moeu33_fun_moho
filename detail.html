@@ -12,17 +12,17 @@
 
 <body>
 
-    <div class="detail-container">
+    <div class="detail-container" style="width: 100%;">
         <div class="breadcrumb">
-            <span class="home-icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
+            <span class="home-icon" href="index" style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
                 <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
             </span>
-            <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">加载中...</span>
+            <a href="index" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">加载中...</span>
         </div>
 
         <div id="loading">正在读取数据...</div>
 
-        <div id="content" style="display: none;">
+        <div id="content" style="max-width:80%; margin:auto;">
             <div class="detail-header">
                 <div class="detail-icon" id="d-icon"></div>
                 <h1 class="detail-title" id="d-title"></h1>
@@ -30,20 +30,21 @@
 
             <div class="prop-table" id="prop-table-body"></div>
 
-            <a href="#" id="d-download" class="btn-download" target="_blank" style="margin: 30px 0; width: 100%;">⬇️
+            <a href="#" id="d-download" class="btn-download" target="_blank" style="width: 100%;">⬇️
                 点击下载资源</a>
 
-            <span style="margin-left: 10px; font-size: 20px; font-weight: bold;"> 📋 详细说明：</span>
+            <span style="margin-left: 10px; font-size: 20px; font-weight: bold; white-space: nowrap;"> 📋 详细说明：</span>
             <hr />
 
             <div class="article-layout">
-                
+
                 <div class="content-area" id="d-desc"></div>
 
                 <aside class="toc-container">
                     <div class="toc-sticky-box">
                         <h3 class="toc-title">📖 目录</h3>
-                        <div id="toc-list"></div> </div>
+                        <div id="toc-list"></div>
+                    </div>
                 </aside>
 
             </div>
@@ -244,4 +245,5 @@
         }
     </script>
 </body>
+
 </html>

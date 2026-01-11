@@ -1,60 +1,79 @@
-This tool will select objects that have any keys selected in relevant timeline channels. Zero or more timeline keys can be selected. If no relevant keys are selected all the objects will be deselected.
+此工具会选中在相关时间轴通道中已设置关键帧的对象。可以选择零个或多个关键帧。如果没有选择任何关键帧，则所有对象都将被取消选择。
 
-This version works only on Points in vector layers and Bones in bone type layers (i.e. Bone and Switch layers).
-It will run on Moho 12 and later.
+此版本仅适用于矢量图层中的点和骨骼类型图层（例如骨骼图层和切换图层）中的骨骼。
 
+它可在 Moho 12 及更高版本上运行。
 
-For points the following animation channels are checked:
-- Position
-- Width
-- Curvature
-- Point colour
-- Point colour strength
-Additionally for Moho 14.3 (and later)
-- Point colour drift 
-- Point opacity
+对于点，将检查以下动画通道：
 
+- 位置
 
-For bones the following animation channels are checked:
-- Position
-- Angle
-- Scale
-- Parent
-- Target Bone
-- Flip Horizontal
-- Flip Vertical
-- IK Global Angle
-- IK Lock
-- IK Parent Target
-- Physics Motor Speed
+- 宽度
 
-An object will be selected if it has any key selected and will be de-selected if it has no keys selected.
+- 曲率
 
+- 点颜色
 
-Notes
+- 点颜色强度
+
+对于 Moho 14.3（及更高版本），还会检查以下通道：
+
+- 点颜色漂移
+
+- 点不透明度
+
+对于骨骼，将检查以下动画通道：
+
+- 位置
+
+- 角度
+
+- 缩放
+
+- 父级
+
+- 目标骨骼
+
+- 水平翻转
+
+- 垂直翻转
+
+- IK 全局角度
+
+- IK 锁定
+
+- IK 父级目标
+
+- 物理引擎速度
+
+如果对象已设置任何关键帧，则会选中该对象；如果没有设置任何关键帧，则会取消选中该对象。
+
+## 备注
 =====
 
-The timeline cursor can be anywhere in the timeline.
-The key at frame 0 is ignored.
+时间轴光标可以位于时间轴上的任意位置。
 
+第 0 帧的关键帧将被忽略。
 
-What’s changed in this version?
+##### 此版本有哪些更改？
 ==========================
-1.01 added support for bones in switch layers (28 December 2017)
-[Versions 1.00 and 1.01 were created before this script repository.]
 
-1.04 added support for the new point colour features in Moho 14.3
+1.01 版本新增了对切换图层中骨骼的支持（2017 年 12 月 28 日）
 
+[版本 1.00 和 1.01 是在此脚本库创建之前发布的。]
 
-Known Issues
+1.04 版本新增了对 Moho 14.3 中新增的点颜色功能的支持
+
+## 已知问题
 ============
 
-None, but enhancement requests or error reports are always welcomed.
+目前没有已知问题，但我们始终欢迎您提出改进建议或错误报告。
 
-2 March 2025
+2025年3月2日
 
 ---
 
 ![Image](https://i.postimg.cc/XYbqkJGy/image.png)
 
 ![Image](https://i.postimg.cc/5yHRkbrh/image.png)
+
