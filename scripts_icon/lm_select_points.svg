@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="lm_select_points_large" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="342.58" y="543.81" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" x="8.01" y="4" width="2.91" height="3.89"/>
+  <rect class="cls-1" x="8.01" y="12.74" width="2.91" height="5.81"/>
+  <rect class="cls-1" x="8.01" y="23.4" width="2.91" height="5.81"/>
+  <rect class="cls-1" x="8.04" y="4" width="6.75" height="2.92"/>
+  <rect class="cls-1" x="19.64" y="4" width="5.81" height="2.92"/>
+  <rect class="cls-1" x="30.3" y="4" width="5.81" height="2.92"/>
+  <rect class="cls-1" x="37.08" y="31.15" width="2.91" height="4.85" transform="translate(77.07 67.15) rotate(180)"/>
+  <rect class="cls-1" x="37.08" y="20.49" width="2.91" height="5.81" transform="translate(77.07 46.8) rotate(180)"/>
+  <rect class="cls-1" x="37.08" y="9.83" width="2.91" height="5.81" transform="translate(77.07 25.48) rotate(180)"/>
+  <rect class="cls-1" x="32.24" y="33.08" width="7.72" height="2.92" transform="translate(72.19 69.08) rotate(180)"/>
+  <rect class="cls-1" x="21.58" y="33.08" width="5.81" height="2.92" transform="translate(48.96 69.08) rotate(180)"/>
+  <rect class="cls-1" x="10.92" y="33.08" width="5.81" height="2.92" transform="translate(27.65 69.08) rotate(180)"/>
+</svg>

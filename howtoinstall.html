@@ -22,25 +22,26 @@
         </div>
 
         <div id="content" style="max-width:80%; margin:auto;">
-            
+
             <div class="detail-header">
                 <div class="detail-icon">
                     <span style="font-size: 50px; line-height: 64px;">🌟</span>
-                    </div>
+                </div>
                 <h1 class="detail-title">如何安装 Moho 脚本</h1>
             </div>
 
 
             <div class="article-layout">
-                
+
                 <div class="content-area" id="article-content">
-                    <p style="text-align:center; color:#999;">正在加载教程...</p>
+                    <img src="assets/loading.gif" alt="Loading..."
+                        style="width: 150px; height: 150px; margin: 10px; display:flex; align-items:center;justify-content: center;border: none;box-shadow: none;">
                 </div>
 
                 <aside class="toc-container">
                     <div class="toc-sticky-box">
                         <h3 class="toc-title">📖 目录</h3>
-                        <div id="toc-list"></div> 
+                        <div id="toc-list"></div>
                     </div>
                 </aside>
 
@@ -51,7 +52,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 指定 Markdown 文件路径
-            const mdFile = 'otherdocs/install.md'; 
+            const mdFile = 'otherdocs/install.md';
 
             fetch(mdFile)
                 .then(res => {
@@ -62,13 +63,13 @@
                     const contentDiv = document.getElementById('article-content');
                     // 1. 渲染 Markdown
                     contentDiv.innerHTML = marked.parse(text);
-                    
+
                     // 2. 生成目录
-                    generateTOC(); 
+                    generateTOC();
                 })
                 .catch(err => {
                     console.error(err);
-                    document.getElementById('article-content').innerHTML = 
+                    document.getElementById('article-content').innerHTML =
                         `<h3 style="color:red; text-align:center;">😢 加载教程失败，请检查 docs/install.md 是否存在。</h3>`;
                 });
         });
@@ -78,16 +79,16 @@
             const content = document.getElementById('article-content');
             const tocContainer = document.querySelector('.toc-container');
             const tocList = document.getElementById('toc-list');
-            
+
             // 1. 找到文章里所有的 h1, h2, h3
             const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
-            
+
             // 如果没有标题，就隐藏目录栏
             if (headers.length === 0) {
                 tocContainer.style.display = 'none';
                 return;
             }
-            
+
             // 显示目录栏
             tocContainer.style.display = 'block';
             tocList.innerHTML = ''; // 清空旧内容
@@ -102,8 +103,8 @@
                 const link = document.createElement('a');
                 link.href = '#' + header.id;
                 link.textContent = header.textContent;
-                link.className = 'toc-link toc-' + header.tagName.toLowerCase(); 
-                
+                link.className = 'toc-link toc-' + header.tagName.toLowerCase();
+
                 // 4. 点击平滑滚动效果
                 link.onclick = (e) => {
                     e.preventDefault();
@@ -115,4 +116,5 @@
         }
     </script>
 </body>
+
 </html>

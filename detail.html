@@ -7,6 +7,7 @@
     <title>资源详情</title>
     <base href="/">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/Favicon.png" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
@@ -20,7 +21,9 @@
             <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">加载中...</span>
         </div>
 
-        <div id="loading">正在读取数据...</div>
+        <div id="loading">
+            <img src="assets/loading.gif" alt="Loading..." style="width: 150px; height: 150px; margin: 10px; display:flex; align-items:center;justify-content: center;border: none;box-shadow: none;">
+        </div>
 
         <div id="content" style="max-width:80%; margin:auto;">
             <div class="detail-header">
@@ -35,9 +38,7 @@
 
             <div class="xiangxishuoming"> 📋 详细说明：</div>
             
-
             <div class="article-layout">
-
                 <div class="content-area" id="d-desc"></div>
 
                 <aside class="toc-container">
@@ -46,16 +47,16 @@
                         <div id="toc-list"></div>
                     </div>
                 </aside>
-
             </div>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- ID 获取逻辑 ---
+            // --- 1. 获取 URL 中的 ID 参数 ---
             let targetId = null;
 
+            // 尝试从路径获取 (例如 /scripts/mr_curve_tool)
             const pathSegments = window.location.pathname.split('/').filter(Boolean);
             const lastSegment = pathSegments[pathSegments.length - 1];
 
@@ -63,6 +64,7 @@
                 targetId = decodeURIComponent(lastSegment);
             }
 
+            // 如果路径没有，尝试从查询参数获取 (例如 ?id=mr_curve_tool)
             if (!targetId) {
                 const params = new URLSearchParams(window.location.search);
                 targetId = params.get('id');
@@ -73,7 +75,7 @@
                 return;
             }
 
-            // 读取 data.json
+            // --- 2. 读取 data.json 并查找对应数据 ---
             fetch('data.json')
                 .then(res => res.json())
                 .then(data => {
@@ -96,7 +98,7 @@
             document.body.innerHTML = `<h2 style='text-align:center;margin-top:50px'>${msg}</h2>`;
         }
 
-        // 1. 渲染基础信息
+        // --- 3. 渲染基础信息 (图标、标题、属性表) ---
         function renderBaseInfo(item) {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('content').style.display = 'block';
@@ -109,6 +111,7 @@
             const propContainer = document.getElementById('prop-table-body');
             propContainer.innerHTML = '';
 
+            // 辅助函数：生成可点击的搜索链接标签
             const createSearchLink = (text, badgeClass) => {
                 return `<a href="index.html?q=${encodeURIComponent(text)}" 
                            class="tag-badge ${badgeClass || ''}" 
@@ -117,13 +120,13 @@
             };
 
             const propsConfig = [
-                { label: '🗂️ 标签', value: item.category, badgeClass: 'tag-blue', isSearchable: true },
+                { label: '🗂️ 标签', value: item.category, type: 'array', badgeClass: 'tag-blue', isSearchable: true },
                 { label: '🏷️ 分类', value: item.tags, type: 'array', badgeClass: 'tag-orange', isSearchable: true },
                 { label: '🔢 版本', value: item.version ? "v" + item.version : null, badgeClass: 'tag-gray' },
-                { label: '👤 作者', value: item.author, badgeClass: 'tag-purple', isSearchable: true },
+                { label: '👤 作者', value: item.author, type: 'array', badgeClass: 'tag-purple', isSearchable: true },
                 { label: '📅 更新日期', value: item.date },
                 { label: '📝 脚本名称', value: item.realName },
-                { label: '⚙️ 适配版本', value: item.supportVer, badgeClass: 'tag-green', isSearchable: true },
+                { label: '⚙️ 适配版本', value: item.supportVer, type: 'array', badgeClass: 'tag-green', isSearchable: true },
                 { label: '🔗 发布页面', value: item.publishPage, type: 'link' }
             ];
 
@@ -161,78 +164,85 @@
             if (item.link && item.link !== "#") {
                 btn.href = item.link;
             } else {
-                btn.textContent = "暂无下载链接";
+                btn.textContent = "暂不提供下载";
                 btn.classList.add('btn-disabled');
                 btn.removeAttribute('href');
             }
         }
 
-        // 2. 加载 Markdown 内容 (修改后)
+        // --- 4. 加载并渲染 Markdown 内容 ---
         function loadMarkdownContent(item) {
             const descEl = document.getElementById('d-desc');
+            // 加载中文案
+            const loadingHTML = "<p style='color:#876d4a;font-weight:500;font-size:18px;display:flex;align-items:center;justify-content:center;'><img src='assets/loading.gif' style='width: 100px; height: 100px; margin:0;border:none;box-shadow:none;''><span>正在加载...</span></p>";
+            // 无内容文案
+            const emptyHTML = "<p style='color:#876d4a;font-weight:500;font-size:18px;display:flex;align-items:center;justify-content:center;'><img src='assets/not_found.gif' style='width: 100px; height: 100px; margin:0;border:none;box-shadow:none;''><span>没有说明。</span></p>";
+
+            // 【新增】统一的处理流程：渲染目录 -> 转换视频 -> 绑定图片点击
+            const processContent = () => {
+                generateTOC();
+                convertImagesToVideos(); // 关键步骤：先把视频链接变成播放器
+                setupImageLightbox();    // 然后再给剩下的普通图片加点击放大
+            };
 
             if (item.descUrl) {
-                descEl.innerHTML = "<p style='color:#666'>⏳ 正在加载详细说明...</p>";
+                descEl.innerHTML = loadingHTML;
                 fetch(item.descUrl)
                     .then(res => {
                         if (!res.ok) throw new Error("文件加载失败");
                         return res.text();
                     })
                     .then(text => {
-                        // 1. 渲染 HTML
+                        // 渲染 Markdown
                         descEl.innerHTML = marked.parse(text);
-                        // 2. 【关键】生成目录
-                        generateTOC();
+                        processContent();
                     })
                     .catch(err => {
                         console.error(err);
-                        descEl.innerHTML = item.desc ? marked.parse(item.desc) : `<p style='color:red'>加载说明文件失败。</p>`;
-                        // 如果加载失败但有备用描述，也尝试生成目录
-                        if (item.desc) generateTOC();
+                        // 尝试降级使用 desc 字段
+                        if (item.desc) {
+                            descEl.innerHTML = marked.parse(item.desc);
+                            processContent();
+                        } else {
+                            descEl.innerHTML = emptyHTML;
+                            document.querySelector('.toc-container').style.display = 'none';
+                        }
                     });
             } else if (item.desc) {
                 descEl.innerHTML = marked.parse(item.desc);
-                // 【关键】直接渲染字符串描述时，也要生成目录
-                generateTOC();
+                processContent();
             } else {
-                descEl.innerHTML = "<p style='color:#999'>暂无详细说明。</p>";
-                // 没有内容时隐藏目录
+                descEl.innerHTML = emptyHTML;
                 document.querySelector('.toc-container').style.display = 'none';
             }
         }
 
-        // --- 【新增】自动生成目录函数 ---
+        // --- 5. 自动生成目录 (TOC) ---
         function generateTOC() {
-            const content = document.getElementById('d-desc'); // 目标是文章容器
+            const content = document.getElementById('d-desc');
             const tocContainer = document.querySelector('.toc-container');
             const tocList = document.getElementById('toc-list');
 
-            // 1. 找到文章里所有的 h1, h2, h3
             const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
-            // 如果没有标题，就隐藏目录栏
             if (headers.length === 0) {
                 tocContainer.style.display = 'none';
                 return;
             }
 
-            // 显示目录栏
             tocContainer.style.display = 'block';
-            tocList.innerHTML = ''; // 清空旧内容
+            tocList.innerHTML = '';
 
             headers.forEach((header, index) => {
-                // 2. 确保每个标题都有 ID (为了让链接能跳过去)
                 if (!header.id) {
                     header.id = 'heading-' + index;
                 }
 
-                // 3. 生成目录链接
                 const link = document.createElement('a');
                 link.href = '#' + header.id;
                 link.textContent = header.textContent;
-                link.className = 'toc-link toc-' + header.tagName.toLowerCase(); // 例如 class="toc-link toc-h2"
+                link.className = 'toc-link toc-' + header.tagName.toLowerCase();
 
-                // 4. 点击平滑滚动效果
                 link.onclick = (e) => {
                     e.preventDefault();
                     header.scrollIntoView({
@@ -241,6 +251,84 @@
                 };
 
                 tocList.appendChild(link);
+            });
+        }
+
+        // --- 【新增】6. 将指向视频的 img 标签转换为 video 标签 ---
+        function convertImagesToVideos() {
+            const content = document.getElementById('d-desc');
+            const images = content.querySelectorAll('img');
+            
+            images.forEach(img => {
+                const src = img.getAttribute('src');
+                if (!src) return;
+
+                // 检查后缀名 (支持 mp4, webm, mov, ogg)
+                if (src.match(/\.(mp4|webm|mov|ogg)$/i)) {
+                    const video = document.createElement('video');
+                    video.src = src;
+                    video.controls = true; // 显示播放控制条
+                    video.preload = "metadata";
+                    
+                    if (img.alt) video.title = img.alt;
+                    
+                    // 继承或重置样式
+                    video.style.maxWidth = '100%';
+                    video.style.display = 'block';
+                    video.style.margin = '20px auto';
+                    
+                    // 替换 DOM 节点
+                    img.parentNode.replaceChild(video, img);
+                }
+            });
+        }
+
+        // --- 7. 图片点击放大功能 (Lightbox) ---
+        function setupImageLightbox() {
+            const content = document.getElementById('d-desc');
+            // 只选择文章内容区域内的图片
+            const images = content.querySelectorAll('img');
+
+            images.forEach(img => {
+                // 只有当图片不是加载图标时才绑定
+                if (img.src.includes('loading.gif') || img.src.includes('not_found.gif')) return;
+
+                img.style.cursor = 'zoom-in'; // 鼠标悬停提示可点击
+
+                img.onclick = () => {
+                    // 创建遮罩层
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100vw';
+                    overlay.style.height = '100vh';
+                    overlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
+                    overlay.style.zIndex = '9999';
+                    overlay.style.display = 'flex';
+                    overlay.style.alignItems = 'center';
+                    overlay.style.justifyContent = 'center';
+                    overlay.style.cursor = 'zoom-out';
+                    
+                    // 创建大图
+                    const largeImg = document.createElement('img');
+                    largeImg.src = img.src;
+                    largeImg.style.maxWidth = '90%';
+                    largeImg.style.maxHeight = '90%';
+                    largeImg.style.borderRadius = '8px';
+                    largeImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)';
+                    largeImg.style.border = '2px solid #fff';
+
+                    // 点击任意处关闭
+                    overlay.onclick = () => {
+                        document.body.removeChild(overlay);
+                        document.body.style.overflow = 'auto'; // 恢复滚动
+                    };
+
+                    overlay.appendChild(largeImg);
+                    document.body.appendChild(overlay);
+                    document.body.style.overflow = 'hidden'; // 禁止背景滚动
+                };
             });
         }
     </script>

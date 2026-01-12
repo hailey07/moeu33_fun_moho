@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dr_setzero" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b8b8b8;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: red;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="342.58" y="274.88" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <path class="cls-1" d="M24,5.39c8.06,0,14.61,6.55,14.61,14.61s-6.55,14.61-14.61,14.61-14.61-6.54-14.61-14.61,6.55-14.61,14.61-14.61h0Z"/>
+    <path d="M24,35.85c-8.74,0-15.85-7.11-15.85-15.85s7.11-15.85,15.85-15.85,15.85,7.11,15.85,15.85-7.11,15.85-15.85,15.85ZM24,6.63c-7.37,0-13.37,6-13.37,13.37s6,13.37,13.37,13.37,13.37-6,13.37-13.37-6-13.37-13.37-13.37Z"/>
+  </g>
+  <rect class="cls-2" x="22.76" y="-1.39" width="2.48" height="42.77" transform="translate(-7.11 22.83) rotate(-45)"/>
+  <rect class="cls-2" x="2.61" y="18.76" width="42.77" height="2.48" transform="translate(-7.11 22.83) rotate(-45)"/>
+</svg>

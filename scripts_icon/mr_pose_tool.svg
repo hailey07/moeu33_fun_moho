@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Eugene_Babich" data-name="Eugene Babich" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #f1241a;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #ffc24d;
+      }
+
+      .cls-3 {
+        fill: #ff968c;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-312.09" y="5.96" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_图层_99" data-name="图层 99">
+    <g>
+      <polygon class="cls-1" points="37.54 6.64 16.17 35.06 9.11 35.06 9.11 28.01 37.54 6.64"/>
+      <circle class="cls-2" cx="12.84" cy="24.18" r="4.8"/>
+      <circle class="cls-3" cx="19.82" cy="31.16" r="4.8"/>
+      <circle class="cls-2" cx="28.18" cy="8.84" r="4.8"/>
+      <circle class="cls-3" cx="35.16" cy="15.82" r="4.8"/>
+    </g>
+  </g>
+</svg>

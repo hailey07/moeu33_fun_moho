@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="am_bone_constrains_helper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00af00;
+      }
+
+      .cls-2 {
+        fill: #af0000;
+      }
+
+      .cls-3 {
+        fill: #0000af;
+      }
+
+      .cls-4 {
+        fill: #404453;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="274.36" y="409.34" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <g>
+      <rect class="cls-4" x="8.73" y="29.35" width="25.49" height="3.55"/>
+      <polygon class="cls-4" points="33.45 27.21 43 31.13 33.45 35.04 33.45 27.21"/>
+    </g>
+    <g>
+      <rect class="cls-4" x="7.02" y="24.37" width="26.04" height="3.55" transform="translate(-8.64 9.94) rotate(-23.06)"/>
+      <polygon class="cls-4" points="29.78 17.75 40.1 17.61 32.84 24.96 29.78 17.75"/>
+    </g>
+    <g>
+      <polygon class="cls-4" points="8.75 32.89 24.98 13.85 22.26 11.55 6.04 30.59 8.75 32.89"/>
+      <polygon class="cls-4" points="20.13 10.75 29.3 6 26.11 15.82 20.13 10.75"/>
+    </g>
+    <polygon class="cls-4" points="29.3 6 28.25 4.96 19.09 9.71 20.13 10.75 25.75 14.78 29.3 6"/>
+    <polygon class="cls-4" points="40.1 17.61 39.06 16.57 31.8 23.91 32.84 24.96 40.1 17.61"/>
+    <polygon class="cls-4" points="43 31.13 41.96 30.22 32.4 34.13 33.45 35.04 43 31.13"/>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-2" x="7.69" y="28.44" width="25.49" height="3.55"/>
+      <polygon class="cls-2" points="32.4 26.3 41.96 30.22 32.4 34.13 32.4 26.3"/>
+    </g>
+    <g>
+      <rect class="cls-3" x="5.97" y="23.33" width="26.04" height="3.55" transform="translate(-8.32 9.44) rotate(-23.06)"/>
+      <polygon class="cls-3" points="28.73 16.71 39.06 16.57 31.8 23.91 28.73 16.71"/>
+    </g>
+    <g>
+      <polygon class="cls-1" points="7.71 31.84 23.93 12.8 21.22 10.5 5 29.54 7.71 31.84"/>
+      <polygon class="cls-1" points="19.09 9.71 28.25 4.96 25.06 14.78 19.09 9.71"/>
+    </g>
+  </g>
+</svg>

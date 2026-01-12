@@ -1,0 +1,1 @@
+![](https://moeu33.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4a5f4408-21b3-41cf-b2e0-124fde6cd22f%2FSnipaste_2021-07-18_21-25-24.png?table=block&id=4fe58fc1-6ee1-4eff-a7cd-65e7bd018805&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&width=1420&userId=&cache=v2)

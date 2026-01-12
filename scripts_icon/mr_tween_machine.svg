@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Eugene_Babich" data-name="Eugene Babich" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1e0c4;
+      }
+
+      .cls-2 {
+        fill: url(#_未命名的渐变_2);
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-4 {
+        fill: #f83f40;
+      }
+
+      .cls-5 {
+        fill: #e72728;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="1.47" y="5.96" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="_未命名的渐变_2" data-name="未命名的渐变 2" x1="-6.16" y1="260.48" x2="-6.16" y2="268.41" gradientTransform="translate(29.86 -251.57)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffbf48"/>
+      <stop offset=".98" stop-color="#f49919"/>
+    </linearGradient>
+  </defs>
+  <g id="MR_Tween_Machine" data-name="MR Tween Machine" class="cls-3">
+    <g>
+      <polygon class="cls-2" points="17.48 7.79 23.71 20.64 29.92 7.79 17.48 7.79"/>
+      <g>
+        <polygon class="cls-1" points="10.55 11.65 5.03 11.65 5.03 19.15 10.55 19.15 10.55 21.59 16.32 15.4 10.55 9.23 10.55 11.65"/>
+        <polygon class="cls-1" points="37.48 19.16 43 19.16 43 11.66 37.48 11.66 37.48 9.23 31.71 15.41 37.48 21.59 37.48 19.16"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-4" x="14.35" y="24.73" width="1.88" height="7.48"/>
+          <rect class="cls-4" x="8.75" y="24.73" width="1.88" height="7.48"/>
+          <rect class="cls-4" x="5" y="22.85" width="1.9" height="9.36"/>
+          <rect class="cls-4" x="31.16" y="24.73" width="1.88" height="7.48" transform="translate(64.2 56.94) rotate(-180)"/>
+          <rect class="cls-4" x="36.76" y="24.73" width="1.88" height="7.48" transform="translate(75.4 56.94) rotate(-180)"/>
+          <rect class="cls-4" x="40.48" y="22.85" width="1.88" height="9.36" transform="translate(82.85 55.06) rotate(-180)"/>
+        </g>
+        <rect class="cls-4" x="5" y="26.63" width="37.36" height="1.87"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-5" x="14.35" y="28.5" width="1.88" height="3.71"/>
+          <rect class="cls-5" x="8.75" y="28.5" width="1.88" height="3.71"/>
+          <rect class="cls-5" x="5" y="28.5" width="1.9" height="3.71"/>
+          <rect class="cls-5" x="31.16" y="28.5" width="1.88" height="3.71" transform="translate(64.2 60.71) rotate(-180)"/>
+          <rect class="cls-5" x="36.76" y="28.5" width="1.88" height="3.71" transform="translate(75.4 60.71) rotate(-180)"/>
+          <rect class="cls-5" x="40.48" y="28.5" width="1.88" height="3.71" transform="translate(82.85 60.71) rotate(-180)"/>
+        </g>
+        <rect class="cls-5" x="5" y="28.02" width="37.36" height="2.34"/>
+      </g>
+    </g>
+  </g>
+</svg>

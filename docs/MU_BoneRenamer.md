@@ -1,0 +1,5 @@
+适配版本: Moho 14
+
+[MU_BoneRenamer_V1.1.zip](%E6%89%B9%E9%87%8F%E6%9B%B4%E6%94%B9%E9%AA%A8%E9%AA%BC%E5%90%8D%E5%AD%97/MU_BoneRenamer_V1.1.zip)
+
+![1-1.jpg](%E6%89%B9%E9%87%8F%E6%9B%B4%E6%94%B9%E9%AA%A8%E9%AA%BC%E5%90%8D%E5%AD%97/1-1.jpg)

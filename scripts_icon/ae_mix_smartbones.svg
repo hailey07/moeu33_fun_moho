@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ae_mix_smartbones" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="206.14" y="476.58" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="25.6 6.09 10.09 21.61 22.4 33.91 37.91 18.4 25.6 6.09 25.6 6.09"/>
+    <path d="M22.4,35.38l-13.77-13.77L25.6,4.62l13.77,13.77-16.98,16.98ZM11.56,21.61l10.84,10.84,14.05-14.05-10.84-10.84-14.05,14.05Z"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="11.96 23.48 9.29 28.29 15.71 34.71 20.52 32.04 11.96 23.48 11.96 23.48"/>
+    <path d="M15.53,36l-7.53-7.53,3.05-5.5,1.64-.23,8.56,8.56-.23,1.64-5.5,3.05ZM10.58,28.11l5.31,5.31,2.93-1.63-6.62-6.62-1.62,2.93Z"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="27.48 7.96 32.29 5.29 38.71 11.71 36.04 16.52 27.48 7.96 27.48 7.96"/>
+    <path d="M35.31,17.26l-8.56-8.56.23-1.64,5.5-3.06,7.53,7.53-3.05,5.5-1.64.23ZM29.18,8.2l6.62,6.61,1.62-2.93-5.31-5.32-2.93,1.63Z"/>
+  </g>
+  <path d="M25.07,27.35l-8.42-8.42,1.47-1.47,8.42,8.42-1.47,1.47ZM29.91,22.51l-8.42-8.42,1.47-1.47,8.42,8.42-1.47,1.47Z"/>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="After_Effects_Camera_Export" data-name="After Effects Camera Export" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1f003f;
+      }
+
+      .cls-2 {
+        fill: #bf90fc;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="1.47" y="-195.73" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <circle class="cls-2" cx="24" cy="22.11" r="9.03"/>
+    <path class="cls-2" d="M41.64,36H6.36V7.39h9.02l3.03-3.39h11.18l3.03,3.39h9.02v28.61ZM9.27,33.09h29.46V10.3h-7.41l-3.03-3.39h-8.58l-3.03,3.39h-7.41v22.79Z"/>
+  </g>
+  <circle class="cls-1" cx="24" cy="22.11" r="6.57"/>
+</svg>

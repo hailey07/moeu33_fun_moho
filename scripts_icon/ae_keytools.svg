@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ae_keytools" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #848484;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="342.58" y="476.58" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="13.28 17.53 24 17.53 25.65 21.65 38.84 21.65 38.84 34.84 11.63 34.84 11.63 21.65 13.28 17.53 13.28 17.53"/>
+    <path class="cls-3" d="M40,36H10.47v-14.57l2.02-5.06h12.29l1.65,4.12h13.57v15.51ZM12.79,33.69h24.9v-10.88h-12.82l-1.65-4.12h-9.15l-1.28,3.19v11.82Z"/>
+  </g>
+  <rect class="cls-3" x="10.95" y="20.49" width="16.33" height="2.31"/>
+  <g>
+    <path d="M22.76,14.56h-11.55c-1.77,0-3.22-1.44-3.22-3.22v-4.12c0-1.77,1.44-3.22,3.22-3.22h11.55c1.77,0,3.22,1.44,3.22,3.22v4.12c0,1.77-1.44,3.22-3.22,3.22ZM11.22,6.31c-.5,0-.91.41-.91.91v4.12c0,.5.41.91.91.91h11.55c.5,0,.91-.41.91-.91v-4.12c0-.5-.41-.91-.91-.91h-11.55Z"/>
+    <polygon class="cls-2" points="18.62 14.23 15.36 14.23 15.36 31.55 18.62 31.55 18.62 14.23 18.62 14.23"/>
+    <polygon class="cls-2" points="20.32 26.6 18.04 26.6 18.04 30.72 20.32 30.72 20.32 26.6 20.32 26.6"/>
+    <polygon class="cls-2" points="23.37 25.77 15.75 25.77 15.75 27.42 23.37 27.42 23.37 25.77 23.37 25.77"/>
+    <polygon class="cls-2" points="23.37 29.9 15.75 29.9 15.75 31.55 23.37 31.55 23.37 29.9 23.37 29.9"/>
+  </g>
+</svg>

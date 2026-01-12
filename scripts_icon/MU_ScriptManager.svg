@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="MU_BoneRenamer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #69a2ff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-width: 1.83px;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 2;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #ffb800;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="25.47" y="-128.5" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <circle class="cls-2" cx="28.89" cy="27.48" r="4.94"/>
+    <path class="cls-3" d="M28.89,19.58v2.96"/>
+    <path class="cls-3" d="M28.89,32.41v2.96"/>
+    <path class="cls-3" d="M34.65,21.55l-2.09,2.09"/>
+    <path class="cls-3" d="M24.77,31.43l-2.09,2.09"/>
+    <path class="cls-3" d="M22.97,21.55l2.09,2.09"/>
+    <path class="cls-3" d="M32.84,31.43l2.09,2.09"/>
+    <path class="cls-3" d="M20.99,27.48h2.96"/>
+    <path class="cls-3" d="M33.83,27.48h2.96"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M35.29,17.75v-4.94l-6.77-7.52h-15.8c-.83,0-1.5.67-1.5,1.5v27.09c0,.83.67,1.5,1.5,1.5h7.2"/>
+    <path class="cls-1" d="M27.76,5.28v7.52h7.52"/>
+  </g>
+</svg>

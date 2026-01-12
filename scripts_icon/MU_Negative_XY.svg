@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="MU_Negative_XY" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #69a2ff;
+      }
+
+      .cls-2 {
+        fill: #ffb800;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="410.81" y="-128.5" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M21.52,36h-3.28L29.59,4h3.28l-11.36,32Z"/>
+  <g>
+    <path class="cls-2" d="M19.09,18.45v3.26H5.43v-3.26h13.66ZM13.98,26.91h-3.43v-13.66h3.43v13.66Z"/>
+    <path class="cls-2" d="M42.57,20.96v3.26h-11.31v-3.26h11.31Z"/>
+  </g>
+</svg>

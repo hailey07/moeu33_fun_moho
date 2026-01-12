@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="AM_Cpacer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #f68e3c;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #fff;
+        stroke-width: 3.2px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke-width: 3px;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #888;
+      }
+
+      .cls-3 {
+        stroke: #ffc469;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="138.14" y="409.34" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <path class="cls-2" d="M34.65,7.34c-7.12,0-11.1,28.73-17.39,28.73"/>
+    <line class="cls-4" x1="9.55" y1="36.07" x2="32.89" y2="36.07"/>
+    <line class="cls-4" x1="18.55" y1="7.34" x2="41.89" y2="7.34"/>
+  </g>
+  <g>
+    <path class="cls-3" d="M32.84,5.54c-7.12,0-11.1,28.73-17.39,28.73"/>
+    <line class="cls-1" x1="7.74" y1="34.27" x2="31.08" y2="34.27"/>
+    <line class="cls-1" x1="16.73" y1="5.54" x2="40.08" y2="5.54"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Eugene_Babich" data-name="Eugene Babich" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9bf52;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-259.14" y="5.96" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_图层_98" data-name="图层 98">
+    <g id="_图层_2-2" data-name=" 图层 2-2">
+      <g>
+        <polygon points="40.47 35.67 5.63 37.04 5.63 2.96 42.37 2.96 40.47 35.67"/>
+        <polygon class="cls-1" points="12.33 7.21 10.73 31.63 19.67 31.63 20.82 20.32 26.06 31.63 35.81 31.63 36.6 7.21 27.82 7.21 27.18 19.06 21.11 7.21 12.33 7.21"/>
+      </g>
+    </g>
+  </g>
+</svg>

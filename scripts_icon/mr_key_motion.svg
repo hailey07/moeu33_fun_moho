@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Eugene_Babich" data-name="Eugene Babich" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名的渐变_6);
+      }
+
+      .cls-2 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-3 {
+        fill: url(#_未命名的渐变_6-2);
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #f20000;
+        stroke-width: 4.9px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: #fbfbfb;
+        stroke: #000;
+        stroke-width: .82px;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-134.97" y="5.96" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" x="2.55" y="2.55" width="43" height="38" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="1.63"/>
+      <feGaussianBlur result="blur-2" stdDeviation=".82"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="_未命名的渐变_6" data-name="未命名的渐变 6" x1="27.83" y1="10.91" x2="38.72" y2="10.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffbf48"/>
+      <stop offset="1" stop-color="#f49919"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_6-2" data-name="未命名的渐变 6" x1="312.46" y1="273.52" x2="323.35" y2="273.52" gradientTransform="translate(332.63 301.76) rotate(-180)" xlink:href="#_未命名的渐变_6"/>
+  </defs>
+  <g id="mr_key_motion">
+    <g class="cls-2">
+      <polygon class="cls-1" points="38.18 11.94 38.18 3.57 28.29 3.57 28.29 11.94 23.9 11.94 33.24 18.25 42.55 11.94 38.18 11.94"/>
+      <polygon class="cls-3" points="9.82 27.21 9.82 35.57 19.71 35.57 19.71 27.21 24.1 27.21 14.76 20.9 5.45 27.21 9.82 27.21"/>
+      <line class="cls-4" x1="11.12" y1="10.91" x2="37.18" y2="28.85"/>
+      <circle class="cls-5" cx="11.12" cy="10.91" r="2.86"/>
+      <circle class="cls-5" cx="37.18" cy="28.85" r="2.86"/>
+    </g>
+  </g>
+</svg>

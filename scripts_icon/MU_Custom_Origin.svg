@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="MU_Custom_Origin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #69a2ff;
+      }
+
+      .cls-2 {
+        fill: #ffb800;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="274.36" y="-128.5" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <path class="cls-1" d="M24,36c-8.82,0-16-7.18-16-16S15.18,4,24,4s16,7.18,16,16-7.18,16-16,16ZM24,6.2c-7.61,0-13.8,6.19-13.8,13.8s6.19,13.8,13.8,13.8,13.8-6.19,13.8-13.8-6.19-13.8-13.8-13.8Z"/>
+    <rect class="cls-1" x="8.98" y="18.98" width="30.04" height="2.03"/>
+    <rect class="cls-1" x="22.98" y="4.98" width="2.03" height="30.04"/>
+  </g>
+  <circle class="cls-2" cx="24" cy="20" r="8.78"/>
+</svg>

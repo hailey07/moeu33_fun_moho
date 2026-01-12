@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dr_switchview" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #fc8354;
+      }
+
+      .cls-3 {
+        fill: #515151;
+      }
+
+      .cls-4 {
+        fill: #78ceca;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="274.36" y="274.88" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <polygon class="cls-3" points="11.36 5.1 20.39 5.1 24 10.52 40.26 10.52 40.26 34.9 7.74 34.9 7.74 10.52 11.36 5.1 11.36 5.1"/>
+    <path class="cls-5" d="M41.35,36H6.65V10.19l4.12-6.19h10.21l3.61,5.42h16.77v26.58ZM8.84,33.8h30.31V11.62h-15.75l-3.61-5.42h-7.85l-3.1,4.65v22.95Z"/>
+  </g>
+  <rect class="cls-5" x="7.55" y="9.42" width="18.45" height="2.2"/>
+  <g>
+    <polygon class="cls-1" points="27.34 16.9 27.39 26.97 17.27 16.84 27.34 16.9 27.34 16.9"/>
+    <polygon class="cls-1" points="18.86 24.37 26.65 31.48 11.06 31.48 18.86 24.37 18.86 24.37"/>
+    <rect class="cls-5" x="12.17" y="24.13" width="14.71" height="2.2" transform="translate(-12.04 20.55) rotate(-43.83)"/>
+  </g>
+  <polygon class="cls-2" points="37.09 14.13 28.97 14.13 28.97 21.35 37.09 21.35 37.09 14.13 37.09 14.13"/>
+  <polygon class="cls-4" points="37.09 24.06 28.97 24.06 28.97 30.39 37.09 30.39 37.09 24.06 37.09 24.06"/>
+</svg>

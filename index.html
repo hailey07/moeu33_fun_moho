@@ -47,16 +47,15 @@
     </div>
 
     <div class="filter-toolbar">
-        <select id="filter-select" class="notion-select" onchange="handleFilter()">
-            <option value="all">🔖 类别</option>
-            </select>
+        <a href="listing.html" class="btn-listing-link">◉ 索引</a>
 
         <select id="sort-select" class="notion-select" onchange="handleSort()">
             <option value="default">⇅ 默认排序</option>
             <option value="date-desc">📅 日期 ⬇︎</option>
             <option value="date-asc">📅 日期 ⬆︎</option>
             <option value="name-asc">🔤 名称 ⬇︎</option>
-            <option value="name-desc">🔤 名称 ⬆︎</option> </select>
+            <option value="name-desc">🔤 名称 ⬆︎</option> 
+        </select>
     </div>
 
             <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ae_transform_layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff4343;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-66.75" y="476.58" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-2" d="M36.3,36H11.7c-.6,0-1.09-.49-1.09-1.09V14.2s0-.02,0-.03h0c0-.14.03-.26.08-.38h0c.05-.12.12-.24.22-.34t0,0s0,0,0,0h0s0,0,0,0h0s0,0,0,0c0,0,0,0,0,0l8.91-9.11c.1-.11.23-.19.35-.24.12-.05.26-.08.41-.08h15.71c.6,0,1.09.49,1.09,1.09v29.82c0,.6-.49,1.09-1.09,1.09ZM12.79,33.82h22.42V6.18h-13.51v8.02c0,.6-.49,1.09-1.09,1.09h-7.82v18.54ZM14.29,13.11h5.23v-5.35l-5.23,5.35Z"/>
+  <g>
+    <g>
+      <path class="cls-1" d="M30.07,24.32h-12.17c-.6,0-1.09-.49-1.09-1.09s.49-1.09,1.09-1.09h12.17c.6,0,1.09.49,1.09,1.09s-.49,1.09-1.09,1.09Z"/>
+      <polygon class="cls-1" points="14.71 23.23 17.9 25.66 17.9 20.8 14.71 23.23"/>
+      <polygon class="cls-1" points="33.29 23.23 30.1 25.66 30.1 20.8 33.29 23.23"/>
+    </g>
+    <g>
+      <path class="cls-1" d="M24,30.93c-.6,0-1.09-.49-1.09-1.09v-12.17c0-.6.49-1.09,1.09-1.09s1.09.49,1.09,1.09v12.17c0,.6-.49,1.09-1.09,1.09Z"/>
+      <polygon class="cls-1" points="24 14.49 21.57 17.68 26.43 17.68 24 14.49"/>
+      <polygon class="cls-1" points="24 31.97 21.57 28.78 26.43 28.78 24 31.97"/>
+    </g>
+  </g>
+</svg>

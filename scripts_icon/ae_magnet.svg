@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ae_magnet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #d3d3d3;
+      }
+
+      .cls-3 {
+        fill: #222;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="274.36" y="476.58" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <path class="cls-2" d="M39.82,31.04h-2.32v-1.16c0-6.53,0-18.68-11.65-18.68s-11.65,12.15-11.65,18.68v1.16h-2.32v-1.16c0-6.28,0-21,13.97-21s13.97,14.71,13.97,21v1.16ZM34.85,31.04h-2.32v-1.16c0-7.38-.81-14.2-6.68-14.2s-6.69,6.82-6.7,14.2h-1.16s-1.16,0-1.16,0c0-5.36.02-16.52,9.02-16.52s9.01,11.16,9.01,16.52v1.16Z"/>
+    <path class="cls-3" d="M39.81,36h-7.28v-6.45h7.28v6.45ZM34.85,33.68h2.64v-1.81h-2.64v1.81ZM19.15,36h-7.28v-6.45h7.28v6.45ZM14.19,33.68h2.64v-1.81h-2.64v1.81Z"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M15.46,26.16h-2.32s0-1.16,0-1.16c0-5.36.01-16.53,9.02-16.53s9.01,11.16,9.01,16.53v1.16h-2.32v-1.16c0-7.38-.81-14.21-6.68-14.21s-6.69,6.83-6.7,14.21v1.16ZM36.13,26.16h-2.32v-1.16c0-6.53,0-18.68-11.65-18.68s-11.65,12.15-11.65,18.68v1.16h-2.32v-1.16c0-6.28,0-21,13.97-21s13.97,14.71,13.97,21v1.16Z"/>
+    <path d="M36.13,31.12h-7.28v-6.45h7.28v6.45ZM31.17,28.8h2.64v-1.81h-2.64v1.81ZM15.46,31.12h-7.28v-6.45h7.28v6.45ZM10.5,28.8h2.64v-1.81h-2.64v1.81Z"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="sz_collapse_all_groups" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="342.58" y="-262.96" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M41.89,36H6.11V9.54h35.78v26.46ZM8.46,33.65h31.08V11.89H8.46v21.76Z"/>
+  <path class="cls-1" d="M23.2,11.89H7.29l-.98-1.82,3.95-6.07h9.4l4.49,6.01-.94,1.88ZM9.46,9.54h11.4l-2.38-3.19h-6.95l-2.07,3.19Z"/>
+  <rect class="cls-1" x="22.44" y="10.33" width="2.35" height="24.88" transform="translate(-8.16 30.93) rotate(-58.35)"/>
+  <rect class="cls-1" x="11.18" y="21.6" width="24.88" height="2.35" transform="translate(-8.44 15.79) rotate(-31.66)"/>
+</svg>

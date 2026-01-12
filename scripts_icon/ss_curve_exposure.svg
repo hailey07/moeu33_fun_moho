@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ss_curve_exposure" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="342.58" y="-195.73" width="46" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="2.13"/>
+      <feGaussianBlur result="blur" stdDeviation="1.06"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path d="M41.91,19.59c0-.13-.11-13.21-7.94-13.21v-2.37c10.19,0,10.31,14.95,10.31,15.58h-2.37ZM25.76,18.66l-2.36-.22c.51-4.36,1.68-14.45,10.58-14.45v2.37c-5.98,0-7.51,6.21-8.22,12.29Z"/>
+  <path class="cls-1" d="M14.62,36c-2.4,0-4.46-.89-6.13-2.65C3.09,27.66,3.73,14.57,3.76,14.01l2.37.13c0,.13-.61,12.63,4.09,17.58,1.22,1.28,2.66,1.91,4.4,1.91,6.36,0,7.92-6.75,8.66-14.05.04-.42.08-.8.12-1.13l2.36.27c-.04.32-.07.69-.12,1.09-.49,4.84-1.63,16.19-11.02,16.19Z"/>
+</svg>
