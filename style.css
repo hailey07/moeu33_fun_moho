@@ -29,15 +29,18 @@
   --black: #2c2c2c;
   --shadow-offset: 4px;
 
+  --md-red: #fa5252;
   --md-pink: #e64980;
+  --md-violet: #7950f2;
   --md-indigo: #4c6ef5;
   --md-blue: #228be6;
   --md-cyan: #15aabf;
   --md-teal: #12b886;
+  --md-green: #40c057;
   --md-lime: #82c91e;
+  --md-yellow: #fab005;
   --md-orange: #ff922b;
-  --md-red: #fa5252;
-  --md-violet: #7950f2;
+  --md-bold: rgba(254, 243, 198, 0.8);
 
 }
 
@@ -172,20 +175,22 @@ a {
   gap: 10px;
 }
 
-.my-link{
-display: flex;
+.my-link {
+  display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 12px;
   object-fit: cover;
-  margin-bottom:80px;
+  margin-bottom: 80px;
 }
+
 .my-link-logo {
   height: 20px;
   width: 20px;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease;
   transform-origin: center center;
 }
+
 .my-link-logo:hover {
   transform: scale(1.3) rotate(-10deg);
   cursor: pointer;
@@ -204,6 +209,8 @@ display: flex;
   margin: 4px;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   white-space: nowrap;
+  height: 35px;
+  width:100px;
 }
 
 .view-switcher button:hover {
@@ -216,8 +223,8 @@ display: flex;
   background: var(--primary-color);
   color: #fff;
   border-color: var(--black);
-  box-shadow: 2px 2px 0px 0px var(--black);
-  transform: translate(-1px, -1px);
+  /* box-shadow: 2px 2px 0px 0px var(--black); */
+  /* transform: translate(-1px, -1px); */
 }
 
 /* 搜索框 */
@@ -265,6 +272,8 @@ display: flex;
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 16px;
+  width:auto;
+  height: 35px;
 }
 
 .notion-select:hover {
@@ -277,7 +286,7 @@ display: flex;
   border-color: var(--primary-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 100px) {
   #search-input {
     width: 100%;
     order: 3;
@@ -396,16 +405,19 @@ display: flex;
   object-fit: contain;
 
   /* --- 方案核心 --- */
-  background-color: var(--script-icon-bg); /* 使用中性灰 (Bootstrap Gray-200)，比纯白稍暗 */
-  padding: 5px;              /* 留出呼吸空间 */
-  border-radius: 8px;        /* 圆角 */
-  
+  background-color: var(--script-icon-bg);
+  /* 使用中性灰 (Bootstrap Gray-200)，比纯白稍暗 */
+  padding: 5px;
+  /* 留出呼吸空间 */
+  border-radius: 8px;
+  /* 圆角 */
+
   /* 【关键】给图标主体加投影，而不是给盒子加 */
   /* 这会让白色图标自带“描边”效果，从而清晰可见 */
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25)); 
-  
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+
   /* 盒子本身的边框（可选，增加精致感） */
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card-title {
@@ -426,7 +438,7 @@ display: flex;
 
 /* 颜色侧边栏 */
 .color-red {
-  border-left: var(--border-important) solid #ff6b6b ;
+  border-left: var(--border-important) solid #ff6b6b;
   background: #fffcfc;
 }
 
@@ -435,7 +447,7 @@ display: flex;
 }
 
 .color-blue {
-  border-left: var(--border-important) solid #2eaadc ;
+  border-left: var(--border-important) solid #2eaadc;
   background: #f8fbff;
 }
 
@@ -444,7 +456,7 @@ display: flex;
 }
 
 .color-green {
-  border-left: var(--border-important) solid #45b649 ;
+  border-left: var(--border-important) solid #45b649;
   background: #fafffa;
 }
 
@@ -453,7 +465,7 @@ display: flex;
 }
 
 .color-purple {
-  border-left: var(--border-important) solid #9d4edd ;
+  border-left: var(--border-important) solid #9d4edd;
   background: #fdfaff;
 }
 
@@ -462,7 +474,7 @@ display: flex;
 }
 
 .color-orange {
-  border-left: var(--border-important) solid #ff9f1c ;
+  border-left: var(--border-important) solid #ff9f1c;
   background: #fffdf8;
 }
 
@@ -471,7 +483,7 @@ display: flex;
 }
 
 .color-gray {
-  border-left: var(--border-important) solid #b0b0b0 ;
+  border-left: var(--border-important) solid #b0b0b0;
   background: #f9f9f9;
 }
 
@@ -480,7 +492,7 @@ display: flex;
 }
 
 .color-teal {
-  border-left: var(--border-important) solid #20c997 ;
+  border-left: var(--border-important) solid #20c997;
   background: #f0fff9;
 }
 
@@ -489,7 +501,7 @@ display: flex;
 }
 
 .color-pink {
-  border-left: var(--border-important) solid var(--md-pink) ;
+  border-left: var(--border-important) solid var(--md-pink);
   background: #fffcfc;
 }
 
@@ -498,7 +510,7 @@ display: flex;
 }
 
 .color-indigo {
-  border-left: var(--border-important) solid #5c7cfa ;
+  border-left: var(--border-important) solid #5c7cfa;
   background: #f8f9ff;
 }
 
@@ -507,7 +519,7 @@ display: flex;
 }
 
 .color-lime {
-  border-left: var(--border-important) solid #94d82d ;
+  border-left: var(--border-important) solid #94d82d;
   background: #f5fff8;
 }
 
@@ -516,7 +528,7 @@ display: flex;
 }
 
 .color-yellow {
-  border-left: var(--border-important) solid #ffc40d ;
+  border-left: var(--border-important) solid #ffc40d;
   background: #fffdf0;
 }
 
@@ -614,21 +626,22 @@ display: flex;
   object-fit: contain;
 
   /* --- 方案核心 --- */
-  background-color: var(--script-icon-bg); /* 同上 */
+  background-color: var(--script-icon-bg);
+  /* 同上 */
   padding: 4px;
   border-radius: 6px;
-  
+
   /* 【关键】投影滤镜 */
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
-  
-  border: 1px solid rgba(0,0,0,0.05);
-  
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
 }
 
 .table-view tbody tr:hover .row-title {
   font-size: 1.1em;
   padding-left: 5px;
-  
+
 }
 
 .row-title {
@@ -648,10 +661,11 @@ display: flex;
 }
 
 .content {
-  max-width: 55%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .breadcrumb {
@@ -675,7 +689,6 @@ display: flex;
   align-items: end;
   gap: 20px;
   padding-top: 40px;
-  margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: var(--border-line-width) solid var(--border-color);
   white-space: nowrap;
@@ -685,6 +698,7 @@ display: flex;
   font-size: 22px;
   font-weight: 500;
   border-bottom: var(--border-line-width) solid var(--border-color);
+  margin-top:60px;
   padding-bottom: 10px;
 }
 
@@ -694,18 +708,19 @@ display: flex;
   width: 64px;
   height: 64px;
   object-fit: contain;
-  
+
   /* --- 方案核心 --- */
-  background-color: var(--script-icon-bg); /* 同上 */
+  background-color: var(--script-icon-bg);
+  /* 同上 */
   padding: 10px;
   border-radius: 16px;
-  
+
   /* 【关键】大图标投影稍微加深一点 */
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-  
-  border: 1px solid rgba(0,0,0,0.05);
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
-  
+
   /* 移除原来的 box-shadow，避免双重阴影显得脏 */
   box-shadow: none;
 }
@@ -715,7 +730,7 @@ display: flex;
   transform: scale(1.2) rotate(-5deg);
   box-shadow: 6px 6px 0px 0px var(--black);
   /* cursor: grab;*/
- }
+}
 
 .detail-icon img:active {
   cursor: grabbing;
@@ -728,11 +743,11 @@ display: flex;
 }
 
 .prop-table {
-  width: 100%;
   border: var(--border-line-width) solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   white-space: nowrap;
   font-size: var(--fz-d-table);
 }
@@ -788,7 +803,12 @@ display: flex;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   white-space: nowrap;
   overflow: hidden;
-  margin: 20px 0 40px 0;
+
+}
+
+.btn-download:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px 0px var(--black);
 }
 
 .btn-download:hover {
@@ -800,15 +820,15 @@ display: flex;
 .btn-download:active {
   transform: translate(0, 0);
   box-shadow: 0 0 0 0 var(--black);
-  
+
 }
 
 .btn-disabled {
   background: #ccc;
   cursor: not-allowed;
   border-color: #999;
-  box-shadow: none ;
-  transform: none ;
+  box-shadow: none;
+  transform: none;
 }
 
 /* ========================================= */
@@ -818,7 +838,7 @@ display: flex;
 .content-area blockquote {
   border: var(--border-line-width) solid var(--border-color);
   border-left: var(--border-important) solid #f7ac7a;
-  background: rgba(173, 228, 129, 0.2) ;
+  background: rgba(173, 228, 129, 0.2);
   padding: 14px 18px;
   margin: 16px 0;
   border-top-left-radius: 4px;
@@ -863,7 +883,7 @@ display: flex;
 .content-area strong,
 .content-area b {
   font-weight: 500;
-  background-color: #ffdeeb;
+  background-color: var(--md-bold);
   padding: 3px 8px;
   margin: 0 3px;
 }
@@ -887,9 +907,11 @@ display: flex;
 .content-area img {
   /* 【核心改动】限制图片最大宽度，防止撑破页面 */
   max-width: 100%;
-  height: auto; 
-  display: block;     /* 让图片独占一行 */
-  margin: 20px auto;  /* 让图片在文章中居中 */
+  height: auto;
+  display: block;
+  /* 让图片独占一行 */
+  margin: 20px auto;
+  /* 让图片在文章中居中 */
 
   /* 原有的美化样式保持不变 */
   border: var(--border-line-width) solid transparent;
@@ -899,91 +921,115 @@ display: flex;
 }
 
 .content-area img:hover {
-  transform: scale(1.02); /* 悬停时稍微放大一点点即可，太大容易遮挡文字 */
+  transform: scale(1.02);
+  /* 悬停时稍微放大一点点即可，太大容易遮挡文字 */
   border: var(--border-line-width) solid var(--black);
   box-shadow: 0 6px 0 0 var(--black);
-  cursor: zoom-in; /* 鼠标变成放大镜图标 */
+  cursor: zoom-in;
+  /* 鼠标变成放大镜图标 */
 }
+
 .content-area video {
-  max-width: 100%;       /* 限制最大宽度 */
-  height: auto; 
-  display: block;        /* 独占一行 */
-  margin: 20px auto;     /* 居中 */
-  border-radius: 8px;    /* 圆角 */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 轻微阴影 */
+  max-width: 100%;
+  /* 限制最大宽度 */
+  height: auto;
+  display: block;
+  /* 独占一行 */
+  margin: 20px auto;
+  /* 居中 */
+  border-radius: 8px;
+  /* 圆角 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* 轻微阴影 */
   outline: none;
-  background-color: #000; /* 视频加载前的背景 */
+  background-color: #000;
+  /* 视频加载前的背景 */
 }
+
 .content-area h1 {
-  font-size: 1.5em;
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
+  font-size: 1.45em;
   font-weight: 500;
   color: var(--black);
-  border-left: 1.2em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 15px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-orange);
+  padding-left: 0.2em;
+  transform: translateX(-1.8em);
+
 }
 
 .content-area h2 {
-  font-size: 1.4em;
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
+  font-size: 1.35em;
   font-weight: 500;
   color: var(--black);
-  border-left: 1em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 10px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-orange);
+  padding-left: 0.2em;
+  transform: translateX(-1.6em);
+
 }
 
 .content-area h3 {
-  font-size: 1.3em;
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
+  font-size: 1.25em;
   font-weight: 500;
   color: var(--black);
-  border-left: 0.8em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 10px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-yellow);
+  padding-left: 0.2em;
+  transform: translateX(-1.4em);
+
 }
 
 .content-area h4 {
-  font-size: 1.2em;
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
+  font-size: 1.15em;
   font-weight: 500;
   color: var(--black);
-  border-left: 0.6em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 10px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-green);
+  padding-left: 0.2em;
+  transform: translateX(-1.3em);
+
 }
 
 .content-area h5 {
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
   font-size: 1.1em;
   font-weight: 500;
   color: var(--black);
-  border-left: 0.4em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 10px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-blue);
+  padding-left: 0.2em;
+  transform: translateX(-1.2em);
+
 }
 
 .content-area h6 {
+  text-align: left;
+  line-height: normal;
+  word-wrap: normal;
   font-size: 1em;
   font-weight: 500;
   color: var(--black);
-  border-left: 0.2em solid var(--md-pink);
-  width: max-content;
-  padding: 0px 12px;
-  margin: 10px 0px;
-  text-align: left;
+  border-left: 0.2em solid var(--md-violet);
+  padding-left: 0.2em;
+  transform: translateX(-1em);
+
 }
 
 .content-area p {
-  line-height: 1.8;
+  line-height: 2;
   margin: 12px 0;
   color: var(--text-main);
+  text-indent: 2em;
+  padding-left: 2em;
 }
 
 /* ========================================= */
@@ -1146,10 +1192,11 @@ display: flex;
 /* ========================================= */
 .article-layout {
   display: flex;
-  gap: 50px;
+  gap: 10px;
   align-items: stretch;
   margin-top: 30px;
   position: relative;
+  width: 100%;
 }
 
 .content-area {
@@ -1166,11 +1213,11 @@ display: flex;
 .toc-sticky-box {
   position: sticky;
   top: 100px;
-  background: #fff;
+  /* background: #fff; */
   border: none;
   border-left: var(--border-important) solid #eee;
   border-radius: 0;
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 10px 10px;
   max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1179,8 +1226,8 @@ display: flex;
 .toc-title {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 16px;
+  font-weight: 500;
   color: #333;
   padding-bottom: 0;
   border-bottom: none;
@@ -1192,7 +1239,7 @@ display: flex;
   display: block;
   color: var(--text-light);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 8px;
   line-height: 1.5;
   transition: all 0.2s;
@@ -1254,118 +1301,177 @@ display: flex;
     padding: 10px 0;
   }
 }
+
 /* ========================================= */
 /* 11. 总列表页面 (Listing Page) 与 按钮 */
 /* ========================================= */
 
 /* 新的 Listing 按钮样式 */
 .btn-listing-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: var(--border-line-width) solid var(--border-color);
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-size: var(--fz-button);
-    font-weight: 600;
-    color: var(--text-main);
-    text-decoration: none;
-    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-    height: 34px; /* 强制与 select 等高 */
-    white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: var(--border-line-width) solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: var(--fz-button);
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 35px;
+  width:100px;
+
+  /* 强制与 select 等高 */
+  white-space: nowrap;
 }
 
 .btn-listing-link:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    border-color: var(--black);
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px 0px 0px var(--black);
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--black);
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0px 0px var(--black);
 }
 
 /* 列表页头部 */
 .listing-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
+
 .listing-header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
+
 .listing-header p {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 
 /* 分区样式 */
 .listing-section {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
+
 .listing-section h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    border-left: 5px solid var(--primary-color);
-    padding-left: 10px;
-    color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 10px;
+  color: #333;
 }
 
 .listing-divider {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 40px 0;
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 40px 0;
 }
 
 /* 标签云容器 */
 .tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* 列表页专用标签样式 (比普通的稍微大一点) */
 .listing-tag {
-    font-size: 15px;
-    padding: 8px 14px;
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    text-decoration: none;
-    border: 1px solid transparent;
+  font-size: 15px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
 }
 
 .listing-tag:hover {
-    transform: scale(1.05);
-    box-shadow: 3px 3px 0px 0px var(--border-color);
-    border-color: rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  box-shadow: 3px 3px 0px 0px var(--border-color);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .tag-count {
-    background: rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    padding: 0px 6px;
-    font-size: 12px;
-    margin-left: 8px;
-    color: inherit;
-    opacity: 0.8;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 0px 6px;
+  font-size: 12px;
+  margin-left: 8px;
+  color: inherit;
+  opacity: 0.8;
 }
+
 /* ========================================= */
 /* 12. 图片并排显示 (Gallery Row) */
 /* ========================================= */
 
 /* 图片容器：横向排列 */
 .gallery-row {
-    display: flex;
-    flex-wrap: wrap;       /* 屏幕太窄时自动换行 */
-    gap: 15px;             /* 图片之间的间距 */
-    justify-content: center; /* 居中对齐 (如果想左对齐改成 flex-start) */
-    margin: 20px 0;        /* 容器上下的间距 */
+  display: flex;
+  flex-wrap: wrap;
+  /* 屏幕太窄时自动换行 */
+  gap: 15px;
+  /* 图片之间的间距 */
+  justify-content: center;
+  /* 居中对齐 (如果想左对齐改成 flex-start) */
+  margin: 20px 0;
+  /* 容器上下的间距 */
 }
 
 /* 覆盖全局图片样式：去掉默认的大边距 */
 .gallery-row img {
-    margin: 0;             /* 取消默认的 auto 边距 */
-    display: inline-block; /* 恢复为行内块元素 */
-    object-fit: contain;   /* 保持图片比例 */
+  margin: 0;
+  /* 取消默认的 auto 边距 */
+  display: inline-block;
+  /* 恢复为行内块元素 */
+  object-fit: contain;
+  /* 保持图片比例 */
+}
+
+/* ========================================= */
+/* 13. 移动端适配 (Mobile Optimizations) */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. 隐藏视图切换按钮（强制只能看表格，就不需要切换了） */
+  .view-switcher {
+    display: none !important;
+  }
+
+  /* 2. 调整顶部导航栏，给搜索框更多空间 */
+  .controls {
+    justify-content: center;
+  }
+  
+  /* 3. 修复表格容器的边距，让它在手机上占满全宽 */
+  .table-mode-container {
+    display: block;      /* 取消 flex 居中，允许原生滚动 */
+    overflow-x: auto;    /* 允许横向滚动 */
+    padding-bottom: 0;
+  }
+
+  .table-view {
+    margin-left: 10px;      /* 去掉电脑版的大边距 */
+    margin-right: 10px;
+    min-width: 100%;     /* 宽度占满 */
+    /* 注意：原本的 min-width: 900px 依然生效，
+       这会导致手机上表格可以左右滑动查看完整信息，
+       这是展示复杂表格的最佳方案。
+    */
+  }
+  
+  /* 4. (可选) 在手机上隐藏一些不重要的列，减少横向滚动 */
+  /* 如果你想让表格更紧凑，可以取消下面这段的注释： */
+ 
+  .table-view th:nth-child(3), .table-view td:nth-child(3), /* 隐藏标签 */
+  .table-view th:nth-child(4), .table-view td:nth-child(4), /* 隐藏版本 */
+  .table-view th:nth-child(5), .table-view td:nth-child(5)  /* 隐藏作者 */
+  {
+      display: none; 
+  }
+  
 }

@@ -3,6 +3,15 @@ let currentView = 'board';
 let currentSort = 'default';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 【新增】检测是否为移动端 (小于 768px)，如果是，强制使用表格视图
+    if (window.innerWidth <= 768) {
+        currentView = 'table';
+        // 更新按钮状态（虽然 CSS 会隐藏它，但逻辑上保持一致）
+        const btnBoard = document.getElementById('btn-board');
+        const btnTable = document.getElementById('btn-table');
+        if (btnBoard) btnBoard.className = '';
+        if (btnTable) btnTable.className = 'active';
+    }
     fetch('data.json')
         .then(res => res.json())
         .then(data => {
@@ -114,7 +123,7 @@ function renderBoard(container, data) {
         "绘图": "color-orange", "图层": "color-blue", "动画": "color-red", "骨骼": "color-purple",
         "其他": "color-yellow", "软件协作": "color-teal", "文档清理": "color-gray"
     };
-    const categoryOrder = ["绘图", "图层", "动画", "骨骼", "软件协作", "文档清理", "其他"];
+    const categoryOrder = ["绘图", "图层", "动画", "骨骼", "其他", "软件协作", "文档清理"]; // 按照这个顺序排序
 
     // 提取分类并去重
     let categories = [...new Set(data.map(item => item.category).flat())];
