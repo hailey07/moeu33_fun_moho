@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="app-lock">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>脚本整理 - ʙʏ萌酥𝟛𝟛</title>
-
     <base href="/">
-
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_5109131_ggysqjieo7v.css">
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-web/style.css" media="print"
+        onload="this.media='all'">
     <link rel="icon" href="assets/Favicon.png" type="image/png">
 </head>
 
 <body class="app-mode">
-   <header class="navbar">
-    <div class="title-area" style="width: 95%; display:flex; flex-direction:column; align-items:center;">
-        
+    <header class="navbar">
         <div class="top-announcement">
             <span style="font-size: 14px; font-weight:bold; color:#868e96; margin:0 10px; ">ʜᴏᴡ ➜</span>
             <a href="howtoinstall.html" class="header-sub-link" target="_blank">如何安装脚本</a>
             <a href="howtouninstall.html" class="header-sub-link" target="_blank">如何卸载脚本</a>
         </div>
-
-        <h1>
-            <img src="assets/Favicon.png" href="index.html" class="header-logo" alt="Logo">
-            <span style="margin-left: 10px;">
-                <a href="index.html" class="header-main-title"> 𝕄𝕠𝕙𝕠 脚本</a>
-            </span>
-        </h1>
-
-        <div class="header-desc-container">
-            <div class="desc-line">———— • 这里是 𝕄𝕠𝕙𝕠 软件的相关资源分享站 • ————</div>
+        <div class="title-area" style="width: 95%; display:flex; flex-direction:column; align-items:center;">
+            <h1 class="webfont">
+                <img src="assets/Favicon.png" href="index.html" class="header-logo" alt="Logo">
+                <span style="margin-left: 10px;">
+                    <a href="index.html" class="header-main-title"> 𝕄𝕠𝕙𝕠 脚本</a>
+                </span>
+            </h1>
+            <div class="header-desc-container">
+                <div class="desc-line">—— • 这里是 𝕄𝕠𝕙𝕠 软件的相关资源分享站 • ——</div>
+            </div>
+            <div class="my-link">
+                <img src="assets/bilibili.svg" href="https://space.bilibili.com/1718084" target="_blank"
+                    class="my-link-logo"></a>
+                <img src="assets/youtube.png" href="https://www.youtube.com/@MoeU33Hailey" target="_blank"
+                    class="my-link-logo"></a>
+                <img src="assets/gumroad.svg" href="https://moeu33.gumroad.com" target="_blank"
+                    class="my-link-logo"></a>
+            </div>
         </div>
-        <div class="my-link">
-            <img src="assets/bilibili.svg" href="https://space.bilibili.com/1718084" target="_blank" class="my-link-logo"></a>
-            <img src="assets/youtube.png" href="https://www.youtube.com/@MoeU33Hailey" target="_blank" class="my-link-logo"></a>
-            <img src="assets/gumroad.svg" href="https://moeu33.gumroad.com" target="_blank" class="my-link-logo"></a>
-        </div>
-    </div>
-
         <div class="controls">
             <div class="view-switcher">
-        <button id="btn-board" class="active" onclick="switchView('board')">⊞ 看板视图</button>
-        <button id="btn-table" onclick="switchView('table')">☰ 表格视图</button>
-    </div>
-
-    <div class="filter-toolbar">
-        <a href="listing.html" class="btn-listing-link">◉ 索引</a>
-
-        <select id="sort-select" class="notion-select" onchange="handleSort()">
-            <option value="default">⇅ 默认排序</option>
-            <option value="date-desc">📅 日期 ⬇︎</option>
-            <option value="date-asc">📅 日期 ⬆︎</option>
-            <option value="name-asc">🔤 名称 ⬇︎</option>
-            <option value="name-desc">🔤 名称 ⬆︎</option> 
-        </select>
-    </div>
-
-            <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">
+                <button id="btn-board" class="active" onclick="switchView('board')">
+                    <span class="iconfont icon-icon-kanban"></span>看板视图
+                </button>
+                <button id="btn-table" onclick="switchView('table')">
+                    <span class="iconfont icon-icon-tables"></span>表格视图
+                </button>
+            </div>
+            <div class="r-controls">
+                <div class="filter-toolbar">
+                    <a href="listing.html" class="btn-listing-link">
+                        <span class="iconfont icon-liebiao1"></span>索引
+                    </a>
+                    <div class="select-wrapper">
+    <select id="sort-select" class="notion-select" onchange="handleSort()">
+        <option value="default">默认排序</option>
+        <option value="date-desc">日期 (新→旧)</option>
+        <option value="date-asc">日期 (旧→新)</option>
+        <option value="name-asc">名称 (A→Z)</option>
+        <option value="name-desc">名称 (Z→A)</option>
+    </select>
+</div>
+                </div>
+                <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">
+            </div>
         </div>
     </header>
-
     <main id="app-container"></main>
-
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://at.alicdn.com/t/c/font_5109131_ggysqjieo7v.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

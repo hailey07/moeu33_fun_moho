@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>资源总索引</title>
+    <title>
+        资源总索引</title>
     <base href="/">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_5109131_ggysqjieo7v.css">
     <link rel="icon" href="assets/Favicon.png" type="image/png">
 </head>
+
 <body>
     <div class="detail-container" style="width: 100%; max-width: 1200px;">
         <div class="breadcrumb">
@@ -16,46 +20,56 @@
             </span>
             <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">索引</span>
         </div>
-
         <div id="loading">
-            <img src="assets/loading.gif" alt="Loading..." style="width: 150px; height: 150px; margin: 10px auto; display:block;">
+            <img src="assets/loading.gif" alt="Loading..."
+                style="width: 150px; height: 150px; margin: 10px auto; display:block;">
         </div>
-
         <div id="listing-content" style="display:none; padding-bottom: 50px;">
             <div class="listing-header">
-                <h1>📚 资源总索引</h1>
-                <p>点击下方的标签，快速在首页筛选相关资源。</p>
+                <h1>
+                    <svg class="icon-svg" aria-hidden="true">
+                        <use xlink:href="#icon-dangan"></use>
+                    </svg>资源总索引
+                </h1>
+                <p></p>
             </div>
-
             <div class="listing-section">
-                <h2>🏷️ 分类</h2>
+                <h2>
+                    <svg class="icon-svg" aria-hidden="true">
+                        <use xlink:href="#icon-suoshuleibie"></use>
+                    </svg>分类
+                </h2>
                 <div class="tag-cloud" id="cloud-category"></div>
             </div>
-
             <hr class="listing-divider">
-
             <div class="listing-section">
-                <h2>👤 作者</h2>
+                <h2>
+                    <svg class="icon-svg" aria-hidden="true">
+                        <use xlink:href="#icon-author"></use>
+                    </svg>作者
+                </h2>
                 <div class="tag-cloud" id="cloud-author"></div>
             </div>
-            
             <hr class="listing-divider">
-
             <div class="listing-section">
-                <h2>🔖 标签</h2>
+                <h2>
+                    <svg class="icon-svg" aria-hidden="true">
+                        <use xlink:href="#icon-tag1"></use>
+                    </svg>标签
+                </h2>
                 <div class="tag-cloud" id="cloud-tags"></div>
             </div>
-
             <hr class="listing-divider">
-
             <div class="listing-section">
-                <h2>⚙️ 最低适配</h2>
+                <h2>
+                    <svg class="icon-svg" aria-hidden="true">
+                        <use xlink:href="#icon-Moho-icon"></use>
+                    </svg>最低适配
+                </h2>
                 <div class="tag-cloud" id="cloud-ver"></div>
             </div>
-
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetch('data.json')
@@ -70,7 +84,6 @@
                     document.getElementById('loading').innerHTML = "数据加载失败";
                 });
         });
-
         function generateClouds(data) {
             // 提取数据的辅助函数
             const extract = (key) => {
@@ -94,7 +107,6 @@
                 all.forEach(x => { counts[x] = (counts[x] || 0) + 1; });
                 return counts;
             };
-
             // 渲染标签云
             const renderCloud = (containerId, counts, colorClass) => {
                 const container = document.getElementById(containerId);
@@ -103,7 +115,6 @@
                     if (counts[b] !== counts[a]) return counts[b] - counts[a];
                     return a.localeCompare(b, 'zh-CN');
                 });
-
                 sortedKeys.forEach(key => {
                     const count = counts[key];
                     const a = document.createElement('a');
@@ -114,12 +125,14 @@
                     container.appendChild(a);
                 });
             };
-
             renderCloud('cloud-category', extract('category'), 'tag-blue');
             renderCloud('cloud-author', extract('author'), 'tag-purple');
             renderCloud('cloud-tags', extract('tags'), 'tag-orange');
             renderCloud('cloud-ver', extract('supportVer'), 'tag-green');
         }
     </script>
+    <script src="https://at.alicdn.com/t/c/font_5109131_ggysqjieo7v.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
