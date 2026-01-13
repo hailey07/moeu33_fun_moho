@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>完全卸载 Moho 及重装</title>
+    <title>Moho 脚本管理器</title>
     <base href="/">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_5109131_wfhaps8fl5.css">
@@ -18,14 +18,14 @@
             <span class="home-icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
                 <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
             </span>
-            <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">卸载教程</span>
+            <a href="index.html" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">Moho 脚本管理器</span>
         </div>
         <div id="content" style="max-width:80%; margin:auto;">
             <div class="detail-header">
                 <div class="detail-icon">
-                    <img src="assets/uninstall.png">
+                    <img src="assets/mohoscripts_manager.png">
                 </div>
-                <h1 class="detail-title">完全卸载 Moho 及重装</h1>
+                <h1 class="detail-title">Moho 脚本管理器</h1>
             </div>
             <div class="article-layout">
                 <div class="content-area" id="article-content">
@@ -47,7 +47,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 指定 Markdown 文件路径
-            const mdFile = 'otherdocs/uninstall.md';
+            const mdFile = 'otherdocs/mohoscripts_manager.md';
             fetch(mdFile)
                 .then(res => {
                     if (!res.ok) throw new Error("无法读取文件");

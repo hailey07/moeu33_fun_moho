@@ -1,6 +1,4 @@
-### 
-
-[📺 使用教程](https://player.bilibili.com/player.html?isOutside=true&aid=548907153&bvid=BV1Eq4y1V71v&cid=433716024&p=1)
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=548907153&bvid=BV1Eq4y1V71v&cid=433716024&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" width="640" height="360"></iframe>
 
 混合两个智能骨骼，或调整一个智能骨骼而不打开它的动作。
 在 0 帧后的位置，两个智能骨骼同时使用，有图形发变形时，您可以在相关图层修复它，并点击按钮保存修改，用以在这两个智能骨骼每次使用时重现修复的效果。

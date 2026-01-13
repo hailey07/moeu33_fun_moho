@@ -1,4 +1,4 @@
-[SVG导入工具_V1.12.zip](SVG%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7/SVG%25E5%25AF%25BC%25E5%2585%25A5%25E5%25B7%25A5%25E5%2585%25B7_V1.12.zip)
+
 
 改进的 SVG 图像导入工具：对 图层分组、遮罩、匹配颜色和 Adobe Illustrator 友好！(ver 1.10)
 

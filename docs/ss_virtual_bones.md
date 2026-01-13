@@ -1,5 +1,3 @@
-[虚拟骨骼_ss_virtual_bones___V1.0.zip](%E8%99%9A%E6%8B%9F%E9%AA%A8%E9%AA%BC/%E8%99%9A%E6%8B%9F%E9%AA%A8%E9%AA%BC_ss_virtual_bones___V1.0.zip)
-
 创建、显示和渲染自定义矢量骨骼（虚拟骨骼）
 
 虚拟骨骼工具允许您创建、显示和渲染自定义矢量骨骼
@@ -22,7 +20,7 @@ Virtual Bones（虚拟骨骼）的主要用途是因为它们具有可定制性�
 - 可模板化：任何现有的矢量图层都可以用作 Virtual Bones 的模板，每个 Virtual Bone 都被建模为该模板的调整大小的副本。对图表、抽象动画、动态图形和自定义控制手柄有用
 - 可叠加：您可以为同一个骨骼层创建多个虚拟骨骼。每个代表不同的骨骼集或只是不同的样式：在编辑过程中，您可以将层从骨骼层组更改，虚拟骨骼将保持可见
 
-![Moho-SSVBones-Real-Virt-511102opti-8.gif](%E8%99%9A%E6%8B%9F%E9%AA%A8%E9%AA%BC/Moho-SSVBones-Real-Virt-511102opti-8.gif)
+![Moho-SSVBones-Real-Virt-511102opti-8.gif](https://i.ibb.co/HDvpz26/Moho-SSVBones-Real-Virt-511102opti-8.gif)
 
 ## 使用方法：
 
@@ -49,7 +47,7 @@ Virtual Bones（虚拟骨骼）的主要用途是因为它们具有可定制性�
 - 使用重置来恢复默认设置。确定应用设置和更改。取消取消
 - *** 目前，模板矢量图层只会被列出和可用，如果它们不为空并且不在一个组中（即它们必须位于文档的根层级别）。
 
-![Snipaste_2021-11-15_19-59-11.png](%E8%99%9A%E6%8B%9F%E9%AA%A8%E9%AA%BC/Snipaste_2021-11-15_19-59-11.png)
+![Snipaste_2021-11-15_19-59-11.png](https://moeu33.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa63334ae-d91f-429a-a0c5-2df2a36e9756%2FSnipaste_2021-11-15_19-59-11.png?table=block&id=f4230a2c-940b-4dbf-aceb-813a68823b39&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&width=660&userId=&cache=v2)
 
 ---
 

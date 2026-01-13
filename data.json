@@ -49,13 +49,17 @@
             "动画"
         ],
         "version": "3",
-        "author": "Eugene Babich",
+        "author": [
+            "Eugene Babich"
+        ],
         "date": "2025-12-29",
         "tags": [
             "工具"
         ],
         "realName": "mr_tween_machine.lua",
-        "supportVer": "Moho 14",
+        "supportVer": [
+            "Moho 14"
+        ],
         "publishPage": "https://mohoscripts.com/script/mr_tween_machine",
         "link": "https://pan.baidu.com/s/1REgPvDCB6kR6JqgpGgHGsA?pwd=bg7s",
         "descUrl": "docs/mr_tween_machine.md"
@@ -87,7 +91,7 @@
             "绘图"
         ],
         "version": "10.0+",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2025-11-25",
         "tags": [
             "工具"
@@ -129,7 +133,7 @@
             "工具"
         ],
         "realName": "ae_2D_joystick.lua",
-        "supportVer": "不支持 Moho14",
+        "supportVer": "Moho 13.5",
         "publishPage": "https://mohoscripts.com/script/ae-2d-joystick",
         "link": "https://pan.baidu.com/s/1ljUWwG2qc9LJiBz2VTDX2Q?pwd=bg7s",
         "descUrl": "docs/ae_2D_joystick.md"
@@ -182,7 +186,7 @@
         "version": "1.1.2",
         "author": [
             "Eugene Babich",
-            "SimplSam (Sam Cogheil)"
+            "SimplSam"
         ],
         "date": "2025-11-03",
         "tags": [
@@ -250,7 +254,7 @@
         "author": [
             "ChatGPT",
             "Marisol Petretto",
-            "SimplSam (Sam Cogheil)"
+            "SimplSam"
         ],
         "date": "2025-08-12",
         "tags": [
@@ -281,7 +285,7 @@
         "realName": "MU_ScriptManager.lua",
         "supportVer": "Moho 14",
         "publishPage": "",
-        "link": "",
+        "link": "https://pan.baidu.com/s/1dyyc6e5S3GxcW-kWTkX2Tw?pwd=bg7s",
         "descUrl": "docs/MU_ScriptManager.md"
     },
     {
@@ -332,7 +336,7 @@
     {
         "id": "AM_Spacer3",
         "name": "Spacer（付费）",
-        "icon": "<img src='scripts_icon/AM_Spacer3.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "动画",
         "version": "3",
         "author": "Aleksei Maletin",
@@ -341,7 +345,7 @@
             "工具"
         ],
         "realName": "AM_Spacer3.lua",
-        "supportVer": "",
+        "supportVer": "Moho 13.5",
         "publishPage": "https://boosty.to/rigandmoho/posts/fd4fc63d-1346-4a00-abab-480ee41c87f0?share=post_link",
         "link": "",
         "descUrl": "docs/AM_Spacer3.md"
@@ -803,9 +807,9 @@
         "descUrl": "docs/hs_shape.md"
     },
     {
-        "id": "Mr_track_bone",
+        "id": "mr_track_bone",
         "name": "追踪骨骼",
-        "icon": "<img src='scripts_icon/Mr_track_bone.png'>",
+        "icon": "<img src='scripts_icon/mr_track_bone.png'>",
         "category": "骨骼",
         "version": "1.1",
         "author": "Eugene Babich",
@@ -813,11 +817,11 @@
         "tags": [
             "工具"
         ],
-        "realName": "Mr_track_bone.lua",
-        "supportVer": "Moho 14",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=12&t=34028",
-        "link": "",
-        "descUrl": "docs/Mr_track_bone.md"
+        "realName": "mr_track_bone.lua",
+        "supportVer": "Moho 13.5",
+        "publishPage": "https://mohoscripts.com/script/mr-track-bone",
+        "link": "https://pan.baidu.com/s/1AEr4ypAHR4jciU2hSiFiYg?pwd=bg7s",
+        "descUrl": "docs/mr_track_bone.md"
     },
     {
         "id": "lm_transform_bone",
@@ -842,18 +846,18 @@
     {
         "id": "ss_number_sequence",
         "name": "数字序列",
-        "icon": "<img src='scripts_icon/ss_number_sequence.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "动画",
-        "version": "1.0",
-        "author": "SimplSam (Sam Cogheil)",
+        "version": "1.0+",
+        "author": "SimplSam",
         "date": "2023-07-12",
         "tags": [
             "菜单"
         ],
         "realName": "ss_number_sequence.lua",
-        "supportVer": "",
+        "supportVer": "Moho 12",
         "publishPage": "https://mohoscripts.com/script/ss_number_sequence",
-        "link": "",
+        "link": "https://pan.baidu.com/s/16ucJKISWX9akXhWb5ANNeA?pwd=bg7s",
         "descUrl": "docs/ss_number_sequence.md"
     },
     {
@@ -865,7 +869,7 @@
         ],
         "version": "10+01.00 #5306",
         "author": [
-            "SimplSam (Sam Cogheil)"
+            "SimplSam"
         ],
         "date": "2023-06-05",
         "tags": [
@@ -919,15 +923,15 @@
         "icon": "<img src='scripts_icon/ss_svg_import.png'>",
         "category": "其他",
         "version": "1.12",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2022-11-15",
         "tags": [
             "工具"
         ],
         "realName": "ss_svg_import.lua",
-        "supportVer": "",
+        "supportVer": "Moho 12.5",
         "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?t=35438",
-        "link": "",
+        "link": "https://pan.baidu.com/s/162tNaexjLg8qb-bHZhfuLA?pwd=bg7s",
         "descUrl": "docs/ss_svg_import.md"
     },
     {
@@ -953,15 +957,15 @@
         "icon": "<img src='scripts_icon/ss_cycle_keys.png'>",
         "category": "动画",
         "version": "1.0",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2022-10-01",
         "tags": [
             "工具"
         ],
         "realName": "ss_cycle_keys.lua",
-        "supportVer": "",
+        "supportVer": "Moho 12",
         "publishPage": "https://mohoscripts.com/script/ss_cycle_keys",
-        "link": "",
+        "link": "https://pan.baidu.com/s/1VIgWrASY4c2Ri6SioKXBcw?pwd=bg7s",
         "descUrl": "docs/ss_cycle_keys.md"
     },
     {
@@ -973,7 +977,7 @@
         ],
         "version": "1.0",
         "author": [
-            "SimplSam (Sam Cogheil)"
+            "SimplSam"
         ],
         "date": "2022-09-15",
         "tags": [
@@ -1043,7 +1047,7 @@
             "工具"
         ],
         "realName": "ae_mix_smartbones.lua",
-        "supportVer": "Moho 13",
+        "supportVer": "Moho 12",
         "publishPage": "http://lostmarble.com/forum/viewtopic.php?f=9&t=31183",
         "link": "https://pan.baidu.com/s/1WdXOmH_UN5FF6ymX-8caHw?pwd=bg7s",
         "descUrl": "docs/ae_mix_smartbones.md"
@@ -1068,7 +1072,7 @@
     {
         "id": "ae_seamless_rotation_smart_maker",
         "name": "无缝旋转骨骼360+",
-        "icon": "<img src='scripts_icon/ae_seamless_rotation_smart_maker.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "骨骼",
         "version": "1.0",
         "author": "Alexandra Evseeva",
@@ -1087,7 +1091,7 @@
         "name": "切换颜色骨骼",
         "icon": "<img src='scripts_icon/LK_ToggleColorBones.png'>",
         "category": "骨骼",
-        "version": "2.0",
+        "version": "2.1",
         "author": [
             "Frame Order",
             "Lukas Krepel"
@@ -1099,7 +1103,7 @@
         "realName": "LK_ToggleColorBones.lua",
         "supportVer": "",
         "publishPage": "https://mohoscripts.com/script/LK_ToggleColorBones",
-        "link": "",
+        "link": "https://pan.baidu.com/s/1VXcCJEqL38BEYpbc6rN74w?pwd=pw1p",
         "descUrl": "docs/LK_ToggleColorBones.md"
     },
     {
@@ -1204,13 +1208,13 @@
         "icon": "<img src='scripts_icon/ss_ae_camera_export.png'>",
         "category": "软件协作",
         "version": "2.0",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2022-01-14",
         "tags": [
             "工具"
         ],
         "realName": "ss_ae_camera_export.lua",
-        "supportVer": "",
+        "supportVer": "Moho 12",
         "publishPage": "https://mohoscripts.com/script/ss_ae_camera_export",
         "link": "https://pan.baidu.com/s/1W9RuJFP2eA4Zaw3dKX_mXw?pwd=bg7s",
         "descUrl": "docs/ss_ae_camera_export.md"
@@ -1256,7 +1260,7 @@
     {
         "id": "ae_transform_bone",
         "name": "转换骨骼 (支持“相对关键帧”)",
-        "icon": "<img src='scripts_icon/ae_transform_bone.png'>",
+        "icon": "<img src='scripts_icon/ae_transform_bone.svg'>",
         "category": "骨骼",
         "version": "6.43",
         "author": "Alexandra Evseeva",
@@ -1296,15 +1300,15 @@
         "icon": "<img src='scripts_icon/ss_virtual_bones.png'>",
         "category": "骨骼",
         "version": "1.0",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2021-11-02",
         "tags": [
             "工具"
         ],
         "realName": "ss_virtual_bones.lua",
-        "supportVer": "",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=12&t=34594&sid=13975cec0a22c5547a70311fa4726066",
-        "link": "https://pan.baidu.com/s/1V-8lyPmO1puHPnLsMsPXiQ?pwd=bg7s",
+        "supportVer": "Moho 11",
+        "publishPage": "https://mohoscripts.com/script/ss-virtual-bones",
+        "link": "https://pan.baidu.com/s/17fQ-Q0NrfV3-AUMWIepwwg?pwd=genu",
         "descUrl": "docs/ss_virtual_bones.md"
     },
     {
@@ -1331,9 +1335,9 @@
         "descUrl": "docs/DV_Layer_Label_Color.md"
     },
     {
-        "id": "Syn_NegativeKeys",
+        "id": "syn_negative_keys",
         "name": "删除负关键帧",
-        "icon": "<img src='scripts_icon/Syn_NegativeKeys.png'>",
+        "icon": "<img src='scripts_icon/syn_negative_keys.svg'>",
         "category": "文档清理",
         "version": "0.2",
         "author": "SynthSin75",
@@ -1341,11 +1345,11 @@
         "tags": [
             "工具"
         ],
-        "realName": "Syn_NegativeKeys.lua",
+        "realName": "syn_negative_keys.lua",
         "supportVer": "",
         "publishPage": "",
-        "link": "",
-        "descUrl": "docs/Syn_NegativeKeys.md"
+        "link": "https://pan.baidu.com/s/1SNhoj6vJIOMf0k6G7iEATQ?pwd=bg7s",
+        "descUrl": "docs/syn_negative_keys.md"
     },
     {
         "id": "ss_curve_exposure",
@@ -1356,7 +1360,7 @@
         ],
         "version": "7.0",
         "author": [
-            "SimplSam (Sam Cogheil)"
+            "SimplSam"
         ],
         "date": "2021-10-23",
         "tags": [
@@ -1394,26 +1398,26 @@
         "descUrl": "docs/DV_select_Bone_layer.md"
     },
     {
-        "id": "SS_MakeBones",
+        "id": "ss_make_bones",
         "name": "骨骼分段",
-        "icon": "<img src='scripts_icon/SS_MakeBones.png'>",
+        "icon": "<img src='scripts_icon/ss_make_bones.png'>",
         "category": "骨骼",
         "version": "1.0",
-        "author": "SimplSam (Sam Cogheil)",
+        "author": "SimplSam",
         "date": "2021-08-28",
         "tags": [
             "工具"
         ],
-        "realName": "SS_MakeBones.lua",
-        "supportVer": "",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=12&t=34384&sid=019abccf87ff459f079b18b710f7c240",
-        "link": "",
-        "descUrl": "docs/SS_MakeBones.md"
+        "realName": "ss_make_bones.lua",
+        "supportVer": "Moho 11",
+        "publishPage": "https://mohoscripts.com/script/ss-make-bones",
+        "link": "https://pan.baidu.com/s/1canUlTLJi_OuM4YoFrThsA?pwd=bg7s",
+        "descUrl": "docs/ss_make_bones.md"
     },
     {
         "id": "LK_SwitchMarkers",
         "name": "切换层标签",
-        "icon": "<img src='scripts_icon/LK_SwitchMarkers.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "动画",
         "version": "1.7",
         "author": "Lukas Krepel",
@@ -1422,8 +1426,8 @@
             "嵌入"
         ],
         "realName": "LK_SwitchMarkers.lua",
-        "supportVer": "",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=12&t=34256",
+        "supportVer": "Moho 11",
+        "publishPage": "https://mohoscripts.com/script/lk-switchmarkers",
         "link": "https://pan.baidu.com/s/1I3p8dr6_lBuu8rTXZhuiCA?pwd=nbze",
         "descUrl": "docs/LK_SwitchMarkers.md"
     },
@@ -1497,9 +1501,9 @@
         "descUrl": "docs/ae_magnet.md"
     },
     {
-        "id": "Syn_AutoSave",
+        "id": "syn_auto_save",
         "name": "自动保存",
-        "icon": "<img src='scripts_icon/Syn_AutoSave.png'>",
+        "icon": "<img src='scripts_icon/syn_auto_save.png'>",
         "category": "其他",
         "version": "1.2",
         "author": "SynthSin75",
@@ -1507,11 +1511,11 @@
         "tags": [
             "工具"
         ],
-        "realName": "Syn_AutoSave.lua",
-        "supportVer": "",
+        "realName": "syn_auto_save.lua",
+        "supportVer": "Moho 12",
         "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=5&t=33933&p=196180&hilit=auto+save#p196180",
-        "link": "",
-        "descUrl": "docs/Syn_AutoSave.md"
+        "link": "https://pan.baidu.com/s/1EpBehDfW6xvtas4N7CEN6Q?pwd=bg7s",
+        "descUrl": "docs/syn_auto_save.md"
     },
     {
         "id": "mr_move_targeted_joint",
@@ -1533,7 +1537,7 @@
     {
         "id": "sz_top_layers_to_pngs",
         "name": "分层导出PNG",
-        "icon": "<img src='scripts_icon/sz_top_layers_to_pngs.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "其他",
         "version": "1.0",
         "author": "Stan",
@@ -1640,9 +1644,9 @@
         "descUrl": "docs/sz_hide_points.md"
     },
     {
-        "id": "SZ_AdjustLineWidth",
+        "id": "sz_adjust_line_width",
         "name": "调整线宽",
-        "icon": "<img src='scripts_icon/SZ_AdjustLineWidth.png'>",
+        "icon": "<img src='scripts_icon/sz_adjust_line_width.png'>",
         "category": "动画",
         "version": "1.01",
         "author": "Stan",
@@ -1650,16 +1654,16 @@
         "tags": [
             "工具"
         ],
-        "realName": "SZ_AdjustLineWidth.lua",
-        "supportVer": "",
+        "realName": "sz_adjust_line_width.lua",
+        "supportVer": "Moho 13",
         "publishPage": "https://mohoscripts.com/script/sz_adjust_line_width",
-        "link": "",
-        "descUrl": "docs/SZ_AdjustLineWidth.md"
+        "link": "https://pan.baidu.com/s/1IpJ1l2AHGiKCQDFb67XXyg?pwd=bg7s",
+        "descUrl": "docs/sz_adjust_line_width.md"
     },
     {
-        "id": "SZ_SwapViewMode",
+        "id": "sz_swap_view_mode",
         "name": "切换视图模式",
-        "icon": "<img src='scripts_icon/SZ_SwapViewMode.png'>",
+        "icon": "<img src='scripts_icon/sz_swap_view_mode.png'>",
         "category": "其他",
         "version": "1.01",
         "author": "Stan",
@@ -1667,11 +1671,11 @@
         "tags": [
             "工具"
         ],
-        "realName": "SZ_SwapViewMode.lua",
-        "supportVer": "",
+        "realName": "sz_swap_view_mode.lua",
+        "supportVer": "Moho 13",
         "publishPage": "https://mohoscripts.com/script/sz_swap_view_mode",
-        "link": "",
-        "descUrl": "docs/SZ_SwapViewMode.md"
+        "link": "https://pan.baidu.com/s/1sgHDQZYfozyvs2ksLP42fA?pwd=bg7s",
+        "descUrl": "docs/sz_swap_view_mode.md"
     },
     {
         "id": "sz_copy_layer_parameters",
@@ -1699,7 +1703,7 @@
     {
         "id": "sz_rename_smart_bone",
         "name": "重命名智能骨骼",
-        "icon": "<img src='scripts_icon/sz_rename_smart_bone.png'>",
+        "icon": "<img src='scripts_icon/sz_rename_smart_bone.svg'>",
         "category": "骨骼",
         "version": "1.0",
         "author": "Stan",
@@ -1709,7 +1713,7 @@
             "菜单"
         ],
         "realName": "sz_rename_smart_bone.lua",
-        "supportVer": "Moho 14",
+        "supportVer": "Moho 9.5",
         "publishPage": "https://mohoscripts.com/script/sz_rename_smart_bone",
         "link": "https://pan.baidu.com/s/1-4PQ0hPCxOLj0Y0KAnodqA?pwd=1y3k",
         "descUrl": "docs/sz_rename_smart_bone.md"
@@ -1743,7 +1747,7 @@
             "菜单"
         ],
         "realName": "ds_layer_to_ae.lua",
-        "supportVer": "",
+        "supportVer": "Moho 8",
         "publishPage": "https://www.animestudiotutor.com/moho_scripts",
         "link": "https://pan.baidu.com/s/1-6I4Om786cD1n-PiKkgvFQ?pwd=bg7s",
         "descUrl": "docs/ds_layer_to_ae.md"
@@ -1751,7 +1755,7 @@
     {
         "id": "LK_SortByZScale",
         "name": "图层 Z 轴排序",
-        "icon": "<img src='scripts_icon/LK_SortByZScale.png'>",
+        "icon": "<img src='scripts_icon/_no_icon.png'>",
         "category": "其他",
         "version": "1.0",
         "author": "Lukas Krepel",
@@ -1789,9 +1793,9 @@
         "descUrl": "docs/sz_move_selected_to_coord.md"
     },
     {
-        "id": "SZ_CollapseAllGroups",
+        "id": "sz_collapse_all_groups",
         "name": "折叠所有群组",
-        "icon": "<img src='scripts_icon/SZ_CollapseAllGroups.png'>",
+        "icon": "<img src='scripts_icon/sz_collapse_all_groups.svg'>",
         "category": "其他",
         "version": "1.0",
         "author": "Stan",
@@ -1800,16 +1804,16 @@
             "工具",
             "菜单"
         ],
-        "realName": "SZ_CollapseAllGroups.lua",
-        "supportVer": "",
+        "realName": "sz_collapse_all_groups.lua",
+        "supportVer": "Moho 12",
         "publishPage": "https://www.lostmarble.com/forum/viewtopic.php?p=191388&hilit=Collapse+All+Groups#p191388",
-        "link": "",
-        "descUrl": "docs/SZ_CollapseAllGroups.md"
+        "link": "https://pan.baidu.com/s/1AEDGYBkeAET3C2BYUsmZuA?pwd=upr5",
+        "descUrl": "docs/sz_collapse_all_groups.md"
     },
     {
-        "id": "SZ_TimelineNavigator",
+        "id": "sz_timeline_navigator",
         "name": "时间轴导航器",
-        "icon": "<img src='scripts_icon/SZ_TimelineNavigator.png'>",
+        "icon": "<img src='scripts_icon/sz_timeline_navigator.svg'>",
         "category": "动画",
         "version": "1.0",
         "author": "Stan",
@@ -1817,16 +1821,16 @@
         "tags": [
             "工具"
         ],
-        "realName": "SZ_TimelineNavigator.lua",
-        "supportVer": "",
+        "realName": "sz_timeline_navigator.lua",
+        "supportVer": "Moho 12",
         "publishPage": "https://www.lostmarble.com/forum/viewtopic.php?f=12&t=32972",
-        "link": "",
-        "descUrl": "docs/SZ_TimelineNavigator.md"
+        "link": "https://pan.baidu.com/s/1mtpcNE1Uncd8Ty4B74z65g?pwd=bg7s",
+        "descUrl": "docs/sz_timeline_navigator.md"
     },
     {
-        "id": "Syn_LockLayer",
+        "id": "syn_lock_layer",
         "name": "锁定图层",
-        "icon": "<img src='scripts_icon/Syn_LockLayer.png'>",
+        "icon": "<img src='scripts_icon/syn_lock_layer.svg'>",
         "category": "其他",
         "version": "0.2",
         "author": "SynthSin75",
@@ -1834,11 +1838,11 @@
         "tags": [
             "工具"
         ],
-        "realName": "Syn_LockLayer.lua",
-        "supportVer": "",
+        "realName": "syn_lock_layer.lua",
+        "supportVer": "Moho 12",
         "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=13&t=29544",
-        "link": "",
-        "descUrl": "docs/Syn_LockLayer.md"
+        "link": "https://pan.baidu.com/s/1k5585prieW3RFvo5U2kzHg?pwd=bg7s",
+        "descUrl": "docs/syn_lock_layer.md"
     },
     {
         "id": "msMakeHighQuality",
@@ -2037,9 +2041,9 @@
         "descUrl": "docs/ds_distort.md"
     },
     {
-        "id": "RT_KeyTool",
+        "id": "rt_key_tool",
         "name": "关键帧微调",
-        "icon": "<img src='scripts_icon/RT_KeyTool.png'>",
+        "icon": "<img src='scripts_icon/rt_key_tool.png'>",
         "category": "动画",
         "version": "1.3",
         "author": "Lukas Krepel",
@@ -2047,33 +2051,17 @@
         "tags": [
             "工具"
         ],
-        "realName": "RT_KeyTool.lua",
+        "realName": "rt_key_tool.lua",
         "supportVer": "",
         "publishPage": "https://www.lostmarble.com/forum/viewtopic.php?f=12&t=13935",
-        "link": "",
-        "descUrl": "docs/RT_KeyTool.md"
+        "link": "https://pan.baidu.com/s/1iLCK70WGxJQYNePfQBZzug?pwd=bg7s",
+        "descUrl": "docs/rt_key_tool.md"
     },
-    {
-        "id": "CC_REVERSE_LAYER_KEYFRAMES",
-        "name": "反转关键帧",
-        "icon": "<img src='scripts_icon/CC_REVERSE_LAYER_KEYFRAMES.png'>",
-        "category": "动画",
-        "version": "1.2",
-        "author": "Crashcore",
-        "date": "2006-01-18",
-        "tags": [
-            "菜单"
-        ],
-        "realName": "CC_REVERSE_LAYER_KEYFRAMES.lua",
-        "supportVer": "",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?t=2448",
-        "link": "",
-        "descUrl": "docs/CC_REVERSE_LAYER_KEYFRAMES.md"
-    },
+
     {
         "id": "sz_remove_empty_actions",
         "name": "删除空操作",
-        "icon": "<img src='scripts_icon/sz_remove_empty_actions.png'>",
+        "icon": "<img src='scripts_icon/sz_remove_empty_actions.svg'>",
         "category": "文档清理",
         "version": "2.0",
         "author": "Stan",
@@ -2085,7 +2073,7 @@
         "realName": "sz_remove_empty_actions.lua",
         "supportVer": "",
         "publishPage": "",
-        "link": "",
+        "link": "https://pan.baidu.com/s/1ilv1SgZ6TKwflccOGmDZJg?pwd=3xzu",
         "descUrl": "docs/sz_remove_empty_actions.md"
     }
 ]

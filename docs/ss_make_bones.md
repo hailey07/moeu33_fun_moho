@@ -1,5 +1,3 @@
-[骨骼分段_ss_make_bones___V1.0.zip](%E9%AA%A8%E9%AA%BC%E5%88%86%E6%AE%B5/%E9%AA%A8%E9%AA%BC%E5%88%86%E6%AE%B5_ss_make_bones___V1.0.zip)
-
 分裂、克隆或重组骨骼的工具
 
 该工具用于拆分、克隆和改造骨骼
@@ -10,7 +8,7 @@
 该工具主要用于绑定和设计
 但如果所选骨骼和或子级已经制作了关键帧，则应该处理动画内容（重新父级和重新定位）
 
-![ss-make-bones-demo-01-x1200.gif](%E9%AA%A8%E9%AA%BC%E5%88%86%E6%AE%B5/ss-make-bones-demo-01-x1200.gif)
+![ss-make-bones-demo-01-x1200.gif](https://i.ibb.co/Jshgbkx/ss-make-bones-demo-01-x1200.gif)
 
 选项和功能：
 
@@ -27,4 +25,4 @@
 - 使用重置第一骨骼角度，如果您还希望基础骨骼具有角度偏移
 - “基础骨骼”是最初选择的骨骼，它本身可能会通过拆分/克隆过程改变大小和旋转
 
-![fibo-octo24-x800.gif](%E9%AA%A8%E9%AA%BC%E5%88%86%E6%AE%B5/fibo-octo24-x800.gif)
+![fibo-octo24-x800.gif](https://i.ibb.co/mJdRTqr/fibo-octo24-x800.gif)

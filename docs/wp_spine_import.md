@@ -1,6 +1,4 @@
-适配版本: Moho 14
 
-[wp_spine_import_V1.1.3.zip](WP%20%E4%BB%8E%20Spine%20JSON%20%E5%AF%BC%E5%85%A5/wp_spine_import_V1.1.3.zip)
 
 从 Spine JSON 导入资源（可从 Affinity、Krita、Spine、Photoshop、AfterEffects、Gimp 等软件导入）
 
@@ -115,11 +113,7 @@ spine.json 中的骨骼数据目前用于确定图像的变换，以在 Moho 中
 
 关于 Spine 生成的更高级功能：
 
-- 目前仅支持默认皮肤（名为"default"的皮肤
-
-![](https://mohoscripts.com/emoticons/wink.png)
-
-将被导入。不支持多皮肤。
+- 目前仅支持默认皮肤（名为"default"的皮肤）将被导入。不支持多皮肤。
 
 - 导入区域附件（= 没有网格的图像）。带网格的图像将不会被导入。
 - 与 Spine 一样，支持的图像文件格式为 png、jpg 和 jpeg（将按此顺序搜索这些格式，与 Spine 相同）。

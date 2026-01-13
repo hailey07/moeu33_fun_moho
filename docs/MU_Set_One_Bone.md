@@ -1,12 +1,5 @@
-适配版本: Moho 14
 
-[MU_Set_One_Bone_V2.9.2.zip](%E5%9C%A8%E4%B8%A4%E7%82%B9%E4%B9%8B%E9%97%B4%E5%BB%BA%E7%AB%8B%E9%AA%A8%E9%AA%BC/MU_Set_One_Bone_V2.9.2.zip)
-
-如果不能下载，[点击此处](https://file.notion.so/f/f/32fff534-f878-4824-ba51-a0404d448f8d/d07024d7-8c25-46cf-99a5-d88ac8110f9a/MU_Set_One_Bone_V2.9.2.zip?table=block&id=22ad2a0d-1cb6-8053-923f-e1d206e65423&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&expirationTimestamp=1751990400000&signature=SnlpzX2oGdwXeC2teXdsr99wUZTfvjfHH6tVz3rrqQ4&downloadName=MU_Set_One_Bone_V2.9.2.zip)
-
-[MU_Set_One_Bone_V2.7.zip](%E5%9C%A8%E4%B8%A4%E7%82%B9%E4%B9%8B%E9%97%B4%E5%BB%BA%E7%AB%8B%E9%AA%A8%E9%AA%BC/MU_Set_One_Bone_V2.7.zip)
-
----
+![Set_One_Bone_V2.5.mp4](https://file.notion.so/f/f/32fff534-f878-4824-ba51-a0404d448f8d/a0f65d75-d8d5-4447-a379-00bdf5dd0ae6/Set_One_Bone_V2.5.mp4?table=block&id=c8b9696d-72a9-46d9-b21c-34b803d56d5e&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&expirationTimestamp=1768356000000&signature=UVj5Pk0taLO8zlVTE2oQWHOekYN0oxiFuSyyIpsPGuM&downloadName=Set_One_Bone_V2.5.mp4)
 
 ## V2.9.2 （此版本由 Hungs59 改进）
 
@@ -53,7 +46,7 @@
 - **更改**：在 Description 函数中将日期格式从 'Cập nhật: 26/03/2025' 更改为 'Updated: 03/26/2025'。
 - **原因**：与英文本地化保持一致，并遵循英文用户的标准日期格式。
 
-### 功能改进总结
+## 功能改进总结
 
 - **增强的鼠标交互**：添加了 Ctrl 和 Alt 修饰键以直接分配坐标，并改进了矢量层的边缘选择。
 - **界面稳定性**：修复了层焦点问题，以获得更流畅的体验。
@@ -69,12 +62,12 @@
 
 ### 更新：
 
-**V2.6 更新：**
+## **V2.6 更新：**
 
 1. 如果没有选中骨骼或点，则自动获取该图层的中心点坐标
 2. 当图层类型不是矢量层或骨骼层时，自动获取图层中心点的坐标（除音频层和3D层）
 
-**V2.5 更新 （来自 Eugene Babich 的修改）：**
+## **V2.5 更新 （来自 Eugene Babich 的修改）：**
 
 1. 现在一切都在全局坐标中进行。
 2. 重新设计了骨架搜索。
@@ -83,6 +76,3 @@
 4. 如果在按住 Alt 的情况下从骨骼获取坐标，它将获取骨骼尖端的坐标，而不是根部的坐标。
 5. 如果选择多个点，将从选择的中心获取坐标。
 
-### 演示：
-
-[Set_One_Bone_V2.5.mp4](%E5%9C%A8%E4%B8%A4%E7%82%B9%E4%B9%8B%E9%97%B4%E5%BB%BA%E7%AB%8B%E9%AA%A8%E9%AA%BC/Set_One_Bone_V2.5.mp4)

@@ -1,4 +1,4 @@
-[📺 视频教程](https://www.bilibili.com/video/BV1tNvbBLEpY/?vd_source=adfba47fc6a78ec4ab307b64e7dce657)
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115806058845899&bvid=BV1tNvbBLEpY&cid=35067463975&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" width="640" height="360"></iframe>
 
 这个脚本非常有助于控制动画的节奏。创建过冲效果，只需要调整间距即可。
 

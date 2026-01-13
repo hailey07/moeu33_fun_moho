@@ -264,8 +264,8 @@ a {
 /* 场景4: 详情页大图标 (Detail Header Icons) */
 .detail-icon .iconfont {
   font-size: 40px;
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
   background-color: var(--script-icon-bg);
   border-radius: 16px;
   color: var(--black);
@@ -377,7 +377,7 @@ a {
 .btn-download {
   display: inline-block;
   background: var(--primary-color);
-  color: #fff;
+  color: white;
   padding: 14px 32px;
   border-radius: 6px;
   font-weight: var(--fw-semi-bold);
@@ -626,23 +626,25 @@ a {
   padding: 4px 10px;
   margin-right: 10px;
   margin-left: 0;
-  background-color: #fff4e6;
+  background-color: #fff0f6;
   border: var(--border-line-width) solid var(--border-color);
   border-radius: 8px;
-  color: #555;
+  color: #495057;
   font-size: var(--fz-head-sub);
   font-weight: var(--fw-medium);
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   white-space: nowrap;
+  opacity: 0.7;
 }
 
 .header-sub-link:hover {
   border-color: var(--black);
-  color: var(--black);
+  color: white;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0px 0px var(--black);
-  background-color: #ffe8cc;
+  background-color: #f783ac;
+  opacity: 1;
 }
 
 /* 控制栏 (Switchers + Search) */
@@ -1242,6 +1244,7 @@ font-size: 15px;
   margin-top: 30px;
   position: relative;
   width: 100%;
+  margin-bottom:200px;
 }
 
 .content-area {
@@ -1510,6 +1513,83 @@ font-size: 15px;
   margin: 16px 0;
   animation: fadeIn 0.5s ease-out;
 }
+
+/* ========================================= */
+/* 新增：Markdown 表格样式 (MD Table) */
+/* ========================================= */
+
+.content-area table {
+    width: 80%;
+    min-width: 400px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    overflow-x: hidden;
+    box-shadow: 0 0 0 1.5px var(--md-gray);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-collapse: separate;
+  
+}
+
+/* 表头样式 */
+.content-area table th {
+  background-color: #f1f3f5; /* 比纯白稍灰的背景 */
+  font-weight: var(--fw-bold);
+  color: var(--black);
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: var(--border-line-width) solid var(--md-gray); /*以此分割表头和内容*/
+  border-right: 1px solid var(--md-gray); /* 只有轻微的纵向分割线 */
+  white-space: pre-wrap;
+}
+
+/* 单元格样式 */
+.content-area table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--md-gray); /* 内容行之间用细线 */
+  border-right: 1px solid var(--md-gray);
+  color: var(--text-main);
+  background-color: #fff;
+  transition: all 0.2s ease;
+  line-height: 1.6;
+}
+
+/* 斑马纹 (Zebra Striping) - 让长表格更易读 */
+.content-area table tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+/* 悬停效果 (Hover) - 呼应整站风格 */
+/*.content-area table tr:hover td {
+  background-color: #e7f5ff; /* 悬停变为极淡的蓝色，呼应 primary-color
+  color: var(--primary-color); /* 文字变色
+  cursor: default;
+}*/
+
+/* 细节处理：移除最后一行和最后一列的多余边框 */
+.content-area table tr:last-child td {
+  border-bottom: none;
+}
+.content-area table th:last-child,
+.content-area table td:last-child {
+  border-right: none;
+}
+
+/* 滚动条美化 (针对表格横向滚动) */
+.content-area table::-webkit-scrollbar {
+  height: 8px; /* 横向滚动条高度 */
+}
+.content-area table::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.content-area table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* ========================================= */
 /* 修改部分：代码块容器 (Code Block) - 红绿灯固定版 */
 /* ========================================= */
@@ -1599,13 +1679,12 @@ font-size: 15px;
 .content-area code:not(pre code) {
   background-color: rgba(97, 95, 255, 0.1);
   color: var(--text-main) !important;
-  padding: 0.2em 0.5em;
+  padding: 0 0.5em;
   border-radius: 4px;
   font-family: "JetBrains Mono", "Fira Code", monospace !important;
   font-size: 0.9em;
   border: 2px dotted var(--md-violet);
-  margin-left: 0.2em;
-  margin-right: 0.2em;
+  margin: 0.2em;
 }
 
 /* ========================================= */
