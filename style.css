@@ -2240,13 +2240,20 @@ font-size: 0.98em;
 }
 
 .view-switcher button:active,
-.btn-listing-link:active,
-.btn-download:active {
+.btn-listing-link:active {
   transform: scale(0.985) !important;
   transition: transform 0.1s;
   box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
   color: #fcfcfc;
   background: var(--primary-color);
+  font-weight: 500;
+}
+.btn-download:active {
+  transform: scale(0.985) !important;
+  transition: transform 0.1s;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
+  color: #fcfcfc;
+  background: rgba(var(--md-blue-rgb), 0.7);
   font-weight: 500;
 }
 
