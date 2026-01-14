@@ -1,5 +1,6 @@
 {
   "rewrites": [
     { "source": "/scripts/:match*", "destination": "/detail.html" }
-  ]
+  ],
+  "cleanUrls": true
 }
