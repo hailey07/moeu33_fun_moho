@@ -16,14 +16,22 @@
 <body class="app-mode">
     <header class="navbar">
         <div class="top-announcement">
-            <span style="font-size: 14px; font-weight:bold; color:#868e96; margin:0 10px; ">ʜᴏᴡ ➜</span>
-            <a href="howtoinstall.html" class="header-sub-link" target="_blank">如何安装脚本</a>
-            <a href="howtouninstall.html" class="header-sub-link" target="_blank">如何卸载 Moho</a>
-            <a href="mohoscripts_manager.html" class="header-sub-link" target="_blank">Moho 脚本管理器</a>
+            <div class="howtotext">
+                <span style="font-size: 14px; font-weight:bold; color:#868e96; margin:0 10px; ">sᴇᴇ ʜᴇʀᴇ ➜</span>
+            </div>
+            <div class="howtolink">
+                <a href="howtoinstall.html" class="header-sub-link" target="_blank">安装脚本</a>
+                <a href="howtouninstall.html" class="header-sub-link" target="_blank">卸载 Moho</a>
+                <a href="mohoscripts_manager.html" class="header-sub-link" target="_blank">Moho 脚本管理器</a>
+            </div>
+
+            <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="切换日夜模式"></button>
         </div>
-        <div class="title-area" style="width: 95%; display:flex; flex-direction:column; align-items:center;">
+        <div class="title-area">
             <h1 class="webfont">
-                <img src="assets/Favicon.png" href="index.html" class="header-logo" alt="Logo">
+                
+                    <img src="assets/Favicon.png" class="header-logo" alt="Logo">
+             
                 <span style="margin-left: 10px;">
                     <a href="index.html" class="header-main-title"> 𝕄𝕠𝕙𝕠 脚本</a>
                 </span>
@@ -32,12 +40,17 @@
                 <div class="desc-line">—— • 这里是 𝕄𝕠𝕙𝕠 软件的相关资源分享站 • ——</div>
             </div>
             <div class="my-link">
-                <img src="assets/bilibili.svg" href="https://space.bilibili.com/1718084" target="_blank"
-                    class="my-link-logo"></a>
-                <img src="assets/youtube.png" href="https://www.youtube.com/@MoeU33Hailey" target="_blank"
-                    class="my-link-logo"></a>
-                <img src="assets/gumroad.svg" href="https://moeu33.gumroad.com" target="_blank"
-                    class="my-link-logo"></a>
+                <a href="https://space.bilibili.com/1718084" target="_blank">
+                    <img src="assets/bilibili.svg" class="my-link-logo">
+                </a>
+
+                <a href="https://www.youtube.com/@MoeU33Hailey" target="_blank">
+                    <img src="assets/youtube.png" class="my-link-logo">
+                </a>
+
+                <a href="https://moeu33.gumroad.com" target="_blank">
+                    <img src="assets/gumroad.svg" class="my-link-logo">
+                </a>
             </div>
         </div>
         <div class="controls">
@@ -52,27 +65,31 @@
             <div class="r-controls">
                 <div class="filter-toolbar">
                     <a href="listing.html" class="btn-listing-link">
-                        <span class="iconfont icon-liebiao1"></span>索引
+                        <span class="iconfont icon-liebiao1" target="_blank"></span>索引
                     </a>
                     <div class="select-wrapper">
-    <select id="sort-select" class="notion-select" onchange="handleSort()">
-        <option value="default">默认排序</option>
-        <option value="date-desc">日期 (新→旧)</option>
-        <option value="date-asc">日期 (旧→新)</option>
-        <option value="name-asc">名称 (A→Z)</option>
-        <option value="name-desc">名称 (Z→A)</option>
-    </select>
-</div>
+                        <select id="sort-select" class="notion-select" onchange="handleSort()">
+                            <option value="default">默认排序</option>
+                            <option value="date-desc">日期 (新→旧)</option>
+                            <option value="date-asc">日期 (旧→新)</option>
+                            <option value="name-asc">名称 (A→Z)</option>
+                            <option value="name-desc">名称 (Z→A)</option>
+                        </select>
+                    </div>
                 </div>
                 <input type="text" id="search-input" placeholder="输入关键词搜索..." oninput="handleSearch()">
             </div>
         </div>
     </header>
+
     <main id="app-container"></main>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://at.alicdn.com/t/c/font_5109131_wfhaps8fl5.js"></script>
+    <script src="https://at.alicdn.com/t/c/font_5109131_e8j9zarzsw.js"></script>
     <script src="script.js"></script>
 </body>
+<div id="copyright" class="cr-text">
+    ©️ 2026 by MoeU33
+</div>
 
 </html>

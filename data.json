@@ -25,7 +25,7 @@
     {
         "id": "mr_curve_tool",
         "name": "节点绘图工具",
-        "icon": "<img src='scripts_icon/mr_curve_tool.svg'>",
+        "icon": "<img src='scripts_icon/mr_curve_tool.png'>",
         "category": [
             "绘图"
         ],
@@ -44,7 +44,7 @@
     {
         "id": "mr_tween_machine",
         "name": "MR 补间机",
-        "icon": "<img src='scripts_icon/mr_tween_machine.svg'>",
+        "icon": "<img src='scripts_icon/mr_tween_machine.png'>",
         "category": [
             "动画"
         ],
@@ -67,7 +67,7 @@
     {
         "id": "mr_guides",
         "name": "MR 参考线",
-        "icon": "<img src='scripts_icon/mr_guides.svg'>",
+        "icon": "<img src='scripts_icon/mr_guides.png'>",
         "category": [
             "其他"
         ],
@@ -442,7 +442,7 @@
     {
         "id": "MU_SetMask",
         "name": "设置遮罩",
-        "icon": "<img src='scripts_icon/MU_SetMask.svg'>",
+        "icon": "<img src='scripts_icon/MU_SetMask.png'>",
         "category": [
             "图层"
         ],
@@ -522,7 +522,7 @@
     {
         "id": "MU_ResetLayerTransform",
         "name": "重置图层变换",
-        "icon": "<img src='scripts_icon/MU_ResetLayerTransform.svg'>",
+        "icon": "<img src='scripts_icon/MU_ResetLayerTransform.png'>",
         "category": [
             "图层"
         ],
@@ -546,7 +546,7 @@
     {
         "id": "Syn_MergeVectors",
         "name": "合并矢量图层",
-        "icon": "<img src='scripts_icon/Syn_MergeVectors.svg'>",
+        "icon": "<img src='scripts_icon/Syn_MergeVectors.png'>",
         "category": [
             "绘图"
         ],
@@ -566,7 +566,7 @@
     {
         "id": "MU_Custom_Origin",
         "name": "自定义原点",
-        "icon": "<img src='scripts_icon/MU_Custom_Origin.svg'>",
+        "icon": "<img src='scripts_icon/MU_Custom_Origin.png'>",
         "category": [
             "绘图"
         ],
@@ -624,7 +624,7 @@
     {
         "id": "MU_LayerRenamer",
         "name": "批量更改图层名字",
-        "icon": "<img src='scripts_icon/MU_LayerRenamer.svg'>",
+        "icon": "<img src='scripts_icon/MU_LayerRenamer.png'>",
         "category": [
             "图层"
         ],
@@ -786,7 +786,7 @@
     {
         "id": "hs_shape",
         "name": "绘图补充（未汉化）",
-        "icon": "<img src='scripts_icon/hs_shape.svg'>",
+        "icon": "<img src='scripts_icon/hs_shape.png'>",
         "category": [
             "绘图"
         ],
@@ -863,7 +863,7 @@
     {
         "id": "ss_multi_layer_transform_points",
         "name": "多层点修改",
-        "icon": "<img src='scripts_icon/ss_multi_layer_transform_points.svg'>",
+        "icon": "<img src='scripts_icon/ss_multi_layer_transform_points.png'>",
         "category": [
             "绘图"
         ],
@@ -971,7 +971,7 @@
     {
         "id": "ss_ref_layer_update",
         "name": "更新参考层",
-        "icon": "<img src='scripts_icon/ss_ref_layer_update.svg'>",
+        "icon": "<img src='scripts_icon/ss_ref_layer_update.png'>",
         "category": [
             "图层"
         ],
@@ -992,7 +992,7 @@
     {
         "id": "ae_transform_points",
         "name": "转换节点、曲率 (智能骨骼修复版)",
-        "icon": "<img src='scripts_icon/ae_transform_points.svg'>",
+        "icon": "<img src='scripts_icon/ae_transform_points.png'>",
         "category": [
             "绘图"
         ],
@@ -1015,7 +1015,7 @@
     {
         "id": "lm_add_point_ae",
         "name": "添加点",
-        "icon": "<img src='scripts_icon/lm_add_point_ae.svg'>",
+        "icon": "<img src='scripts_icon/lm_add_point_ae.png'>",
         "category": [
             "绘图"
         ],
@@ -1260,7 +1260,7 @@
     {
         "id": "ae_transform_bone",
         "name": "转换骨骼 (支持“相对关键帧”)",
-        "icon": "<img src='scripts_icon/ae_transform_bone.svg'>",
+        "icon": "<img src='scripts_icon/ae_transform_bone.png'>",
         "category": "骨骼",
         "version": "6.43",
         "author": "Alexandra Evseeva",
@@ -1314,7 +1314,7 @@
     {
         "id": "DV_Layer_Label_Color",
         "name": "图层标签颜色",
-        "icon": "<img src='scripts_icon/DV_Layer_Label_Color.svg'>",
+        "icon": "<img src='scripts_icon/DV_Layer_Label_Color.png'>",
         "category": [
             "图层"
         ],
@@ -1337,7 +1337,7 @@
     {
         "id": "syn_negative_keys",
         "name": "删除负关键帧",
-        "icon": "<img src='scripts_icon/syn_negative_keys.svg'>",
+        "icon": "<img src='scripts_icon/syn_negative_keys.png'>",
         "category": "文档清理",
         "version": "0.2",
         "author": "SynthSin75",
@@ -1354,7 +1354,7 @@
     {
         "id": "ss_curve_exposure",
         "name": "边线显露",
-        "icon": "<img src='scripts_icon/ss_curve_exposure.svg'>",
+        "icon": "<img src='scripts_icon/ss_curve_exposure.png'>",
         "category": [
             "绘图"
         ],
@@ -1377,7 +1377,7 @@
     {
         "id": "DV_select_Bone_layer",
         "name": "快速回到骨骼层",
-        "icon": "<img src='scripts_icon/DV_select_Bone_layer.svg'>",
+        "icon": "<img src='scripts_icon/DV_select_Bone_layer.png'>",
         "category": [
             "图层"
         ],
@@ -1457,7 +1457,7 @@
     {
         "id": "ae_transform_layer",
         "name": "操控层 (智能骨骼修复版)",
-        "icon": "<img src='scripts_icon/ae_transform_layer.svg'>",
+        "icon": "<img src='scripts_icon/ae_transform_layer.png'>",
         "category": [
             "图层"
         ],
@@ -1480,7 +1480,7 @@
     {
         "id": "ae_magnet",
         "name": "多层磁铁",
-        "icon": "<img src='scripts_icon/ae_magnet.svg'>",
+        "icon": "<img src='scripts_icon/ae_magnet.png'>",
         "category": [
             "绘图"
         ],
@@ -1554,7 +1554,7 @@
     {
         "id": "ae_shape_picker",
         "name": "多选图层",
-        "icon": "<img src='scripts_icon/ae_shape_picker.svg'>",
+        "icon": "<img src='scripts_icon/ae_shape_picker.png'>",
         "category": [
             "图层"
         ],
@@ -1577,7 +1577,7 @@
     {
         "id": "DV_transform_layer",
         "name": "DV 操控层",
-        "icon": "<img src='scripts_icon/DV_transform_layer.svg'>",
+        "icon": "<img src='scripts_icon/DV_transform_layer.png'>",
         "category": [
             "图层"
         ],
@@ -1600,7 +1600,7 @@
     {
         "id": "sz_mark_points",
         "name": "标记节点",
-        "icon": "<img src='scripts_icon/sz_mark_points.svg'>",
+        "icon": "<img src='scripts_icon/sz_mark_points.png'>",
         "category": [
             "绘图"
         ],
@@ -1623,7 +1623,7 @@
     {
         "id": "sz_hide_points",
         "name": "隐藏节点",
-        "icon": "<img src='scripts_icon/sz_hide_points.svg'>",
+        "icon": "<img src='scripts_icon/sz_hide_points.png'>",
         "category": [
             "绘图"
         ],
@@ -1680,7 +1680,7 @@
     {
         "id": "sz_copy_layer_parameters",
         "name": "复制图层参数",
-        "icon": "<img src='scripts_icon/sz_copy_layer_parameters.svg'>",
+        "icon": "<img src='scripts_icon/sz_copy_layer_parameters.png'>",
         "category": [
             "图层"
         ],
@@ -1703,7 +1703,7 @@
     {
         "id": "sz_rename_smart_bone",
         "name": "重命名智能骨骼",
-        "icon": "<img src='scripts_icon/sz_rename_smart_bone.svg'>",
+        "icon": "<img src='scripts_icon/sz_rename_smart_bone.png'>",
         "category": "骨骼",
         "version": "1.0",
         "author": "Stan",
@@ -1772,7 +1772,7 @@
     {
         "id": "sz_move_selected_to_coord",
         "name": "复制粘贴选定坐标",
-        "icon": "<img src='scripts_icon/sz_move_selected_to_coord.svg'>",
+        "icon": "<img src='scripts_icon/sz_move_selected_to_coord.png'>",
         "category": [
             "绘图"
         ],
@@ -1795,7 +1795,7 @@
     {
         "id": "sz_collapse_all_groups",
         "name": "折叠所有群组",
-        "icon": "<img src='scripts_icon/sz_collapse_all_groups.svg'>",
+        "icon": "<img src='scripts_icon/sz_collapse_all_groups.png'>",
         "category": "其他",
         "version": "1.0",
         "author": "Stan",
@@ -1813,7 +1813,7 @@
     {
         "id": "sz_timeline_navigator",
         "name": "时间轴导航器",
-        "icon": "<img src='scripts_icon/sz_timeline_navigator.svg'>",
+        "icon": "<img src='scripts_icon/sz_timeline_navigator.png'>",
         "category": "动画",
         "version": "1.0",
         "author": "Stan",
@@ -1830,7 +1830,7 @@
     {
         "id": "syn_lock_layer",
         "name": "锁定图层",
-        "icon": "<img src='scripts_icon/syn_lock_layer.svg'>",
+        "icon": "<img src='scripts_icon/syn_lock_layer.png'>",
         "category": "其他",
         "version": "0.2",
         "author": "SynthSin75",
@@ -1847,7 +1847,7 @@
     {
         "id": "msMakeHighQuality",
         "name": "位图高质量渲染",
-        "icon": "<img src='scripts_icon/msMakeHighQuality.svg'>",
+        "icon": "<img src='scripts_icon/msMakeHighQuality.png'>",
         "category": [
             "图层"
         ],
@@ -1870,7 +1870,7 @@
     {
         "id": "dr_switchview",
         "name": "切换层全显开关",
-        "icon": "<img src='scripts_icon/dr_switchview.svg'>",
+        "icon": "<img src='scripts_icon/dr_switchview.png'>",
         "category": [
             "图层"
         ],
@@ -1893,7 +1893,7 @@
     {
         "id": "msSetOrigin",
         "name": "图形轴心点",
-        "icon": "<img src='scripts_icon/msSetOrigin.svg'>",
+        "icon": "<img src='scripts_icon/msSetOrigin.png'>",
         "category": [
             "绘图"
         ],
@@ -1916,7 +1916,7 @@
     {
         "id": "dr_roundcorners",
         "name": "圆角工具",
-        "icon": "<img src='scripts_icon/dr_roundcorners.svg'>",
+        "icon": "<img src='scripts_icon/dr_roundcorners.png'>",
         "category": [
             "绘图"
         ],
@@ -1995,8 +1995,8 @@
     },
     {
         "id": "lm_select_points",
-        "name": "节点 xy 轴对齐 + 镜像绘图",
-        "icon": "<img src='scripts_icon/lm_select_points.svg'>",
+        "name": "节点 xy 轴对齐 + 镜像绘图 + 自动中心点",
+        "icon": "<img src='scripts_icon/lm_select_points.png'>",
         "category": [
             "绘图"
         ],
@@ -2020,7 +2020,7 @@
     {
         "id": "ds_distort",
         "name": "自由变形",
-        "icon": "<img src='scripts_icon/ds_distort.svg'>",
+        "icon": "<img src='scripts_icon/ds_distort.png'>",
         "category": [
             "绘图"
         ],
@@ -2061,7 +2061,7 @@
     {
         "id": "sz_remove_empty_actions",
         "name": "删除空操作",
-        "icon": "<img src='scripts_icon/sz_remove_empty_actions.svg'>",
+        "icon": "<img src='scripts_icon/sz_remove_empty_actions.png'>",
         "category": "文档清理",
         "version": "2.0",
         "author": "Stan",

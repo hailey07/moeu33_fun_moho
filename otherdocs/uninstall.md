@@ -33,5 +33,4 @@
     > /Users/Shared/Library/Application Support/Lost Marble
     
 3. 重新安装Moho，启动后出现注册页面即为重装成功
-
-![](https://moeu33.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F053d0991-5e60-4393-aaa8-3e1e5b70d23b%2FUntitled.png?table=block&id=03f9abe6-553b-4537-a4f8-198d5b5f5392&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&width=1280&userId=&cache=v2)
+   ![](https://moeu33.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F053d0991-5e60-4393-aaa8-3e1e5b70d23b%2FUntitled.png?table=block&id=03f9abe6-553b-4537-a4f8-198d5b5f5392&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&width=1280&userId=&cache=v2)

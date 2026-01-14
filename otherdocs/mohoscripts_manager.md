@@ -1,6 +1,6 @@
 
 ## 下载
-<a href="https://pan.baidu.com/s/1671nC65pQq3O6i8gx9gq5w?pwd=udkc" id="d-download" class="btn-download" target="_blank" style="width: 200px;color:white;border-color:#495057;margin-bottom:2em;">
+<a href="https://pan.baidu.com/s/1671nC65pQq3O6i8gx9gq5w?pwd=udkc" id="d-download" class="btn-download" target="_blank" style="width: 200px;color:white;border-color:var(--border-color);background-color:var(--primary-color);margin-bottom:2em;">
 <span class="iconfont icon-download"></span>
 点击下载资源</a>
 

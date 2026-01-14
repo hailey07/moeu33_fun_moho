@@ -3,10 +3,14 @@ let currentView = "board"; // 默认为看板
 let currentSort = "default";
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. 初始化检查：页面刚打开时判断一次
+    // --- [新增] 1. 主题初始化逻辑 (必须放在最前面) ---
+    initTheme();
+// --- [新增] 彩蛋初始化 ---
+    initEasterEgg(); // <--- 添加这一行
+    // 2. 初始化检查：页面刚打开时判断一次
     checkMobileMode();
 
-    // 2. 【新增】动态监听：防止用户拖拽窗口或手机旋转屏幕时，视图卡在看板模式
+    // 3. 动态监听：防止用户拖拽窗口或手机旋转屏幕时，视图卡在看板模式
     window.addEventListener("resize", () => {
         checkMobileMode();
     });
@@ -307,4 +311,107 @@ function renderTable(container, data) {
     });
 
     container.appendChild(table);
+}
+
+// =========================================
+// [新增] 深色模式逻辑 (Dark Mode Logic)
+// =========================================
+
+// 定义图标 HTML 字符串
+// 太阳图标 (用于深色模式下，提示点击切换回白天)
+const iconSun = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-taiyang"></use></svg>';
+// 月亮图标 (用于浅色模式下，提示点击切换回黑夜)
+const iconMoon = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-yueliang"></use></svg>';
+
+// 初始化主题
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const btn = document.getElementById('theme-toggle');
+
+    // 逻辑：如果有缓存设置，优先使用缓存；否则跟随系统
+    if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if(btn) btn.innerHTML = iconSun; 
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        if(btn) btn.innerHTML = iconMoon; 
+    }
+}
+
+// 切换主题
+function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const btn = document.getElementById('theme-toggle');
+
+    if (current === 'dark') {
+        // 切换到浅色
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        if(btn) btn.innerHTML = iconMoon;
+    } else {
+        // 切换到深色
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        if(btn) btn.innerHTML = iconSun;
+    }
+}
+// =========================================
+// [新增] 彩蛋逻辑 (Easter Egg)
+// =========================================
+function initEasterEgg() {
+    // 同时选择主页的 Logo 和详情页的面包屑 Icon
+    const targets = document.querySelectorAll('.header-logo, .breadcrumb-home-icon');
+    let clickCount = 0;
+    let resetTimer = null;
+
+    targets.forEach(el => {
+        el.addEventListener('click', (e) => {
+            // 如果你原本的 HTML 结构中图片被包裹在链接里，这里需要阻止跳转
+            // 根据你的代码，index.html 的图片没包在 a 标签里，但为了保险起见：
+            // e.preventDefault(); 
+
+            clickCount++;
+            
+            // 添加一个点击的抖动效果 (可选，增加交互感)
+            el.style.transition = "transform 0.1s";
+            el.style.transform = `scale(0.9) rotate(${Math.random() * 20 - 10}deg)`;
+            setTimeout(() => {
+                el.style.transform = ""; // 恢复原样（会回到 CSS hover 定义的状态）
+            }, 100);
+
+            // 清除之前的重置计时器（如果用户连续点击，就不重置）
+            if (resetTimer) clearTimeout(resetTimer);
+
+            // 如果点击超过 6 次
+            if (clickCount > 10) {
+                showToast("别点了，回首页点旁边的字！😠");
+                clickCount = 0; // 重置计数，避免一直弹
+            }
+
+            // 如果用户停止点击 2 秒，计数清零
+            resetTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 2000);
+        });
+    });
+}
+
+// 显示浮动提示框的通用函数
+function showToast(msg) {
+    // 防止重复创建堆叠
+    if (document.querySelector('.egg-toast')) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'egg-toast';
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+
+    // 动画结束后（对应 CSS 的 3s），移除元素
+    setTimeout(() => {
+        if(toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+        }
+    }, 3000);
 }
