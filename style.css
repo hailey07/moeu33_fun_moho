@@ -329,7 +329,7 @@ textarea {
 }
 
 .header-sub-link:hover {
-  color: var(--white);
+  color: #fcfcfc;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0px 0px var(--shadow-color);
   background-color: rgba(var(--md-pink-rgb),0.7);
@@ -437,7 +437,7 @@ textarea {
 
 .view-switcher button.active {
   background: var(--primary-color);
-  color: var(--text-main);
+  color: #fcfcfc;
   border-color: var(--shadow-color);
 }
 
@@ -478,7 +478,7 @@ textarea {
 
 .btn-listing-link:hover {
   background-color: var(--primary-color);
-  color: var(--text-main);
+  color: #fcfcfc;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0px 0px var(--shadow-color);
 }
@@ -525,7 +525,7 @@ textarea {
 .btn-download:hover {
   transform: translate(-3px, -3px);
   box-shadow: 6px 6px 0px 0px var(--shadow-color);
-  color: white; /* 悬停时文字保持白色 */
+  color: #fcfcfc; /* 悬停时文字保持白色 */
 }
 
 .btn-download:active {
