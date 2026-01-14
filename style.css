@@ -1897,13 +1897,13 @@ font-weight: 500;
 
 @media (hover:hover) {
   .listing-tag:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
     box-shadow: 3px 3px 0px 0px var(--border-color);
   }
 }
 
 .listing-tag:active {
-  transform: scale(1);
+  transform: none;
   /* 抵消 hover 的 scale 和位移 */
   box-shadow: 0px 0px 0 0 transparent;
   transition: all 0.05s ease-in-out;
@@ -2232,7 +2232,7 @@ font-size: 0.98em;
     background-color: var(--md-pink);
     transform: scale(0.96) !important;
     transition: transform 0.1s;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 0 rgba(127, 127, 127, .6);
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
     color: #fcfcfc;
     font-weight: 500;
     opacity: 1;
@@ -2242,9 +2242,9 @@ font-size: 0.98em;
 .view-switcher button:active,
 .btn-listing-link:active,
 .btn-download:active {
-  transform: scale(0.96) !important;
+  transform: scale(0.985) !important;
   transition: transform 0.1s;
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 0 rgba(127, 127, 127, .6);
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
   color: #fcfcfc;
   background: var(--primary-color);
   font-weight: 500;
@@ -2252,18 +2252,14 @@ font-size: 0.98em;
 
 .board-card:active,
 .prop-val a.tag-badge:active,
-.listing-tag:hover {
-  transform: scale(0.96) !important;
-  /* 强制缩小 */
+.listing-tag:active{
+  transform: scale(0.985) !important;
   transition: transform 0.1s;
-  /* 动画要快 */
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 0 rgba(127, 127, 127, .6);
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
 }
 
 .select-wrapper:active,
-/* 新增这一行 */
 .notion-select:active {
-  /* 新增这一行 */
   transform: scale(0.99) !important;
   transition: transform 0.1s;
 }
@@ -2274,7 +2270,6 @@ font-size: 0.98em;
   border-width: calc(var(--border-line-width)*1.55);
   border-style: solid;
   transition: transform 0.1s;
-  /* 动画要快 */
 }
 
 .detail-icon img:active,
@@ -2284,7 +2279,7 @@ font-size: 0.98em;
 }
 
 .my-link-logo:active {
-  transform: scale(0.92) !important;
+  transform: scale(0.985) !important;
   transition: transform 0.1s;
 }
 
@@ -2299,19 +2294,15 @@ font-size: 0.98em;
 .theme-toggle-btn:active {
   background-color: var(--md-violet);
   opacity: 1;
-  transform: scale(0.96) !important;
-  /* 强制缩小 */
+  transform: scale(0.985) !important;
   transition: transform 0.1s;
-  /* 动画要快 */
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 0 rgba(127, 127, 127, .6);
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.4), 1px 1px 0 rgba(127,127,127,.1);
 }
 
 /* 2. 表格行的按压效果 */
 .table-view tbody tr:active {
   background-color: rgba(0, 0, 0, 0.05);
-  /* 只有背景变灰，不缩放，以免文字晃动 */
-  transform: scale(0.98) !important;
-  /* 强制缩小 */
+  transform: scale(0.99) !important;
   transition: transform 0.1s;
 }
 
@@ -2332,7 +2323,6 @@ font-size: 0.98em;
   font-weight: 500;
 font-size: 0.98em;
   transition: transform 0.1s;
-  /* 动画要快 */
 }
 
 .color-red:active {
