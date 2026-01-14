@@ -324,39 +324,66 @@ const iconSun = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon
 const iconMoon = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-yueliang"></use></svg>';
 
 // 初始化主题
+// =========================================
+// [新增] 深色模式逻辑 (Dark Mode Logic)
+// =========================================
+
+const iconSun = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-taiyang"></use></svg>';
+const iconMoon = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-yueliang"></use></svg>';
+
+// 1. 初始化主题
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const btn = document.getElementById('theme-toggle');
-
-    // 逻辑：如果有缓存设置，优先使用缓存；否则跟随系统
+    
+    // 逻辑优化：
+    // 1. 如果有缓存，用缓存
+    // 2. 如果没缓存，用系统状态
     if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        if(btn) btn.innerHTML = iconSun; 
+        applyDark(true);
     } else {
-        document.documentElement.removeAttribute('data-theme');
-        if(btn) btn.innerHTML = iconMoon; 
+        applyDark(false);
     }
 }
 
-// 切换主题
+// 2. 核心应用函数 (抽离出来方便复用)
+function applyDark(isDark) {
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    
+    if (isDark) {
+        html.setAttribute('data-theme', 'dark');
+        if(btn) btn.innerHTML = iconSun;
+    } else {
+        html.removeAttribute('data-theme');
+        if(btn) btn.innerHTML = iconMoon;
+    }
+}
+
+// 3. 切换按钮点击事件
 function toggleTheme() {
     const html = document.documentElement;
-    const current = html.getAttribute('data-theme');
-    const btn = document.getElementById('theme-toggle');
-
-    if (current === 'dark') {
-        // 切换到浅色
-        html.removeAttribute('data-theme');
+    const isDarkNow = html.getAttribute('data-theme') === 'dark';
+    
+    // 既然用户手动点击了，我们就保存用户的偏好，不再跟随系统
+    if (isDarkNow) {
+        applyDark(false); // 变亮
         localStorage.setItem('theme', 'light');
-        if(btn) btn.innerHTML = iconMoon;
     } else {
-        // 切换到深色
-        html.setAttribute('data-theme', 'dark');
+        applyDark(true);  // 变暗
         localStorage.setItem('theme', 'dark');
-        if(btn) btn.innerHTML = iconSun;
     }
 }
+
+// 4. [新增] 监听系统变化
+// 当用户没有手动设置过偏好(localStorage为空)时，实时跟随系统变化
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    const savedTheme = localStorage.getItem('theme');
+    // 只有在用户"未手动锁定"过主题的情况下，才自动切换
+    if (!savedTheme) {
+        applyDark(e.matches);
+    }
+});
 // =========================================
 // [新增] 彩蛋逻辑 (Easter Egg)
 // =========================================
