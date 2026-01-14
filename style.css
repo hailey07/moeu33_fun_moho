@@ -36,7 +36,7 @@
   --trans-black: 0, 0, 0;     /* 用于rgba计算 */
   --white: #fff;
   
-  --text-main: rgb(24, 24, 27);       /* 主要文字 (Zinc-900) */
+  --text-main: #18181b;       /* 主要文字 (Zinc-900) */
   --text-light: #52525c;      /* 次要文字 (Zinc-600) */
   --text-top-bar: var(--text-light);
   
@@ -437,7 +437,7 @@ textarea {
 
 .view-switcher button.active {
   background: var(--primary-color);
-  color: #fcfcfc ;
+  color: #fcfcfc !important;
   border-color: var(--shadow-color);
 }
 
@@ -478,7 +478,7 @@ textarea {
 
 .btn-listing-link:hover {
   background-color: var(--primary-color);
-  color: #fcfcfc ;
+  color: #fcfcfc !important;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0px 0px var(--shadow-color);
 }
