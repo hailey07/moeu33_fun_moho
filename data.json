@@ -1282,7 +1282,7 @@
             "其他",
             "动画"
         ],
-        "version": "1.0",
+        "version": "2.0.3",
         "author": "Eugene Babich",
         "date": "2025-11-02",
         "tags": [
@@ -1290,8 +1290,8 @@
         ],
         "realName": "mr_overlay.lua",
         "supportVer": "Moho 14",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=12&t=34678&sid=56e6a7be81d1375965356679ec69e5b2",
-        "link": "https://pan.baidu.com/s/1KzuZy1P-kzacuc08EeoWjg?pwd=vfr9",
+        "publishPage": "https://mohoscripts.com/script/mr_overlay/moho-14-1-edition",
+        "link": "https://pan.baidu.com/s/18UKoPrmvrsuTOe-OK9r_AA?pwd=9rck",
         "descUrl": "docs/mr_overlay.md"
     },
     {
