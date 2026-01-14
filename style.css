@@ -333,13 +333,13 @@ textarea {
 @media (hover: hover) {
   .header-main-title:hover {
     color: var(--md-pink);
-    transform: scale(1.08);
+    font-size: 1.1em;
   }
 }
 
 .header-main-title:active {
   color: var(--md-pink);
-  transform: scale(0.98);
+ font-size: 0.98em;
 }
 
 .header-desc-container {
@@ -1166,13 +1166,13 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: none;
+  background-color: var(--all-bg-color);
   border-bottom: var(--border-line-width) solid var(--border-color);
   white-space: nowrap;
-  backdrop-filter: blur(100px);
+  /* backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .detail-topbar {
@@ -1233,15 +1233,15 @@ textarea {
 @media(hover:hover) {
   .breadcrumb-link:hover {
     color: var(--md-pink);
-    font-weight: var(--fw-medium);
+    font-weight: 600;
     text-decoration: none;
     border-bottom: var(--border-line-width) solid var(--md-pink);
-    font-size: 1.1em;
+    font-size: 1.05em;
   }
 }
 
 .breadcrumb-link:active {
-  transform: scale(0.96);
+font-size: 0.98em;
   font-weight: 500;
 }
 
@@ -1473,16 +1473,20 @@ textarea {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: inline-block;
   border-bottom: var(--border-line-width) solid var(--md-orange);
+      padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media (hover: hover) {
   .content-area a:hover {
     color: var(--md-red);
     border-bottom: var(--border-line-width) solid var(--md-red);
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 500;
+    font-weight: 600;
   }
+}
+.content-area a:active{
+font-size: 0.98em;
+font-weight: 500;
 }
 
 .content-area strong,
@@ -2218,8 +2222,8 @@ textarea {
 
   /* 1. 让所有主要交互元素在按下时“缩小”一点，产生按压感 */
   .header-main-title:active {
-    transform: scale(0.96) !important;
-    /* 强制缩小 */
+font-size: 0.98em;
+
     transition: transform 0.1s;
     color: var(--md-pink);
   }
@@ -2318,7 +2322,7 @@ textarea {
 
 .breadcrumb-link:active {
   font-weight: 500;
-  transform: scale(0.96) !important;
+  font-size: 0.98em;
   transition: transform 0.1s;
 }
 
@@ -2326,8 +2330,7 @@ textarea {
   color: var(--md-red);
   border-bottom: var(--border-line-width) solid var(--md-red);
   font-weight: 500;
-  transform: scale(0.96) !important;
-  /* 强制缩小 */
+font-size: 0.98em;
   transition: transform 0.1s;
   /* 动画要快 */
 }
