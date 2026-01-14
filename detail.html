@@ -70,7 +70,7 @@
                 lastSegment !== 'index.html' &&
                 lastSegment !== 'detail.html' &&
                 lastSegment !== 'index' &&
-                lastSegment !== 'detail') {  // 👈 增加了这一行，排除 "detail"
+                lastSegment !== 'detail') {
                 targetId = decodeURIComponent(lastSegment);
             }
             // 如果路径没有，尝试从查询参数获取 (例如 ?id=mr_curve_tool)
