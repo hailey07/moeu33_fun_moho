@@ -669,8 +669,8 @@
         "id": "mr_pose_tool",
         "name": "Pose 工具",
         "icon": "<img src='scripts_icon/mr_pose_tool.png'>",
-        "category": "骨骼",
-        "version": "3.2.1",
+        "category": ["骨骼","动画"],
+        "version": "3.5",
         "author": "Eugene Babich",
         "date": "2024-07-31",
         "tags": [
@@ -679,7 +679,7 @@
         "realName": "mr_pose_tool.lua",
         "supportVer": "Moho 14",
         "publishPage": "https://mohoscripts.com/script/mr_pose_tool",
-        "link": "https://pan.baidu.com/s/13bY4bbPjoCigAxD44lxAnw?pwd=bg7s",
+        "link": "https://pan.baidu.com/s/1GIP0g9eo9ti4ywF_0pAlcg?pwd=6ikt",
         "descUrl": "docs/mr_pose_tool.md"
     },
     {
