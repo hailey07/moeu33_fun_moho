@@ -319,11 +319,6 @@ function renderTable(container, data) {
 
 // 定义图标 HTML 字符串
 // 太阳图标 (用于深色模式下，提示点击切换回白天)
-const iconSun = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-taiyang"></use></svg>';
-// 月亮图标 (用于浅色模式下，提示点击切换回黑夜)
-const iconMoon = '<svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-yueliang"></use></svg>';
-
-// 初始化主题
 // =========================================
 // [新增] 深色模式逻辑 (Dark Mode Logic)
 // =========================================
