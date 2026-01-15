@@ -590,7 +590,7 @@ textarea {
   border-color: var(--md-cyan);
   background: rgba(var(--trans-white), 0.5);
   font-weight: var(--fw-medium);
-  outline: calc(var(--border-line-width)*1.5) solid var(--md-cyan) !important;
+  outline: calc(var(--border-line-width)*1.5) solid var(--md-cyan) ;
 }
 
 /* ========== 看板 ========== */
@@ -1924,7 +1924,7 @@ textarea {
 
 .table-view tbody tr:active {
   transform: var(--btn-xy-reset);
-  box-shadow: none !important;
+  box-shadow: none ;
   transition: all 0.05s ease;
 }
 
@@ -2168,15 +2168,24 @@ textarea {
   .listing-tag:active,
   .my-link-logo:active,
   .theme-toggle-btn:active {
-    transform: scale(0.985) !important;
+    transform: scale(0.985) ;
     transition: transform 0.1s;
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4),
-      1px 1px 0 rgba(127, 127, 127, 0.1) !important;
+      1px 1px 0 rgba(127, 127, 127, 0.1) ;
   }
-
+  .index-topbar-link:focus,
+  .view-switcher button:focus,
+  .btn-listing-link:focus,
+  .btn-download:focus,
+  .board-card:focus,
+  .tag-badge:focus,
+  .theme-toggle-btn:focus {
+    transform: none !important; /* 强制焦点状态无变形 */
+    box-shadow: none !important;
+  }
   .select-wrapper:active,
   .notion-select:active {
-    transform: scale(0.99) !important;
+    transform: scale(0.99) ;
     transition: transform 0.1s;
   }
 
@@ -2199,7 +2208,7 @@ textarea {
   }
 
   .index-logo:active {
-    transform: scale(0.92) rotate(12deg) !important;
+    transform: scale(0.92) rotate(12deg) ;
     border-color: var(--md-pink);
     border-width: calc(var(--border-line-width) * 1.55);
     border-style: dotted;
@@ -2207,7 +2216,7 @@ textarea {
   }
 
   .breadcrumb-home-icon:active {
-    transform: rotate(15deg) scale(0.96) !important;
+    transform: rotate(15deg) scale(0.96) ;
     border-color: var(--md-pink);
     border-style: dotted;
     border-width: calc(var(--border-line-width) * 1.3);
@@ -2222,14 +2231,14 @@ textarea {
   .detail-icon img:active,
   .detail-icon svg:not(.iconfont):active,
   .detail-icon .iconfont:active {
-    transform: none !important;
+    transform: none ;
     /* 禁用移动端图标的按压效果 */
   }
 
   /* 表格行按压 */
   .table-view tbody tr:active {
     background-color: rgba(0, 0, 0, 0.05);
-    transform: scale(0.99) !important;
+    transform: scale(0.99) ;
     transition: transform 0.1s;
   }
 

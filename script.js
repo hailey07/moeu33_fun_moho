@@ -5,6 +5,8 @@ let currentSort = "default";
 document.addEventListener("DOMContentLoaded", () => {
     // --- [新增] 1. 主题初始化逻辑 (必须放在最前面) ---
     initTheme();
+    // --- [新增] 修复移动端 :active 状态卡死的问题 ---
+    fixMobileActiveState();
 // --- [新增] 彩蛋初始化 ---
     initEasterEgg(); // <--- 添加这一行
     // 2. 初始化检查：页面刚打开时判断一次
@@ -313,10 +315,6 @@ function renderTable(container, data) {
     container.appendChild(table);
 }
 
-// =========================================
-// [新增] 深色模式逻辑 (Dark Mode Logic)
-// =========================================
-
 // 定义图标 HTML 字符串
 // 太阳图标 (用于深色模式下，提示点击切换回白天)
 // =========================================
@@ -436,4 +434,21 @@ function showToast(msg) {
             toast.parentNode.removeChild(toast);
         }
     }, 3000);
+}
+function fixMobileActiveState() {
+    // 1. 激活 iOS 的 CSS :active 支持 (这是一个著名的 Hack)
+    document.body.addEventListener('touchstart', function() {}, {passive: true});
+
+    // 2. 强制在点击后失去焦点 (移除 :focus 状态，防止样式残留)
+    // 监听所有的点击事件
+    document.addEventListener('touchend', (e) => {
+        // 给一点点延迟，让点击动画播放完，然后移除焦点
+        setTimeout(() => {
+            // 获取当前聚焦的元素
+            const activeEl = document.activeElement;
+            if (activeEl && (activeEl.tagName === 'A' || activeEl.tagName === 'BUTTON' || activeEl.classList.contains('btn-download'))) {
+                activeEl.blur(); // 移除焦点，浏览器会随之移除 :active 和 :focus 样式
+            }
+        }, 300); // 300ms 刚好够你看清按下的动画
+    });
 }
