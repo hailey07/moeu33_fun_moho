@@ -1,10 +1,10 @@
 :root {
   color-scheme: light dark;
   /* 字重 */
-  --fw-normal: 300;
-  --fw-medium: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 600;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
   /* 字体大小 */
   --fs-normal: 15px;
   --fs-h1: 40px;
@@ -1090,7 +1090,7 @@ textarea {
   color: var(--text-light);
   padding: 1em;
   border-right: var(--border-line-width) solid var(--border-color);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-normal);
   flex-shrink: 0;
 }
 
