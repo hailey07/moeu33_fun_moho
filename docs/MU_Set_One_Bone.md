@@ -1,6 +1,4 @@
 
-![Set_One_Bone_V2.5.mp4](https://file.notion.so/f/f/32fff534-f878-4824-ba51-a0404d448f8d/a0f65d75-d8d5-4447-a379-00bdf5dd0ae6/Set_One_Bone_V2.5.mp4?table=block&id=c8b9696d-72a9-46d9-b21c-34b803d56d5e&spaceId=32fff534-f878-4824-ba51-a0404d448f8d&expirationTimestamp=1768356000000&signature=UVj5Pk0taLO8zlVTE2oQWHOekYN0oxiFuSyyIpsPGuM&downloadName=Set_One_Bone_V2.5.mp4)
-
 ## V2.9.2 （此版本由 Hungs59 改进）
 
 ### 1. 版本更新
@@ -76,3 +74,4 @@
 4. 如果在按住 Alt 的情况下从骨骼获取坐标，它将获取骨骼尖端的坐标，而不是根部的坐标。
 5. 如果选择多个点，将从选择的中心获取坐标。
 
+![](https://bucket.moeu33.fun/compressO-Set_One_Bone_V2.5.mp4)
