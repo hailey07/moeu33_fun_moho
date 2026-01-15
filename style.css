@@ -1789,7 +1789,7 @@ textarea {
   }
 
   .board-card:hover .card-title {
-    transform: scale(1.6);
+    font-size: 1.2em;
   }
 
   .color-red:hover {
@@ -1950,7 +1950,7 @@ textarea {
 }
 
 .table-view tbody tr:active .row-title {
-  transform: scale(1.6);
+  font-size: 1.2em;
   padding-left: none;
 }
 
