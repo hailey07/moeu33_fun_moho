@@ -1330,7 +1330,16 @@ textarea {
   background-color: var(--text-main);
   border: var(--border-line-width) solid var(--border-color);
 }
-
+.content-area iframe {
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 保持和你现有 video 一样的阴影 */
+}
 .gallery-row {
   display: flex;
   flex-wrap: wrap;

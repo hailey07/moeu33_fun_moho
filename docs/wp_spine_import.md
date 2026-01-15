@@ -18,9 +18,7 @@
 
 ## **从 PHOTOSHOP、AFTEREFFECTS、GIMP 等导入**
 
-许多程序都有 Spine JSON 导出脚本。Esoteric Software（Spine 的创建者）为 Photoshop、AfterEffects、Gimp 等软件制作的导出脚本可在此处找到：
-
-[https://github.com/EsotericSoftware/spine-scripts](https://github.com/EsotericSoftware/spine-scripts)
+许多程序都有 Spine JSON 导出脚本。Esoteric Software（Spine 的创建者）为 Photoshop、AfterEffects、Gimp 等软件制作的导出脚本可在此处找到：[https://github.com/EsotericSoftware/spine-scripts](https://github.com/EsotericSoftware/spine-scripts)
 
 ## **免责声明**
 
@@ -63,9 +61,7 @@
 
 **2. 使从 Krita 导出图层更简单快捷**
 
-还有一个非常有用的 Krita（Krita 网站）脚本可以将 Krita 图层导出为 spine.json。虽然我还没有测试过用该脚本输出的 spine.json，但应该也能正常工作。你可以在这里找到它：
-
-[Krita-to-spine 脚本下载](https://github.com/DanStout/KritaToSpine)
+还有一个非常有用的 Krita（Krita 网站）脚本可以将 Krita 图层导出为 spine.json。虽然我还没有测试过用该脚本输出的 spine.json，但应该也能正常工作。你可以在这里找到它：[Krita-to-spine 脚本下载](https://github.com/DanStout/KritaToSpine)
 
 上面的教程视频中没有显示，因为我不确定在 Spine 中是否有用，但甚至可以为 Krita 组图层添加特殊命名，导出脚本会识别这些命名并自动创建骨骼等。有关更多信息，请参阅 krita-to-spine 脚本的自述文件（点击下载链接）。
 
