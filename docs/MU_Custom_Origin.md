@@ -1,6 +1,5 @@
 ### V1.2
-
-![](https://bucket.moeu33.fun/2026/01/MU_Custom_Origin_V1.2_Demo.mp4)
+<img src="https://bucket.moeu33.fun/compressO-MU_Custom_Origin_V1.2_Demo.mp4"/>
 
 ---
 

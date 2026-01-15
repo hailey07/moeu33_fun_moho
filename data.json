@@ -1428,7 +1428,7 @@
     "id": "msSetOrigin",
     "name": "图形轴心点",
     "icon": "<img src='scripts_icon/msSetOrigin.png'>",
-    "category": ["绘图"],
+    "category": ["绘图", "图层"],
     "version": "1.0",
     "author": ["Mitchel Soltys"],
     "date": "2018-05-23",
