@@ -384,7 +384,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 // =========================================
 function initEasterEgg() {
     // 同时选择主页的 Logo 和详情页的面包屑 Icon
-    const targets = document.querySelectorAll('.header-logo, .breadcrumb-home-icon');
+    const targets = document.querySelectorAll('.index-logo, .breadcrumb-home-icon');
     let clickCount = 0;
     let resetTimer = null;
 

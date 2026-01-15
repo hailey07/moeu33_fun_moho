@@ -15,15 +15,15 @@
 </head>
 
 <body>
-    <div class="detail-container" style="width: 100%;">
-
+    <div class="detail-container">
         <div class="breadcrumb">
             <div class="detail-topbar">
                 <span class="home-icon" href="index"
                     style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
                     <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
                 </span>
-                <a href="index" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">索引</span>
+                <a href="index" class="breadcrumb-link">返回首页</a>｜
+<span id="bread-name">索引</span>
 
             </div>
             <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="切换日夜模式"></button>
@@ -126,8 +126,8 @@
                 sortedKeys.forEach(key => {
                     const count = counts[key];
                     const a = document.createElement('a');
-                    // 跳转回 index.html 并带上搜索参数 q
-                    a.href = `index.html?q=${encodeURIComponent(key)}`;
+                    // 跳转回 index" 并带上搜索参数 q
+                    a.href = `index"?q=${encodeURIComponent(key)}`;
                     a.className = `tag-badge ${colorClass} listing-tag`;
                     a.innerHTML = `${key} <span class="tag-count">${count}</span>`;
                     container.appendChild(a);

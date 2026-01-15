@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="detail-container" style="width: 100%;">
+    <div class="detail-container">
 
         <div class="breadcrumb">
             <div class="detail-topbar">
@@ -23,7 +23,8 @@
                     style="display:inline-flex; align-items:center; vertical-align:middle; width:30px;">
                     <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
                 </span>
-                <a href="index" class="breadcrumb-link">返回首页</a> ｜ <span id="bread-name">完全卸载 Moho 及重装</span>
+                <a href="index" class="breadcrumb-link">返回首页</a>｜
+                <span id="bread-name">完全卸载 Moho 及重装</span>
 
             </div>
             <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="切换日夜模式"></button>
@@ -33,7 +34,7 @@
                 <div class="detail-icon">
                     <img src="assets/uninstall.png">
                 </div>
-                <h1 class="detail-title">完全卸载 Moho 及重装</h1>
+                <div class="detail-title">完全卸载 Moho 及重装</div>
             </div>
             <div class="article-layout">
                 <div class="content-area" id="article-content">
@@ -74,7 +75,7 @@
                         `<h3 style="color:red; text-align:center;">😢 加载教程失败，请检查 docs/install.md 是否存在。</h3>`;
                 });
         });
-        // --- 自动生成目录函数 (和 detail.html 通用) ---
+        // --- 自动生成目录函数 (和 detail. html 通用) ---
         function generateTOC() {
             const content = document.getElementById('article-content');
             const tocContainer = document.querySelector('.toc-container');
