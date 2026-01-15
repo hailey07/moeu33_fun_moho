@@ -23,7 +23,7 @@
                     <img src="assets/Favicon.png" alt="Home" class="breadcrumb-home-icon">
                 </span>
                 <a href="index" class="breadcrumb-link">返回首页</a>｜
-<span id="bread-name">索引</span>
+                <span id="bread-name">索引</span>
 
             </div>
             <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="切换日夜模式"></button>
@@ -127,7 +127,7 @@
                     const count = counts[key];
                     const a = document.createElement('a');
                     // 跳转回 index" 并带上搜索参数 q
-                    a.href = `index"?q=${encodeURIComponent(key)}`;
+                    a.href = `index.html"?q=${encodeURIComponent(key)}`;
                     a.className = `tag-badge ${colorClass} listing-tag`;
                     a.innerHTML = `${key} <span class="tag-count">${count}</span>`;
                     container.appendChild(a);
@@ -143,6 +143,7 @@
     <script src="script.js"></script>
 </body>
 <div id="copyright" class="cr-text">
-        ©️ 2026 by MoeU33
-    </div>
+    ©️ 2026 by MoeU33
+</div>
+
 </html>
