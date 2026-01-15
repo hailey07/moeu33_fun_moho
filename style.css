@@ -1,10 +1,10 @@
 :root {
   color-scheme: light dark;
   /* 字重 */
-  --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
+  --fw-normal: 300;
+  --fw-medium: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 600;
   /* 字体大小 */
   --fs-normal: 15px;
   --fs-h1: 40px;
@@ -590,7 +590,7 @@ textarea {
   border-color: var(--md-cyan);
   background: rgba(var(--trans-white), 0.5);
   font-weight: var(--fw-medium);
-  outline: calc(var(--border-line-width)*1.5) solid var(--md-cyan) ;
+  outline: calc(var(--border-line-width)*1.5) solid var(--md-cyan);
 }
 
 /* ========== 看板 ========== */
@@ -994,22 +994,23 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.breadcrumb-link {
+.gobackhome {
   padding-left: 1em;
   padding-right: 0.25em;
   text-decoration: none;
   color: inherit;
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-medium);
   transition: all 0.2s ease;
   display: flex;
   align-items: end;
   position: sticky;
 }
 
-.script-name,
+
 #bread-name {
   white-space: nowrap;
   overflow: hidden;
+  font-weight: var(--fw-medium);
   text-overflow: ellipsis;
 }
 
@@ -1923,7 +1924,7 @@ textarea {
 
 .table-view tbody tr:active {
   transform: var(--btn-xy-reset);
-  box-shadow: none ;
+  box-shadow: none;
   transition: all 0.05s ease;
 }
 
@@ -1940,7 +1941,7 @@ textarea {
 /* === 顶部按钮 ===*/
 
 @media (hover: hover) {
-  .breadcrumb-link:hover {
+  .gobackhome:hover {
     color: var(--md-pink);
     font-weight: 600;
     text-decoration: none;
@@ -1948,9 +1949,9 @@ textarea {
   }
 }
 
-.breadcrumb-link:active {
+.gobackhome:active {
   transform: scale(0.98);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* === 脚本图标 === */
@@ -1990,7 +1991,7 @@ textarea {
 
 .content-area a:active {
   transform: scale(0.98);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ========== 索引页 ==========*/
@@ -2018,7 +2019,7 @@ textarea {
     gap: 20px;
   }
 
-  .breadcrumb-link {
+  .gobackhome {
     padding-left: .75em;
     padding-right: none;
 
@@ -2152,112 +2153,52 @@ textarea {
 @media (hover: none) {
 
   /* --- 通用按压反馈 --- */
+  .index-logo:active,
+  .breadcrumb-home-icon:active {
+    transform: var(--btn-rotate-2);
+    border-style: dotted;
+    border-width: calc(var(--border-line-width) * 2.5);
+    transition: all 0.05s ease;
+  }
+
   .index-main-title:active {
     transform: scale(0.98);
-    transition: transform 0.1s;
-    color: var(--md-pink);
+    transition: all 0.05s ease;
+  }
+
+  .my-link-logo:active {
+    transform: none;
   }
 
   .index-topbar-link:active,
-  .view-switcher button:active,
+  .theme-toggle-btn:active .view-switcher button:active,
   .btn-listing-link:active,
   .btn-download:active,
   .board-card:active,
   .prop-val a.tag-badge:active,
   .listing-tag:active,
   .my-link-logo:active,
-  .theme-toggle-btn:active {
-    transform: scale(0.985) ;
-    transition: transform 0.1s;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4),
-      1px 1px 0 rgba(127, 127, 127, 0.1) ;
-  }
-  .index-topbar-link:focus,
-  .view-switcher button:focus,
-  .btn-listing-link:focus,
-  .btn-download:focus,
-  .board-card:focus,
-  .tag-badge:focus,
-  .theme-toggle-btn:focus {
-    transform: none !important; /* 强制焦点状态无变形 */
-    box-shadow: none !important;
-  }
   .select-wrapper:active,
-  .notion-select:active {
-    transform: scale(0.99) ;
-    transition: transform 0.1s;
-  }
-
-  /* --- 特殊元素按压效果 --- */
-  .index-topbar-link:active {
-    background-color: var(--md-pink);
-    color: #fcfcfc;
-    opacity: 1;
-  }
-
-  .view-switcher button:active,
-  .btn-listing-link:active {
-    color: #fcfcfc;
-    background: var(--primary-color);
-  }
-
-  .btn-download:active {
-    color: #fcfcfc;
-    background: rgba(var(--md-blue-rgb), 0.7);
-  }
-
-  .index-logo:active {
-    transform: scale(0.92) rotate(12deg) ;
-    border-color: var(--md-pink);
-    border-width: calc(var(--border-line-width) * 1.55);
-    border-style: dotted;
-    transition: transform 0.3 ease-out;
-  }
-
-  .breadcrumb-home-icon:active {
-    transform: rotate(15deg) scale(0.96) ;
-    border-color: var(--md-pink);
-    border-style: dotted;
-    border-width: calc(var(--border-line-width) * 1.3);
-    transition: transform 0.3 ease-out;
-  }
-
-  .theme-toggle-btn:active {
-    background-color: var(--md-violet);
-    opacity: 1;
-  }
-
+  .notion-select:active,
   .detail-icon img:active,
   .detail-icon svg:not(.iconfont):active,
-  .detail-icon .iconfont:active {
-    transform: none ;
-    /* 禁用移动端图标的按压效果 */
+  .detail-icon .iconfont:active,
+  .table-view tbody tr:active,
+  .content-area a:active {
+    transform: none;
+    box-shadow: none;
   }
 
   /* 表格行按压 */
-  .table-view tbody tr:active {
-    background-color: rgba(0, 0, 0, 0.05);
-    transform: scale(0.99) ;
-    transition: transform 0.1s;
-  }
-
-  [data-theme="dark"] .table-view tbody tr:active {
+  /* [data-theme="dark"] .table-view tbody tr:active {
     background-color: rgba(255, 255, 255, 0.1);
-  }
+  }*/
 
-  /* 链接按压 */
-  .breadcrumb-link:active {
-    color: var(--md-pink);
-    font-size: 0.98em;
-    font-weight: var(--fw-semi-bold);
-    transition: transform 0.1s;
-  }
-
+  .gobackhome:active,
   .content-area a:active {
     color: var(--md-red);
-    border-bottom-color: var(--md-red);
-    font-weight: var(--fw-semi-bold);
-    transition: transform 0.1s;
+    font-weight: var(--fw-bold);
+    transition: all 0.05s ease;
   }
 
   /* 卡片颜色反馈 */
