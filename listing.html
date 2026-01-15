@@ -127,7 +127,7 @@
                     const count = counts[key];
                     const a = document.createElement('a');
                     // 跳转回 index" 并带上搜索参数 q
-                    a.href = `index.html"?q=${encodeURIComponent(key)}`;
+                    a.href = `index.html?q=${encodeURIComponent(key)}`;
                     a.className = `tag-badge ${colorClass} listing-tag`;
                     a.innerHTML = `${key} <span class="tag-count">${count}</span>`;
                     container.appendChild(a);
