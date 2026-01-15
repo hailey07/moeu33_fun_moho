@@ -1789,7 +1789,7 @@ textarea {
   }
 
   .board-card:hover .card-title {
-    font-size: 1.1em;
+    transform: scale(1.2);
   }
 
   .color-red:hover {
