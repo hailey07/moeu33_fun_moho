@@ -1505,16 +1505,16 @@
         "name": "自动保存",
         "icon": "<img src='scripts_icon/syn_auto_save.png'>",
         "category": "其他",
-        "version": "1.2",
+        "version": "1.3",
         "author": "SynthSin75",
-        "date": "2021-05-19",
+        "date": "2022-04-12",
         "tags": [
             "工具"
         ],
         "realName": "syn_auto_save.lua",
         "supportVer": "Moho 12",
-        "publishPage": "http://www.lostmarble.com/forum/viewtopic.php?f=5&t=33933&p=196180&hilit=auto+save#p196180",
-        "link": "https://pan.baidu.com/s/1EpBehDfW6xvtas4N7CEN6Q?pwd=bg7s",
+        "publishPage": "https://lostmarble.net/forum/viewtopic.php?t=33933&hilit=auto+save&sid=2dce91806699402445b871e7c653f9f6&start=90",
+        "link": "https://pan.baidu.com/s/18uNOnhYmECnm4yGUe_f_vQ?pwd=q9sb",
         "descUrl": "docs/syn_auto_save.md"
     },
     {
