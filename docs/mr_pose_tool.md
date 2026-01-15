@@ -16,7 +16,7 @@ MR Pose Tool 可让您最大限度地减少日常工作，将更多精力花在�
     
 2. 改变肘部位置，而不改变手的位置：
     拖动小臂起点（按住 Alt拖动 可自动调整手的角度，按住 Shift拖动，可保持骨骼比例）
-    <img src="https://bucket.moeu33.fun/Untitled (1).png" style="zoom:30%;"/>
+    <img src="https://bucket.moeu33.fun/Untitled (1).png" style="height:30%;width:30%;"/>
     
 3. 改变肩膀位置，而不改变肘部位置：
     按住 Alt 拖动大臂起点
