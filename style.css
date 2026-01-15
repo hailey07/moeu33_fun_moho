@@ -197,9 +197,13 @@ textarea {
 }
 
 #copyright {
+  position: sticky;
+  left: 0;
+  /* 禁止横向滚动 */
   border-top: var(--border-line-width) solid var(--border-color);
   padding: 20px;
   margin-top: 100px;
+  text-align: end;
 }
 
 /* ==================== 彩蛋 ==================== */
@@ -945,8 +949,11 @@ textarea {
 }
 
 /* ======================== 详情页 ========================= */
-/* 整体布局 */
-
+.biaoqian_xiazai{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .detail-container {
   margin: auto;
   padding: 0 0px;
@@ -1067,6 +1074,7 @@ textarea {
   margin-bottom: 40px;
   white-space: nowrap;
   font-size: var(--fs-detail-table);
+  width:90%;
 }
 
 .prop-row {
@@ -1123,7 +1131,7 @@ textarea {
 
 /* 下载按钮 */
 .btn-download {
-  width: 100%;
+  width:90%;
   display: inline-block;
   color: var(--btn-text-color-white);
   background: var(--md-cyan);
@@ -2053,6 +2061,10 @@ textarea {
   .detail-title {
     font-size: 28px;
   }
+  .prop-table,
+  .btn-download {
+    width: 100%;
+  }
 }
 
 /* 手机 (max-width: 768px) */
@@ -2143,6 +2155,7 @@ textarea {
   }
 
   /* 详情页属性表调整 */
+
   .prop-key {
     width: 120px;
     padding-left: 12px;
