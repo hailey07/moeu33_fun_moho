@@ -999,7 +999,7 @@ textarea {
   padding-right: 0.25em;
   text-decoration: none;
   color: inherit;
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-normal);
   transition: all 0.2s ease;
   display: flex;
   align-items: end;
@@ -1010,7 +1010,7 @@ textarea {
 #bread-name {
   white-space: nowrap;
   overflow: hidden;
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-normal);
   text-overflow: ellipsis;
 }
 
