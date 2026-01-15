@@ -1260,9 +1260,8 @@ textarea {
 
 .content-area hr {
   border: none;
-  border-bottom: 3px dashed var(--border-color);
-  transform: scaleX(0.9);
-  margin: 30px 0;
+  border-bottom: 2px dotted var(--border-color);
+  margin: 50px 0;
   opacity: .5;
 }
 
@@ -1293,7 +1292,7 @@ textarea {
 }
 
 .content-area img {
-  max-width: 90%;
+  width: 90%;
   height: auto;
   display: inline-block;
   margin: 5px auto;
@@ -1311,7 +1310,7 @@ textarea {
 }
 
 .content-area video {
-  max-width: 90%;
+  width: 90%;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -1346,7 +1345,7 @@ textarea {
   padding: 35px 0 0 0;
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
-  max-width: 90%;
+  width: 90%;
 }
 
 [data-theme="dark"] .content-area pre {
