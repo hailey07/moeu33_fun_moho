@@ -1301,7 +1301,7 @@ textarea {
 }
 
 .content-area img {
-  width: 90%;
+  width: 60%;
   height: auto;
   display: inline-block;
   margin: 5px auto;
@@ -1319,7 +1319,7 @@ textarea {
 }
 
 .content-area video {
-  width: 90%;
+  width: 60%;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -1331,7 +1331,7 @@ textarea {
   border: var(--border-line-width) solid var(--border-color);
 }
 .content-area iframe {
-  width: 90%;
+  width: 60%;
   aspect-ratio: 16 / 9;
   height: auto;
   display: block;
@@ -1363,7 +1363,7 @@ textarea {
   padding: 35px 0 0 0;
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
-  width: 90%;
+  width: 60%;
 }
 
 [data-theme="dark"] .content-area pre {
@@ -2168,6 +2168,12 @@ textarea {
   .prop-key {
     width: 120px;
     padding-left: 12px;
+  }
+  .content-area pre,
+  .content-area iframe,
+  .content-area video,
+  .content-area img {
+    width: 100%;
   }
 }
 
