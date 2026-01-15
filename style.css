@@ -1789,7 +1789,7 @@ textarea {
   }
 
   .board-card:hover .card-title {
-    font-size: 1.06em;
+    font-size: 1.05em;
   }
 
   .color-red:hover {
@@ -1950,7 +1950,7 @@ textarea {
 }
 
 .table-view tbody tr:active .row-title {
-  font-size: 1.06em;
+  font-size: 1.05em;
   padding-left: none;
 }
 
