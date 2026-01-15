@@ -1990,7 +1990,7 @@ textarea {
 }
 
 .content-area a:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
   font-weight: 600;
 }
 
