@@ -1090,7 +1090,7 @@ textarea {
   color: var(--text-light);
   padding: 1em;
   border-right: var(--border-line-width) solid var(--border-color);
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-medium);
   flex-shrink: 0;
 }
 
