@@ -1,11 +1,11 @@
 [
   {
-    "id": "2D_Rigging_Toolbox",
+    "id": "MG_2D_Rigging_Toolbox",
     "name": "2D 绑定工具箱 (付费)",
     "date": "2025-09-09",
     "category": ["软件协作"],
     "tags": ["工具"],
-    "icon": "<img src='scripts_icon/2D_Rigging_Toolbox.png'>",
+    "icon": "<img src='scripts_icon/MG_2D_Rigging_Toolbox.png'>",
     "author": ["Motion Gears"],
     "version": "4.0",
     "realName": "MG_2D_Rigging_Toolbox 4.0.lua",
