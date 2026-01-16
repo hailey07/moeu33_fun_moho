@@ -19,7 +19,7 @@
 
 
 
-[📺 使用教程](https://www.bilibili.com/video/BV1xq4y1r7eS/)
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=591457493&bvid=BV1xq4y1r7eS&cid=435135284&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 快速制作预备动作和过冲动作，也许您需要在此基础上再次进行修改动画，但可以为您的动画制作节省更多时间
 
