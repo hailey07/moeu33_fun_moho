@@ -11,12 +11,12 @@
 - 修复了一些错误
 - 将移动帧数改为输入框
 
-![](https://bucket.moeu33.fun/Snipaste_2024-10-12_23-31-21.jpg)
+<img src="https://bucket.moeu33.fun/2026/01/1768571114583-Snipaste_2024-10-12_23-31-21.jpg"/>
 
 ---
 
 ### V1.5：
-<img src="https://bucket.moeu33.fun/image (2).png"/>
+<img src="https://bucket.moeu33.fun/2026/01/1768571143196-image (2).png"/>
 
 - 分别选择不同骨骼动画通道上的帧
 - 从帧查找骨骼和点
@@ -29,4 +29,4 @@
 
 ### V1.0 Demo：
 
-<img src="https://bucket.moeu33.fun/compressO-QQ20241011-032-HD__81pct_smaller.mp4"/>
+<img src="https://bucket.moeu33.fun/2026/01/1768571098713-20241011-032-HD__81pct_smaller.mp4"/>

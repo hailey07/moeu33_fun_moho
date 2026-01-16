@@ -1,4 +1,4 @@
-<img src="https://bucket.moeu33.fun/compressO-Jietu20260116-202643.mp4"/>
+![](https://bucket.moeu33.fun/2026/01/am_palette-1.mp4)
 
 该脚本支持骨骼图层通道（位置、缩放、旋转）以及图层内部的动画。这意味着您可以保存姿势预设，包括矢量动画、插值唇形同步、特殊姿势等。
 

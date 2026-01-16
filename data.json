@@ -16,17 +16,17 @@
   },
   {
     "id": "mr_curve_tool",
-    "name": "节点绘图工具",
+    "name": "MR 曲线工具",
     "icon": "<img src='scripts_icon/mr_curve_tool.png'>",
     "category": ["绘图"],
-    "version": "4.2.5",
-    "author": "Eugene Babich",
-    "date": "2026-01-02",
+    "version": "4.2.6",
+    "author": ["Eugene Babich","Alexandra Evseeva", "Dauid"],
+    "date": "2026-01-15",
     "tags": ["工具"],
     "realName": "mr_curve_tool.lua",
     "supportVer": "Moho 13.5",
     "publishPage": "https://mohoscripts.com/script/mr_curve_tool",
-    "link": "https://pan.baidu.com/s/1DVORjmRYMYB1WjnobvcppA?pwd=bg7s",
+    "link": "https://bucket.moeu33.fun/2026/01/mr_curve_tool_v4.2.6.zip",
     "descUrl": "docs/mr_curve_tool.md"
   },
   {

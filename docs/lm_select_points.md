@@ -1,5 +1,5 @@
 DKWROOT 工具的提取修改版
 
-<img src="https://bucket.moeu33.fun/Snipaste_2022-02-06_11-08-20.png"/>
+![](https://bucket.moeu33.fun/2026/01/lm_select_points-1.png)
 
-<img src="https://bucket.moeu33.fun/Snipaste_2022-02-06_11-09-30.png"/>
+![](https://bucket.moeu33.fun/2026/01/lm_select_points-2.png)

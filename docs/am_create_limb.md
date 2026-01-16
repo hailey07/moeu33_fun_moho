@@ -1,4 +1,4 @@
-<img src="https://bucket.moeu33.fun/Untitled (5).png"/>
+![](https://bucket.moeu33.fun/2026/01/am_create_limb-1.png)
 
 使用方法：
 

@@ -7,6 +7,6 @@ V1.3:
 
 修改txt文件后，按shift+ctrl+alt+L刷新按钮显示。
 
-![](https://bucket.moeu33.fun/20260116032618530.png)
+<img src="https://bucket.moeu33.fun/2026/01/1768571193642-20260116032618530.png"/>
 
-![](https://bucket.moeu33.fun/20260116032657646.png)
+<img src="https://bucket.moeu33.fun/2026/01/1768571208036-20260116032657646.png"/>

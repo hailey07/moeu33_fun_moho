@@ -1,6 +1,6 @@
 处理骨骼约束的便捷工具
 
-<img src="https://bucket.moeu33.fun/Untitled (7).png"/>
+![](https://bucket.moeu33.fun/2026/01/am_bone_constrains_helper-1.png)
 
 单击以选择骨骼。 选中骨骼后，Shift+单击设置角度控制骨骼，Ctrl+单击设置缩放控制骨骼，Alt+单击设置位置控制骨骼。
 

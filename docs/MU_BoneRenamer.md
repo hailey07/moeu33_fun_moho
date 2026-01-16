@@ -1,1 +1,1 @@
-<img src="https://bucket.moeu33.fun/1-1.jpg"/>
+![](https://bucket.moeu33.fun/2026/01/1768570924992-1-1.jpg)
