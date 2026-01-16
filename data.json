@@ -1564,7 +1564,7 @@
     "id": "LF_silhouette",
     "name": "删除空操作",
     "icon": "<img src='scripts_icon/LF_silhouette.png'>",
-    "category": "文档清理",
+    "category": "动画",
     "version": "2.0",
     "author": ["Luca França","Eugene Babich"],
     "date": "2026-01-16",
