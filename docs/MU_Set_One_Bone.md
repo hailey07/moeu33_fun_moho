@@ -74,4 +74,4 @@
 4. 如果在按住 Alt 的情况下从骨骼获取坐标，它将获取骨骼尖端的坐标，而不是根部的坐标。
 5. 如果选择多个点，将从选择的中心获取坐标。
 
-![](https://bucket.moeu33.fun/compressO-Set_One_Bone_V2.5.mp4)
+<img src="https://bucket.moeu33.fun/2026/01/1768602506944-Set_One_Bone_V2.5.mp4"/>
