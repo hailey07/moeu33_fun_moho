@@ -1325,8 +1325,7 @@ textarea {
 .content-area video {
   width: 70%;
   height: auto;
-  display: flex;
-  justify-content: left;
+  display: block;
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1369,7 +1368,7 @@ textarea {
   padding: 35px 0 0 0;
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
-  width: 60%;
+  width: 70%;
 }
 
 [data-theme="dark"] .content-area pre {
