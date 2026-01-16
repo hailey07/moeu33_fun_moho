@@ -1318,10 +1318,11 @@ textarea {
 
 .content-area img:hover {
   transform: scale(1.02);
-  border:var(--border-line-width) solid var(--shadow-color);
-  box-shadow: var(--btn-xy-shadow);
+  /* border:var(--border-line-width) solid var(--shadow-color);
+  box-shadow: var(--btn-xy-shadow); 
+  padding: var(--border-line-width);*/
   cursor: zoom-in;
-  padding: var(--border-line-width);
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
 }
 
 .content-area video {
