@@ -1487,7 +1487,7 @@
   {
     "id": "DKWROOT",
     "name": "DKWROOT SCRIPTS",
-    "icon": "<img src='scripts_icon/_no_icon.png'>",
+    "icon": "<img src='scripts_icon/DKWROOT.png'>",
     "category": ["绘图"],
     "version": "6.0",
     "author": ["DKWROOT"],
