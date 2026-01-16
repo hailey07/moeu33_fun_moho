@@ -1318,8 +1318,8 @@ textarea {
 
 .content-area img:hover {
   transform: scale(1.02);
-  border-color: var(--shadow-color);
-  box-shadow: 0 6px 0 0 var(--shadow-color);
+  border:var(--border-line-width) solid var(--shadow-color);
+  box-shadow: var(--btn-xy-shadow);
   cursor: zoom-in;
   padding: var(--border-line-width);
 }
