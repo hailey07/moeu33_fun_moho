@@ -1321,6 +1321,7 @@ textarea {
   border-color: var(--shadow-color);
   box-shadow: 0 6px 0 0 var(--shadow-color);
   cursor: zoom-in;
+  padding: var(--border-line-width);
 }
 
 .content-area video {
