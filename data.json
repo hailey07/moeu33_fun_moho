@@ -257,7 +257,7 @@
   {
     "id": "am_spacer3",
     "name": "Spacer（付费）",
-    "icon": "<img src='scripts_icon/am_spacer3.png'>",
+    "icon": "<img src='scripts_icon/am_spacer.png'>",
     "category": "动画",
     "version": "3",
     "author": "Aleksei Maletin",
