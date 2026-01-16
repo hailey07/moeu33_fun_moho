@@ -1559,5 +1559,20 @@
     "publishPage": "",
     "link": "https://pan.baidu.com/s/1ilv1SgZ6TKwflccOGmDZJg?pwd=3xzu",
     "descUrl": "docs/sz_remove_empty_actions.md"
+  },
+  {
+    "id": "LF_silhouette",
+    "name": "删除空操作",
+    "icon": "<img src='scripts_icon/LF_silhouette.png'>",
+    "category": "文档清理",
+    "version": "2.0",
+    "author": ["Luca França","Eugene Babich"],
+    "date": "2026-01-16",
+    "tags": ["工具", "菜单"],
+    "realName": "LF_silhouette.lua",
+    "supportVer": "Moho 12",
+    "publishPage": "https://mohoscripts.com/script/lf-silhouette",
+    "link": "https://pan.baidu.com/s/1IRm1WNHqlKcc1BaK65HdoA?pwd=wwiy",
+    "descUrl": "docs/LF_silhouette.md"
   }
 ]
