@@ -2203,7 +2203,7 @@ textarea {
 
   .index-topbar-link:active{
     background-color: var(--md-pink);
-    color: var(--btn-text-color-white);
+    color: var(--btn-text-color-white) !important;
   }
   .theme-toggle-btn:active{
     background-color: var(--md-violet);
