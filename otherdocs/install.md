@@ -8,9 +8,9 @@
 
 4. 重启 Moho 或按 `Shift+Ctrl+Alt+L` 。
 
-   <div class="gallery-row" style="display:flex; justify-content: left; align-items:start;gap:10px;">
-       <img src="https://bucket.moeu33.fun/2026/01/1768596751467-PixPin_2026-01-17_04-24-49.png" style="max-height:500px;" />
-       <img src="https://bucket.moeu33.fun/2026/01/1768596873530-PixPin_2026-01-17_04-40.png" style="max-height:500px;" />
+   <div class="gallery-row" style="display:flex; justify-content: left; align-items:start;gap:10px;flex-wrap:nowrap;">
+       <img src="https://bucket.moeu33.fun/2026/01/1768596751467-PixPin_2026-01-17_04-24-49.png" " />
+       <img src="https://bucket.moeu33.fun/2026/01/1768596873530-PixPin_2026-01-17_04-40.png" " />
      </div>
 
 
