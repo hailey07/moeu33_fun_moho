@@ -1565,7 +1565,7 @@
     "name": "删除空操作",
     "icon": "<img src='scripts_icon/LF_silhouette.png'>",
     "category": "动画",
-    "version": "2.0",
+    "version": "3.3",
     "author": ["Luca França","Eugene Babich"],
     "date": "2026-01-16",
     "tags": ["工具", "菜单"],
