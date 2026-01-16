@@ -1,5 +1,20 @@
 [
   {
+    "id": "am_switcher",
+    "name": "AM 切换器",
+    "date": "2023-10-25",
+    "category": ["其他"],
+    "tags": ["工具"],
+    "icon": "<img src='scripts_icon/am_switcher.png'>",
+    "author": ["Aleksei Maletin"],
+    "version": "1.0",
+    "realName": "am_switcher.lua",
+    "link": "https://bucket.moeu33.fun/2026/01/1768571801362-am_switcher_v1.0.zip",
+    "publishPage": "https://boosty.to/rigandmoho/posts/5499e5d4-7d19-455b-8f93-3846d4606f62",
+    "supportVer": [],
+    "descUrl": "docs/am_switcher.md"
+  },
+  {
     "id": "ac_keyFlow",
     "name": "流动关键帧",
     "date": "2026-01-12",
