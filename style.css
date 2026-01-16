@@ -1701,6 +1701,7 @@ textarea {
 .breadcrumb-home-icon:active {
   transform: var(--btn-rotate-2);
   border-style: dotted;
+  border-color: var(--md-pink);
   border-width: calc(var(--border-line-width) * 2.5);
   transition: all 0.05s ease;
 }
