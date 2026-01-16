@@ -57,6 +57,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // 指定 Markdown 文件路径
             const mdFile = 'otherdocs/mohoscripts_manager.md';
+
             fetch(mdFile)
                 .then(res => {
                     if (!res.ok) throw new Error("无法读取文件");
@@ -66,8 +67,13 @@
                     const contentDiv = document.getElementById('article-content');
                     // 1. 渲染 Markdown
                     contentDiv.innerHTML = marked.parse(text);
+
                     // 2. 生成目录
                     generateTOC();
+
+                    // 3. 【新增】处理视频和开启画廊模式
+                    convertImagesToVideos();
+                    setupImageLightbox();
                 })
                 .catch(err => {
                     console.error(err);
@@ -75,38 +81,204 @@
                         `<h3 style="color:red; text-align:center;">😢 加载教程失败，请检查 docs/install.md 是否存在。</h3>`;
                 });
         });
-        // --- 自动生成目录函数 (和 detail.html 通用) ---
+
+        // --- 自动生成目录函数 ---
         function generateTOC() {
             const content = document.getElementById('article-content');
             const tocContainer = document.querySelector('.toc-container');
             const tocList = document.getElementById('toc-list');
-            // 1. 找到文章里所有的 h1, h2, h3
+
             const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
-            // 如果没有标题，就隐藏目录栏
+
             if (headers.length === 0) {
                 tocContainer.style.display = 'none';
                 return;
             }
-            // 显示目录栏
+
             tocContainer.style.display = 'block';
-            tocList.innerHTML = ''; // 清空旧内容
+            tocList.innerHTML = '';
+
             headers.forEach((header, index) => {
-                // 2. 确保每个标题都有 ID
                 if (!header.id) {
                     header.id = 'heading-' + index;
                 }
-                // 3. 生成目录链接
                 const link = document.createElement('a');
                 link.href = '#' + header.id;
                 link.textContent = header.textContent;
                 link.className = 'toc-link toc-' + header.tagName.toLowerCase();
-                // 4. 点击平滑滚动效果
                 link.onclick = (e) => {
                     e.preventDefault();
-                    header.scrollIntoView({ behavior: 'smooth' });
+                    header.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 };
                 tocList.appendChild(link);
             });
+        }
+
+        // --- 【新增】将指向视频的 img 标签转换为 video 标签 ---
+        function convertImagesToVideos() {
+            // 注意：这里改为获取 article-content
+            const content = document.getElementById('article-content');
+            if (!content) return;
+            
+            const images = content.querySelectorAll('img');
+            images.forEach(img => {
+                const src = img.getAttribute('src');
+                if (!src) return;
+                // 检查后缀名 (支持 mp4, webm, mov, ogg)
+                if (src.match(/\.(mp4|webm|mov|ogg)$/i)) {
+                    const video = document.createElement('video');
+                    video.src = src;
+                    video.controls = true;
+                    video.preload = "metadata";
+                    if (img.alt) video.title = img.alt;
+                    video.style.maxWidth = '100%';
+                    video.style.display = 'block';
+                    video.style.margin = '20px auto';
+                    img.parentNode.replaceChild(video, img);
+                }
+            });
+        }
+
+        // --- 【新增】图片点击放大功能 (画廊模式) ---
+        function setupImageLightbox() {
+            // 注意：这里改为获取 article-content
+            const content = document.getElementById('article-content');
+            if (!content) return;
+
+            // 筛选出所有有效的图片
+            const images = Array.from(content.querySelectorAll('img')).filter(img =>
+                !img.src.includes('loading.gif') && !img.src.includes('not_found.gif')
+            );
+
+            images.forEach((img, index) => {
+                img.style.cursor = 'zoom-in';
+
+                if (img.parentNode.tagName === 'A') {
+                    img.parentNode.onclick = (e) => e.preventDefault();
+                }
+
+                img.onclick = (e) => {
+                    e.stopPropagation();
+                    openGallery(images, index);
+                };
+            });
+        }
+
+        // --- 【新增】开启画廊遮罩层 (逻辑与 detail.html 保持一致) ---
+        function openGallery(images, startIndex) {
+            let currentIndex = startIndex;
+
+            // 1. 创建遮罩层
+            const overlay = document.createElement('div');
+            overlay.id = 'gallery-overlay';
+            Object.assign(overlay.style, {
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0,0,0,0.9)',
+                zIndex: '9999',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                userSelect: 'none'
+            });
+
+            // 2. 创建图片容器
+            const imgEl = document.createElement('img');
+            Object.assign(imgEl.style, {
+                maxWidth: '90%',
+                maxHeight: '85%',
+                objectFit: 'contain',
+                borderRadius: '4px',
+                boxShadow: '0 0 20px rgba(0,0,0,0.8)',
+                transition: 'transform 0.2s ease'
+            });
+
+            // 3. 创建控制按钮
+            const createBtn = (html, styleObj, onClick) => {
+                const btn = document.createElement('div');
+                btn.innerHTML = html;
+                Object.assign(btn.style, {
+                    position: 'absolute',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    fontSize: '40px',
+                    padding: '20px',
+                    opacity: '0.6',
+                    transition: 'opacity 0.2s',
+                    ...styleObj
+                });
+                btn.onmouseenter = () => btn.style.opacity = '1';
+                btn.onmouseleave = () => btn.style.opacity = '0.6';
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    onClick();
+                };
+                return btn;
+            };
+
+            const counter = document.createElement('div');
+            Object.assign(counter.style, {
+                position: 'absolute',
+                bottom: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                color: '#ccc',
+                fontSize: '16px',
+                fontFamily: 'Arial'
+            });
+
+            const updateImage = () => {
+                imgEl.src = images[currentIndex].src;
+                counter.textContent = `${currentIndex + 1} / ${images.length}`;
+                if (images[currentIndex + 1]) (new Image()).src = images[currentIndex + 1].src;
+                if (images[currentIndex - 1]) (new Image()).src = images[currentIndex - 1].src;
+            };
+
+            const nextImg = () => {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++;
+                    updateImage();
+                }
+            };
+            const prevImg = () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateImage();
+                }
+            };
+            const closeGallery = () => {
+                document.body.removeChild(overlay);
+                document.body.style.overflow = 'auto';
+                document.removeEventListener('keydown', keyHandler);
+            };
+
+            const closeBtn = createBtn('×', { top: '10px', right: '20px', fontSize: '50px' }, closeGallery);
+            const prevBtn = createBtn('❮', { left: '20px', top: '50%', transform: 'translateY(-50%)' }, prevImg);
+            const nextBtn = createBtn('❯', { right: '20px', top: '50%', transform: 'translateY(-50%)' }, nextImg);
+
+            overlay.append(imgEl, closeBtn, counter);
+            if (images.length > 1) {
+                overlay.append(prevBtn, nextBtn);
+            }
+
+            overlay.onclick = closeGallery;
+            imgEl.onclick = (e) => e.stopPropagation();
+
+            const keyHandler = (e) => {
+                if (e.key === 'Escape') closeGallery();
+                if (e.key === 'ArrowRight') nextImg();
+                if (e.key === 'ArrowLeft') prevImg();
+            };
+            document.addEventListener('keydown', keyHandler);
+
+            updateImage();
+            document.body.appendChild(overlay);
+            document.body.style.overflow = 'hidden';
         }
     </script>
     <script src="https://at.alicdn.com/t/c/font_5109131_e8j9zarzsw.js"></script>
