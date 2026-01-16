@@ -1322,7 +1322,7 @@ textarea {
   box-shadow: var(--btn-xy-shadow); 
   padding: var(--border-line-width);*/
   cursor: zoom-in;
-  box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
 .content-area video {
