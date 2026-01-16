@@ -240,20 +240,36 @@
     "descUrl": "docs/MU_Set_One_Bone.md"
   },
   {
-    "id": "AM_Spacer3",
+    "id": "am_spacer3",
     "name": "Spacer（付费）",
-    "icon": "<img src='scripts_icon/_no_icon.png'>",
+    "icon": "<img src='scripts_icon/am_spacer3.png'>",
     "category": "动画",
     "version": "3",
     "author": "Aleksei Maletin",
     "date": "2025-03-13",
     "tags": ["工具"],
-    "realName": "AM_Spacer3.lua",
+    "realName": "am_spacer3.lua",
     "supportVer": "Moho 13.5",
     "publishPage": "https://boosty.to/rigandmoho/posts/fd4fc63d-1346-4a00-abab-480ee41c87f0?share=post_link",
     "link": "",
-    "descUrl": "docs/AM_Spacer3.md"
+    "descUrl": "docs/am_spacer3.md"
   },
+  {
+    "id": "am_palette",
+    "name": "Palette（付费）",
+    "icon": "<img src='scripts_icon/am_palette.png'>",
+    "category": "动画",
+    "version": "3",
+    "author": "Aleksei Maletin",
+    "date": "2025-04-04",
+    "tags": ["工具"],
+    "realName": "am_palette.lua",
+    "supportVer": "Moho 13.5",
+    "publishPage": "https://boosty.to/rigandmoho/posts/f4901b64-473e-4318-9a7d-058956c21e39",
+    "link": "",
+    "descUrl": "docs/am_palette.md"
+  },
+  
   {
     "id": "DV_quckSelectLayer",
     "name": "快速选择图层",
