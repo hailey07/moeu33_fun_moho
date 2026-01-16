@@ -1,6 +1,6 @@
 let allData = [];
 let currentView = "board"; // 默认为看板
-let currentSort = "default";
+let currentSort = "date-desc";
 
 document.addEventListener("DOMContentLoaded", () => {
     // --- [新增] 1. 主题初始化逻辑 (必须放在最前面) ---
