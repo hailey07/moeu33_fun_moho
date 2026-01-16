@@ -1,7 +1,7 @@
 [
   {
     "id": "2D_Rigging_Toolbox",
-    "name": "2D 绑定工具箱",
+    "name": "2D 绑定工具箱 (付费)",
     "date": "2025-09-09",
     "category": ["软件协作"],
     "tags": ["工具"],
@@ -286,7 +286,7 @@
   },
   {
     "id": "am_spacer3",
-    "name": "Spacer（付费）",
+    "name": "Spacer (付费)",
     "icon": "<img src='scripts_icon/am_spacer.png'>",
     "category": "动画",
     "version": "3",
@@ -301,7 +301,7 @@
   },
   {
     "id": "am_palette",
-    "name": "Palette（付费）",
+    "name": "Palette (付费)",
     "icon": "<img src='scripts_icon/am_palette.png'>",
     "category": "动画",
     "version": "3",
