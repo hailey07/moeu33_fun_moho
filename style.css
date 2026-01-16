@@ -1343,6 +1343,7 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 保持和你现有 video 一样的阴影 */
 }
 .gallery-row {
+  max-width: 70%;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
