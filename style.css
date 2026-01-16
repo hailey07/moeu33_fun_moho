@@ -2290,3 +2290,15 @@ textarea {
     background: rgba(var(--md-yellow-rgb), 0.15);
   }
 }
+
+.detail-content img {
+  /* 优先限制不超过父容器宽度（解决手机端问题） */
+  max-width: 100%; 
+  
+  /* 其次限制不超过 768px（解决大图问题） */
+  /* 注意：如果不写具体的 class 限制，不要把这行加到全局 img 标签上，否则 LOGO 也会受影响 */
+  max-width: 768px; 
+  
+  width: auto;
+  height: auto;
+}
