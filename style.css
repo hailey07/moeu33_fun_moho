@@ -2212,7 +2212,10 @@ textarea {
     background-color: var(--md-cyan);
     color: var(--btn-text-color-white) !important;
   }
-  .view-switcher button:active,
+  .view-switcher button:active{
+    background-color: var(--md-cyan);
+    color: var(--btn-text-color-white);
+  }
   
   .btn-download:active,
   .board-card:active,
