@@ -31,7 +31,7 @@
 ### Tool：
 
 <div class="gallery-row" style="display:flex; justify-content: left; align-items:start;">
-   <img src="https://bucket.moeu33.fun/2026/01/1768597263369-PixPin_2026-01-17_04-40-15.png" style="max-width:500px;"/>
+   <img src="https://bucket.moeu33.fun/2026/01/1768597263369-PixPin_2026-01-17_04-40-15.png" style="max-width:600px;"/>
   </div>
 
 
@@ -45,7 +45,7 @@
 例如：
 
 <div class="gallery-row" style="display:flex; justify-content: left; align-items:start;gap:10px;">
-    <img src="https://bucket.moeu33.fun/2026/01/1768597334049-PixPin_2026-01-17_04-26-12.png" style="max-width:300px;"/>
+    <img src="https://bucket.moeu33.fun/2026/01/1768597334049-PixPin_2026-01-17_04-26-12.png" style="max-width:350px;"/>
   </div>
 
 
