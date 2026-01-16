@@ -1726,9 +1726,9 @@ textarea {
 
   .btn-listing-link:hover {
     color: var(--btn-text-color-white);
+    background-color: var(--md-cyan);
     transform: var(--btn-xy-move);
     box-shadow: var(--btn-xy-shadow);
-    background-color: var(--md-cyan);
   }
 }
 
@@ -1737,6 +1737,7 @@ textarea {
   transform: var(--btn-xy-reset);
   box-shadow: var(--btn-xy-shadow-reset);
   transition: all 0.05s ease;
+  background-color: var(--md-cyan);
 }
 
 @media (hover: hover) {
