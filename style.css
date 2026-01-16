@@ -99,7 +99,7 @@
 
 /* ==================== 深色模式覆盖 ==================== */
 [data-theme="dark"] {
-  --all-bg-color: #27272a;
+  --all-bg-color: #18181b;
   --card-bg: #27272a;
   --trans-white: 39, 39, 42;
   --trans-black: 220, 220, 220;
