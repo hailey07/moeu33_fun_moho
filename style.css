@@ -1663,6 +1663,7 @@ textarea {
 
 .index-topbar-link:active {
   transform: var(--btn-xy-reset);
+  background-color: var(--md-pink);
   box-shadow: var(--btn-xy-shadow-reset);
   transition: all 0.05s ease;
 }
