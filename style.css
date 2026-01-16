@@ -1663,7 +1663,6 @@ textarea {
 
 .index-topbar-link:active {
   transform: var(--btn-xy-reset);
-  background-color: var(--md-pink);
   box-shadow: var(--btn-xy-shadow-reset);
   transition: all 0.05s ease;
 }
@@ -2187,6 +2186,7 @@ textarea {
   .index-logo:active,
   .breadcrumb-home-icon:active {
     transform: var(--btn-rotate-2);
+    border-color: var(--md-pink);
     border-style: dotted;
     border-width: calc(var(--border-line-width) * 2.5);
     transition: all 0.05s ease;
@@ -2201,8 +2201,14 @@ textarea {
     transform: none;
   }
 
-  .index-topbar-link:active,
-  .theme-toggle-btn:active .view-switcher button:active,
+  .index-topbar-link:active{
+    background-color: var(--md-pink);
+    color: var(--btn-text-color-white);
+  }
+  .theme-toggle-btn:active{
+    background-color: var(--md-violet);
+  } 
+  .view-switcher button:active,
   .btn-listing-link:active,
   .btn-download:active,
   .board-card:active,
