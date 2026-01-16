@@ -1301,7 +1301,7 @@ textarea {
 }
 
 .content-area img {
-  max-width: 768px; 
+  max-width: 60%; 
   width: auto;
   height: auto;
   display: inline-block;
