@@ -1562,7 +1562,7 @@
   },
   {
     "id": "LF_silhouette",
-    "name": "删除空操作",
+    "name": "LF 剪影",
     "icon": "<img src='scripts_icon/LF_silhouette.png'>",
     "category": "动画",
     "version": "3.3",
