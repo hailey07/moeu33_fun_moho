@@ -2295,5 +2295,8 @@ textarea {
   .color-yellow:active {
     background: rgba(var(--md-yellow-rgb), 0.15);
   }
+  .gallery-row {
+    width: 95%;
+  }
 }
 
