@@ -1303,7 +1303,7 @@ textarea {
 }
 
 .content-area img {
-  max-width: 60%; 
+  max-width: 70%; 
   word-wrap: break-word;
   width: auto;
   height: auto;
@@ -1323,9 +1323,10 @@ textarea {
 }
 
 .content-area video {
-  width: 60%;
+  width: 70%;
   height: auto;
-  display: block;
+  display: flex;
+  justify-content: left;
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1335,7 +1336,7 @@ textarea {
   border: var(--border-line-width) solid var(--border-color);
 }
 .content-area iframe {
-  width: 60%;
+  width: 70%;
   aspect-ratio: 16 / 9;
   height: auto;
   display: block;
