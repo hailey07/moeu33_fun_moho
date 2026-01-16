@@ -632,7 +632,7 @@
   },
   {
     "id": "hs_shape",
-    "name": "绘图补充（未汉化）",
+    "name": "绘图补充 (未汉化)",
     "icon": "<img src='scripts_icon/hs_shape.png'>",
     "category": ["绘图"],
     "version": "10.2",
@@ -1142,7 +1142,7 @@
   },
   {
     "id": "ae_select_shape",
-    "name": "选择图形（改进版）",
+    "name": "选择图形 (改进版)",
     "icon": "<img src='scripts_icon/ae_select_shape.png'>",
     "category": ["绘图"],
     "version": "6.01.5",
