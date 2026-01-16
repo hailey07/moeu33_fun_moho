@@ -2208,8 +2208,12 @@ textarea {
   .theme-toggle-btn:active{
     background-color: var(--md-violet);
   } 
+  .btn-listing-link:active{
+    background-color: var(--md-cyan);
+    color: var(--btn-text-color-white) !important;
+  }
   .view-switcher button:active,
-  .btn-listing-link:active,
+  
   .btn-download:active,
   .board-card:active,
   .prop-val a.tag-badge:active,
