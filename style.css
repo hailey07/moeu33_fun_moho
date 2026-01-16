@@ -1285,6 +1285,7 @@ textarea {
   box-shadow: 0 3px 0 0 var(--border-color);
   max-width: 95%;
   color: var(--text-main);
+  word-wrap: break-word;
 }
 
 .content-area ul li::marker {
@@ -1303,6 +1304,7 @@ textarea {
 
 .content-area img {
   max-width: 60%; 
+  word-wrap: break-word;
   width: auto;
   height: auto;
   display: inline-block;
@@ -1429,6 +1431,7 @@ textarea {
   font-size: 0.9em;
   border: 2px dotted var(--md-violet);
   margin: 0.2em;
+  word-wrap: break-word;
 }
 
 .content-area table {
