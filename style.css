@@ -156,7 +156,6 @@
 * {
   box-sizing: border-box;
   font-stretch: 100%;
-  font-variation-settings: 'wdth' 100;
 }
 
 html {
