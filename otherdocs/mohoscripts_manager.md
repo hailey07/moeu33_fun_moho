@@ -23,8 +23,12 @@
 ## 截图
 
 **Windows**
-    <img src="https://bucket.moeu33.fun/2026/01/1768629094644-mhsm_win.png"/>
+
+<img src="https://bucket.moeu33.fun/2026/01/1768629094644-mhsm_win.png"/>
+
+<br>
 
 **macOS**
-    <img src="https://bucket.moeu33.fun/2026/01/1768629120971-mhsm_mac.png"/>
+
+<img src="https://bucket.moeu33.fun/2026/01/1768629120971-mhsm_mac.png"/>
 
