@@ -417,7 +417,7 @@ textarea {
   display: flex;
   align-items: end;
   font-weight: var(--fw-bold);
-  gap: 10px;
+  gap: 14px;
   justify-content: center;
   animation: fadeIn 0.3s ease-out;
 }
