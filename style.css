@@ -164,8 +164,8 @@
 /* ==================== 全局重置与基础 ==================== */
 * {
   box-sizing: border-box;
-  font-stretch: 100%;
-  letter-spacing: 0.05em;
+  font-stretch: 90%;
+  /* letter-spacing: 0.05em; */
 }
 
 html {
