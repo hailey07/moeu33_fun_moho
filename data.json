@@ -1,5 +1,20 @@
 [
   {
+    "id": "cz_camerashake",
+    "name": "相机抖动",
+    "date": "2026-01-17",
+    "category": ["动画"],
+    "tags": ["工具"],
+    "icon": "<img src='scripts_icon/cz_camerashake.png'>",
+    "author": ["congz"],
+    "version": "3.1",
+    "realName": "cz_camerashake.lua, cz_camerakey.lua",
+    "publishPage": "https://mohoscripts.com/script/cz-camerashake",
+    "link": "https://bucket.moeu33.fun/2026/01/1768634944910-cz_camerashake_v3.1.zip",
+    "supportVer": ["Moho 14"],
+    "descUrl": "docs/cz_camerashake.md"
+  },
+  {
     "id": "MG_2D_Rigging_Toolbox",
     "name": "2D 绑定工具箱 (付费)",
     "date": "2025-09-09",
