@@ -22,9 +22,9 @@
   color-scheme: light dark;
   /* 字重 */
   --fw-normal: 400;
-  --fw-medium: 450;
-  --fw-semi-bold: 500;
-  --fw-bold: 600;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
   /* 字体大小 */
   --fs-normal: 15px;
   --fs-h1: 40px;
@@ -164,7 +164,7 @@
 /* ==================== 全局重置与基础 ==================== */
 * {
   box-sizing: border-box;
-  font-stretch: 90%;
+  font-stretch: 85%;
   /* letter-spacing: 0.05em; */
 }
 
@@ -190,7 +190,7 @@ html.app-lock body {
 }
 
 body {
-  font-family: 'ChillDuanSans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   color: var(--text-main);
   background-color: var(--all-bg-color);
@@ -202,7 +202,7 @@ body {
 }
 
 h1 {
-  font-family: "ChillDuanSans", system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 a {
