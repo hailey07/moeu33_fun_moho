@@ -8,6 +8,15 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'ChillDuanSans';
+  /* 最好将 woff2 文件放在您的项目目录中，例如 fonts/ 文件夹下 */
+  src: url('<img src="https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2"/>') format('woff2-variations'),
+       url('<img src="https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2"/>') format('woff2');
+  font-weight: 100 900; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   color-scheme: light dark;
@@ -156,7 +165,7 @@
 * {
   box-sizing: border-box;
   font-stretch: 100%;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 html {
@@ -181,7 +190,7 @@ html.app-lock body {
 }
 
 body {
-  font-family: 'ChillDINGothic', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: 'ChillDuanSans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   color: var(--text-main);
   background-color: var(--all-bg-color);
@@ -191,50 +200,9 @@ body {
   display: block;
   position: relative;
 }
-/* ============================
-   1. 宽度 (Width/Stretch)
-   "Std" 代表标准宽度，"Con" 代表压缩宽度
-   ============================ */
-
-/* 标准宽度 (Std) */
-.width-std {
-  font-stretch: 100%; /* 或者使用 font-variation-settings: 'wdth' 100; */
-}
-
-/* 压缩宽度 (Condensed / Con) */
-.width-con {
-  font-stretch: 75%; /* 如果 75% 不够窄，可以尝试 62.5% 或 50% */
-  /* 备用写法（推荐）： */
-  font-variation-settings: 'wdth' 75; 
-}
-
-/* ============================
-   2. 字重 (Weight)
-   对应您提到的 Regular, Medium, Semibold, Bold
-   ============================ */
-
-/* 标准体 / ConRegulai (Regular) */
-.weight-regular {
-  font-weight: 400;
-}
-
-/* 中等体 / ConMedium (Medium) */
-.weight-medium {
-  font-weight: 500;
-}
-
-/* 中粗体 / ConSemibold (Semibold) */
-.weight-semibold {
-  font-weight: 600;
-}
-
-/* 粗体 / ConBold (Bold) */
-.weight-bold {
-  font-weight: 700;
-}
 
 h1 {
-  font-family: "ChillDINGothic", system-ui, sans-serif;
+  font-family: "ChillDuanSans", system-ui, sans-serif;
 }
 
 a {
