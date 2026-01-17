@@ -6,7 +6,7 @@
 <span class="iconfont icon-download"></span>
 Mac 版下载</a>
 
-<a href="https://pan.baidu.com/s/1xFcTV-tiHDaYz8patNDmvg?pwd=apbi" id="d-download" class="btn-download" target="_blank" style="width: 200px;color:white;border-color:var(--border-color);background-color:var(--primary-color);margin-bottom:2em;">
+<a href="https://pan.baidu.com/s/15B3kzB1mUdTWMMbOBi0NnQ?pwd=q7my" id="d-download" class="btn-download" target="_blank" style="width: 200px;color:white;border-color:var(--border-color);background-color:var(--primary-color);margin-bottom:2em;">
 <span class="iconfont icon-download"></span>
 Win 版下载</a>
 </div>
