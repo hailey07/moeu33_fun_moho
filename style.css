@@ -155,7 +155,7 @@
 /* ==================== 全局重置与基础 ==================== */
 * {
   box-sizing: border-box;
-  /* font-stretch: 100%; */
+  font-stretch: 100%;
   font-variation-settings: 'wdth' 100;
 }
 
