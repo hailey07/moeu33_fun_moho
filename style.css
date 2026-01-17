@@ -119,11 +119,11 @@
 
 /* ==================== 深色模式覆盖 ==================== */
 [data-theme="dark"] {
-  --all-bg-color: #3b3b3b; /*#27272a*/
-  --card-bg: #3b3b3b;
+  --all-bg-color: #27272a; /*#27272a*/
+  --card-bg: #27272a;
   --trans-white: 39, 39, 42;
   --trans-black: 220, 220, 220;
-  --white: #3b3b3b;
+  --white: #27272a;
   --primary-color: #439eaa;
   --text-main: #f4f4f5;
   --text-light: #a1a1aa;
