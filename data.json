@@ -725,14 +725,14 @@
     "name": "故事板参考",
     "icon": "<img src='scripts_icon/LK_Storyboard.png'>",
     "category": "动画",
-    "version": "0.0",
-    "author": "Lukas Krepel",
-    "date": "2023-05-25",
+    "version": "0.2",
+    "author": ["Lukas Krepel","Frame Order","MoeU33"],
+    "date": "2026-01-09",
     "tags": ["工具"],
     "realName": "LK_Storyboard.lua",
     "supportVer": "Moho 13.5",
     "publishPage": "https://www.lostmarble.com/forum/viewtopic.php?t=36019",
-    "link": "https://pan.baidu.com/s/1FPkX5cL-9OvP7SA9r0RWFg?pwd=bg7s",
+    "link": "https://bucket.moeu33.fun/2026/01/1768638817437-LK_Storyboard_0.2.zip",
     "descUrl": "docs/LK_Storyboard.md"
   },
   {
