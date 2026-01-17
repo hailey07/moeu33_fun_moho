@@ -1177,6 +1177,14 @@ textarea {
   transform: none;
 }
 
+.new_xiazai{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 20px;
+justify-content: flex-start;
+}
+
 /* === 内容区域 === */
 .article-layout {
   display: flex;

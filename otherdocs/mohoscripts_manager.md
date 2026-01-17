@@ -1,7 +1,7 @@
 
 ## 下载
 
-<div class="xiazaimanager">
+<div class="new_xiazai">
 <a href="https://pan.baidu.com/s/1xFcTV-tiHDaYz8patNDmvg?pwd=apbi" id="d-download" class="btn-download" target="_blank" style="width: 200px;color:white;border-color:var(--border-color);background-color:var(--primary-color);margin-bottom:2em;">
 <span class="iconfont icon-download"></span>
 Mac 版下载</a>
