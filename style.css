@@ -22,8 +22,8 @@
   color-scheme: light dark;
   /* 字重 */
   --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semi-bold: 600;
+  --fw-medium: 450;
+  --fw-semi-bold: 500;
   --fw-bold: 700;
   /* 字体大小 */
   --fs-normal: 15px;
