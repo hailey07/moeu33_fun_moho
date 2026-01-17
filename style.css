@@ -156,6 +156,7 @@
 * {
   box-sizing: border-box;
   font-stretch: 100%;
+  letter-spacing: 0.1em;
 }
 
 html {
