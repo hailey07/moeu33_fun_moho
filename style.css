@@ -427,6 +427,7 @@ textarea {
   font-size: var(--fs-normal);
   font-weight: var(--fw-semi-bold);
   text-align: center;
+  white-space: nowrap;
   animation: fadeIn 0.6s ease-out;
 }
 
