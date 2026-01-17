@@ -938,7 +938,7 @@ textarea {
 }
 
 .row-title {
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semi-bold);
   transition: all 0.2s ease;
   display: inline-block;
   white-space: nowrap;
