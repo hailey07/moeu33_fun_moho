@@ -4,7 +4,7 @@
 
 2. 删除以下路径文件夹 ↓↓↓
 
-    <div class="gallery_row" style="display:flex;flex-direction: column;align-items: flex-start;">
+    <div class="gallery_col">
     <img src="https://bucket.moeu33.fun/2026/01/1768597763827-1.png"/>
     <img src="https://bucket.moeu33.fun/2026/01/1768597774176-2.png"/>
     </div>
@@ -30,7 +30,7 @@
 1. 正常流程卸载Moho
 2. 删除以下路径文件夹 ↓↓↓
 
-    <div class="gallery_row" style="display:flex;flex-direction: column;align-items: flex-start;">
+    <div class="gallery_col">
     <img src="https://bucket.moeu33.fun/2026/01/1768597884557-组 1.png"/>
     <img src="https://bucket.moeu33.fun/2026/01/1768597893566-图层 2.png"/>
     </div>
