@@ -2051,7 +2051,7 @@ justify-content: flex-start;
     color: var(--md-pink);
     font-weight: 600;
     text-decoration: none;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
