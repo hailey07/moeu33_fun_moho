@@ -1323,7 +1323,6 @@ justify-content: flex-start;
 
 .content-area a {
   color: var(--md-orange);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: inline-block;
   border-bottom: var(--border-line-width) solid var(--md-orange);
   padding-left: 10px;
@@ -2091,11 +2090,13 @@ justify-content: flex-start;
   .content-area a:hover {
     color: var(--md-red);
     border-bottom-color: var(--md-red);
+    transform: scale(1.1);
     font-weight: 600;
   }
 }
 
 .content-area a:active {
+  transform: scale(0.98);
   font-weight: 600;
 }
 
@@ -2327,6 +2328,11 @@ justify-content: flex-start;
   }*/
 
   .gobackhome:active,
+  .content-area a:active {
+    background-color: var(--md-red);
+    color: var(--md-red) !important;
+    font-weight: 600;
+  }
 
   /* 卡片颜色反馈 */
   .color-red:active {
