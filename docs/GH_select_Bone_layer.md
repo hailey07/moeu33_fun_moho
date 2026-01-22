@@ -30,9 +30,3 @@
         - 第一次激活：立即折叠所有组图层。
 - 我的脚本可以快速切换到骨骼层，类似您的“Back To Bone Layer”工具。
 - 但GH_select_Bone_layer还增加了折叠组图层的功能，使工作流程更顺畅、更有条理。
-
----
-
-[Am_Select_Bonelayer_V1.4.zip](https://pan.baidu.com/s/1HoI8KsM-SZbniOee1obslg?pwd=gk1e)
-
-使用此按钮选择父骨骼层

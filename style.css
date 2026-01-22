@@ -2096,7 +2096,6 @@ justify-content: flex-start;
 }
 
 .content-area a:active {
-  transform: scale(0.96);
   font-weight: 600;
 }
 
