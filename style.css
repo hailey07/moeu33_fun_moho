@@ -212,7 +212,7 @@
 /* ==================== 全局重置与基础 ==================== */
 * {
   box-sizing: border-box;
-  font-stretch: 85%;
+  /* font-stretch: 85%; */
   /* letter-spacing: 0.05em; */
 }
 
