@@ -135,7 +135,7 @@
                 // 🏷️ 分类 -> icon-suoshuleibie (假设这是你用的分类图标)
                 { label: `${getIcon('icon-suoshuleibie')} 分类`, value: item.tags, type: 'array', badgeClass: 'tag-orange', isSearchable: true },
                 // 🔢 版本 -> icon-version (如果没有这个图标，去找一个 icon-banben)
-                { label: `${getIcon('icon-banbenguanli-')} 版本`, value: item.version ? "v" + item.version : null, badgeClass: 'tag-gray' },
+                { label: `${getIcon('icon-banbenguanli-')} 版本`, value: item.version ? "v&nbsp;" + item.version : null, badgeClass: 'tag-gray' },
                 // 👤 作者 -> icon-zuozhe3 (你之前用过的)
                 { label: `${getIcon('icon-author')} 作者`, value: item.author, type: 'array', badgeClass: 'tag-purple', isSearchable: true },
                 // 📅 更新日期 -> icon-calendar (或者 icon-riqi)
