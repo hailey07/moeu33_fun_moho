@@ -207,7 +207,7 @@ function renderBoard(container, data) {
                         <span class="card-title">${item.name}</span>
                     </div>
                     <div class="card-meta">
-                        <span>v${item.version}</span>
+                        <span>v ${item.version}</span>
                         <span>${item.date}</span>
                     </div>
                 </div>
