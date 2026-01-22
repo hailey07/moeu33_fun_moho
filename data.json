@@ -1,5 +1,20 @@
 [
   {
+    "id": "MU_Name2UTF8",
+    "name": "名称转 UTF8",
+    "date": "2026-01-22",
+    "category": ["软件协作"],
+    "tags": ["菜单"],
+    "icon": "<img src='scripts_icon/_no_icon.png'>",
+    "author": ["MoeU33"],
+    "version": "1.0",
+    "realName": "MU_Name2UTF8.lua",
+    "publishPage": "",
+    "link": "https://bucket.moeu33.fun/2026/01/1769093039075-MU_Name2UTF8_V1.0.zip",
+    "supportVer": ["Moho 14"],
+    "descUrl": "docs/MU_Name2UTF8.md"
+  },
+  {
     "id": "lf_pencil",
     "name": "LF 铅笔",
     "date": "2026-01-21",
