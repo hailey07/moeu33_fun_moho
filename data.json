@@ -1,5 +1,20 @@
 [
   {
+    "id": "lf_pencil",
+    "name": "LF 铅笔",
+    "date": "2026-01-21",
+    "category": ["动画"],
+    "tags": ["工具"],
+    "icon": "<img src='scripts_icon/lf_pencil.png'>",
+    "author": ["Luca França", "Eugene Babich"],
+    "version": "beta 4.4",
+    "realName": "lf_pencil.lua",
+    "publishPage": "https://mohoscripts.com/script/lf-pencil",
+    "link": "https://bucket.moeu33.fun/2026/01/1769046908813-lf_pencil_beta4.4.zip",
+    "supportVer": ["Moho 14"],
+    "descUrl": "docs/lf_pencil.md"
+  },
+  {
     "id": "cz_camerashake",
     "name": "相机抖动",
     "date": "2026-01-17",
