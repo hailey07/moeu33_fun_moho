@@ -1327,6 +1327,7 @@ justify-content: flex-start;
   border-bottom: var(--border-line-width) solid var(--md-orange);
   padding-left: 10px;
   padding-right: 10px;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .content-area strong,
