@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'ChillDINGothic';
-  /* 最好将 woff2 文件放在您的项目目录中，例如 fonts/ 文件夹下 */
   src: url('https://bucket.moeu33.fun/2026/01/1768630495698-ChillDINGothicVF.woff2') format('woff2-variations'),
        url('https://bucket.moeu33.fun/2026/01/1768630495698-ChillDINGothicVF.woff2') format('woff2');
   font-weight: 100 900; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
@@ -10,13 +9,62 @@
 }
 @font-face {
   font-family: 'ChillDuanSans';
-  /* 最好将 woff2 文件放在您的项目目录中，例如 fonts/ 文件夹下 */
-  src: url('<img src="https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2"/>') format('woff2-variations'),
-       url('<img src="https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2"/>') format('woff2');
+  src: url('https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1768631520518-ChillDuanSansVF.woff2') format('woff2');
   font-weight: 100 900; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058255344-TsangerMinghei_W03.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058255344-TsangerMinghei_W03.woff2') format('woff2');
+  font-weight: 300; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058310344-TsangerMinghei_W04.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058310344-TsangerMinghei_W04.woff2') format('woff2');
+  font-weight: 400; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058327789-TsangerMinghei_W05.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058327789-TsangerMinghei_W05.woff2') format('woff2');
+  font-weight: 500; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058338477-TsangerMinghei_W06.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058338477-TsangerMinghei_W06.woff2') format('woff2');
+  font-weight: 600; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058347788-TsangerMinghei_W07.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058347788-TsangerMinghei_W07.woff2') format('woff2');
+  font-weight: 700; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TsangerMinghei';
+  src: url('https://bucket.moeu33.fun/2026/01/1769058357528-TsangerMinghei_W08.woff2') format('woff2-variations'),
+       url('https://bucket.moeu33.fun/2026/01/1769058357528-TsangerMinghei_W08.woff2') format('woff2');
+  font-weight: 800; /* 告诉浏览器这个字体支持 100 到 900 的粗细 */
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 :root {
   color-scheme: light dark;
@@ -190,7 +238,7 @@ html.app-lock body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "TsangerMinghei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   color: var(--text-main);
   background-color: var(--all-bg-color);
@@ -202,7 +250,7 @@ body {
 }
 
 h1 {
-  font-family: system-ui, sans-serif;
+  font-family: "TsangerMinghei", system-ui, sans-serif;
 }
 
 a {
