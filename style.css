@@ -2328,11 +2328,6 @@ justify-content: flex-start;
   }*/
 
   .gobackhome:active,
-  .content-area a:active {
-    color: var(--md-red);
-    font-weight: var(--fw-bold);
-    transition: all 0.05s ease;
-  }
 
   /* 卡片颜色反馈 */
   .color-red:active {
