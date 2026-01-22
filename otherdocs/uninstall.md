@@ -4,8 +4,10 @@
 
 2. 删除以下路径文件夹 ↓↓↓
 
+    <div class="gallery_row" style="display:flex; justify-content:center;">
     <img src="https://bucket.moeu33.fun/2026/01/1768597763827-1.png"/>
     <img src="https://bucket.moeu33.fun/2026/01/1768597774176-2.png"/>
+    </div>
 
 
     > C:\ProgramData\Lost Marble
