@@ -2051,7 +2051,7 @@ justify-content: flex-start;
     color: var(--md-pink);
     font-weight: 600;
     text-decoration: none;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 }
 
@@ -2091,7 +2091,7 @@ justify-content: flex-start;
   .content-area a:hover {
     color: var(--md-red);
     border-bottom-color: var(--md-red);
-    transform: scale(1.1);
+    transform: scale(1.05);
     font-weight: 600;
   }
 }
