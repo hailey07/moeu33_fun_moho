@@ -207,7 +207,7 @@ function renderBoard(container, data) {
                         <span class="card-title">${item.name}</span>
                     </div>
                     <div class="card-meta">
-                        <span>v ${item.version}</span>
+                        <span>v&nbsp;${item.version}</span>
                         <span>${item.date}</span>
                     </div>
                 </div>
@@ -305,7 +305,7 @@ function renderTable(container, data) {
             <td>${nameHtml}</td>
             <td>${categoryHtml}</td>
             <td>${tagsHtml}</td>
-            <td>v${item.version}</td>
+            <td>v&nbsp;${item.version}</td>
             <td>${authorHtml}</td>
             <td style="color:#999">${item.date}</td>
         `;
