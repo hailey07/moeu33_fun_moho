@@ -2316,8 +2316,7 @@ justify-content: flex-start;
   .detail-icon img:active,
   .detail-icon svg:not(.iconfont):active,
   .detail-icon .iconfont:active,
-  .table-view tbody tr:active,
-  .content-area a:active {
+  .table-view tbody tr:active {
     transform: none;
     box-shadow: none;
   }
