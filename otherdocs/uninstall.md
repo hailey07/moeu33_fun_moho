@@ -9,6 +9,7 @@
 
 
     > C:\ProgramData\Lost Marble
+    > 
     > C:\Users\pc\AppData\Roaming\Lost Marble
 
 3. 重新安装Moho，启动后出现注册页面即为重装成功
@@ -32,6 +33,7 @@
 
 
     > /Users/*你的用户名*/Library/WebKit/com.lostmarble.moho
+    > 
     > /Users/Shared/Library/Application Support/Lost Marble
 
 3. 重新安装Moho，启动后出现注册页面即为重装成功
