@@ -1,1 +1,1 @@
-![](https://bucket.moeu33.fun/2026/01/1768570924992-1-1.jpg)
+<img src="https://bucket.moeu33.fun/2026/01/1769273663045-PixPin_2026-01-25_00-53-10.png"/>
