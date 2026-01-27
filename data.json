@@ -1,6 +1,6 @@
 [
   {
-    "id": "MU_Name2Unicode",
+    "id": "MU_Name_Fix",
     "name": "PS图层名修复",
     "date": "2026-01-22",
     "category": ["软件协作"],
@@ -8,11 +8,11 @@
     "icon": "<img src='scripts_icon/_no_icon.png'>",
     "author": ["MoeU33"],
     "version": "1.2",
-    "realName": "MU_Name2Unicode.lua",
+    "realName": "MU_Name_Fix_AI.lua, MU_Name_Fix_PS.lua",
     "publishPage": "",
-    "link": "https://bucket.moeu33.fun/2026/01/1769485361235-MU_Name2Unicode_V1.2.zip",
+    "link": "https://bucket.moeu33.fun/2026/01/1769499479781-MU_Name_Fix_v1.2.zip",
     "supportVer": ["Moho 14"],
-    "descUrl": "docs/MU_Name2Unicode.md"
+    "descUrl": "docs/MU_Name_Fix.md"
   },
   {
     "id": "lf_pencil",
