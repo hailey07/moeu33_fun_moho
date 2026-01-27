@@ -1,7 +1,7 @@
 [
   {
     "id": "MU_Name2Unicode",
-    "name": "名称 转 Unicode",
+    "name": "PS图层名修复",
     "date": "2026-01-22",
     "category": ["软件协作"],
     "tags": ["菜单"],
@@ -10,7 +10,7 @@
     "version": "1.2",
     "realName": "MU_Name2Unicode.lua",
     "publishPage": "",
-    "link": "https://bucket.moeu33.fun/2026/01/1769484941448-MU_Name2Unicode_V1.2.zip",
+    "link": "https://bucket.moeu33.fun/2026/01/1769485361235-MU_Name2Unicode_V1.2.zip",
     "supportVer": ["Moho 14"],
     "descUrl": "docs/MU_Name2Unicode.md"
   },
