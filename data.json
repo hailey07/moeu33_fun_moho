@@ -1,8 +1,8 @@
 [
   {
     "id": "MU_Name_Fix",
-    "name": "PS图层名修复",
-    "date": "2026-01-22",
+    "name": "PS AI 中文图层名修复",
+    "date": "2026-01-27",
     "category": ["软件协作"],
     "tags": ["菜单"],
     "icon": "<img src='scripts_icon/_no_icon.png'>",
