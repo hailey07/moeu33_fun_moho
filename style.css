@@ -1279,37 +1279,37 @@ justify-content: flex-start;
 }
 .content-area h1::before {
   content: "H1\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h2::before {
   content: "H2\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h3::before {
   content: "H3\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h3::before {
   content: "H3\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h4::before {
   content: "H4\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h5::before {
   content: "H5\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h6::before {
   content: "H6\2002";
-  font-size: 0.75em;
+  font-size: 0.6em;
   opacity: 0.5;
 }
 .content-area h1 {
