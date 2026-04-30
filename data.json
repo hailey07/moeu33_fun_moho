@@ -1,5 +1,20 @@
 [
   {
+    "id": "ss_solo",
+    "name": "SS - Solo",
+    "date": "2026-03-31",
+    "category": ["绘图"],
+    "tags": ["工具"],
+    "icon": "<img src='scripts_icon/ss_solo.png'>",
+    "author": ["SimplSam"],
+    "version": "1.0",
+    "realName": "ss_solo.lua",
+    "publishPage": "https://mohoscripts.com/script/ss-solo",
+    "link": "https://bucket.moeu33.fun/2026/04/1777536133404-ss_solo_v1.0.zip",
+    "supportVer": ["Moho 12.5"],
+    "descUrl": "docs/ss_solo.md"
+  },
+  {
     "id": "MU_Name_Fix",
     "name": "PS AI 中文图层名修复",
     "date": "2026-01-27",
