@@ -1383,7 +1383,7 @@ justify-content: flex-start;
   border: var(--border-line-width) solid var(--border-color);
   border-left: var(--border-important) solid var(--md-orange);
  background: rgba(164, 215, 223, 0.2);
-  padding: 0.25em 0.5em;
+  padding: 0.5rem 0.5rem;
   margin: 1rem 0;
   border-radius: 0 8px 8px 0;
   box-shadow: 0 3px 0 0 var(--border-color);
