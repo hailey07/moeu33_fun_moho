@@ -1277,10 +1277,13 @@ justify-content: flex-start;
   color: var(--md-h-title);
   padding-left: 0.2em;
 }
-
-.content-area h1 {
+.content-area h1::before {
   font-size: 1.45em;
   content: "H1\2002";
+  padding-left: 0.5em;
+}
+.content-area h1 {
+  font-size: 1.45em;
   /* border-left: 3em groove var(--md-red); */
   padding-left: 0.5em;
 }
