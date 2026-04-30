@@ -1391,7 +1391,7 @@ justify-content: flex-start;
 
 .content-area ul li::marker {
   color: var(--primary-color);
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 .content-area ol li::marker {
