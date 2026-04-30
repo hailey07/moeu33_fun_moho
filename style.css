@@ -1280,7 +1280,8 @@ justify-content: flex-start;
 
 .content-area h1 {
   font-size: 1.45em;
-  border-left: 3em groove var(--md-red);
+  content: "H1\2002";
+  /* border-left: 3em groove var(--md-red); */
   padding-left: 0.5em;
 }
 
