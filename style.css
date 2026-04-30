@@ -1339,7 +1339,7 @@ justify-content: flex-start;
 
 .content-area p {
   line-height: 2;
-  margin: 12px 0;
+  margin: 1rem 0;
   color: var(--text-main);
   font-weight: var(--fw-normal);
 }
