@@ -1366,7 +1366,7 @@ justify-content: flex-start;
 .content-area i {
   font-style: italic;
   color: var(--md-lime);
-  font-weight: var(--fw-semi-bold);
+  /* font-weight: var(--fw-semi-bold); */
 }
 
 .content-area hr {
