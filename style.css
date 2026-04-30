@@ -1357,8 +1357,8 @@ justify-content: flex-start;
 .content-area b {
   font-weight: var(--fw-semi-bold);
   /* background-color: rgba(var(--md-yellow-rgb), 0.3); */
-  padding: 3px 8px;
-  margin: 0 2px;
+  /* padding: 3px 8px; */
+  /* margin: 0 2px; */
   color: var(--text-main);
 }
 
