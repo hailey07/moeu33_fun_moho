@@ -1,5 +1,20 @@
 [
   {
+    "id": "ss_bone_clone_dynamics",
+    "name": "SS 骨骼动力学克隆",
+    "date": "2026-04-16",
+    "category": ["动画"],
+    "tags": ["工具"],
+    "icon": "<img src='scripts_icon/ss_bone_clone_dynamics.png'>",
+    "author": ["SimplSam"],
+    "version": "1.0",
+    "realName": "ss_bone_clone_dynamics.lua",
+    "publishPage": "https://mohoscripts.com/script/ss-bone-clone-dynamics",
+    "link": "https://bucket.moeu33.fun/2026/04/1777537644076-ss_bone_clone_dynamics_v1.0.zip",
+    "supportVer": ["Moho 14"],
+    "descUrl": "docs/ss_bone_clone_dynamics.md"
+  },
+  {
     "id": "ss_solo",
     "name": "SS - Solo",
     "date": "2026-03-31",
