@@ -1,5 +1,20 @@
 [
   {
+    "id": "ms_focus_layer",
+    "name": "MS 聚焦图层",
+    "date": "2026-05-10",
+    "category": ["图层"],
+    "tags": ["菜单"],
+    "icon": "<img src='scripts_icon/ms_focus_layer.png'>",
+    "author": ["TenKellyArt"],
+    "version": "5.0",
+    "realName": "ms_focus_layer.lua",
+    "publishPage": "https://mohoscripts.com/script/ms-focus-layer",
+    "link": "https://bucket.moeu33.fun/2026/05/ms_focus_layer_V5.0.zip",
+    "supportVer": ["Moho 14"],
+    "descUrl": "docs/ms_focus_layer.md"
+  },
+  {
     "id": "ss_bone_clone_dynamics",
     "name": "SS 骨骼动力学克隆",
     "date": "2026-04-16",
